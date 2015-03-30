@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\sssf">
+      <UniqueIdentifier>{9f366dcc-2c02-4d58-b9bb-cb45655a4681}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf_VS">
+      <UniqueIdentifier>{4b1bc69b-0df8-45fe-8fc5-662bee37087c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\data_loader">
+      <UniqueIdentifier>{8db1b878-46a4-43de-a16c-810c66a1dca5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\game">
+      <UniqueIdentifier>{e913e1ba-2371-4a1d-9d9e-713b19df405d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\graphics">
+      <UniqueIdentifier>{ac5276cf-2f7d-44b8-9c0a-d446abe80121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\gsm">
+      <UniqueIdentifier>{b5dce720-d828-4233-8632-4227f20678fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\gsm\ai">
+      <UniqueIdentifier>{2c3d422d-7c60-416b-98d5-20b1ed68fb01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\gsm\ai\bots">
+      <UniqueIdentifier>{41824b24-0287-4a6b-bda9-277f7c8ff78d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\gsm\physics">
+      <UniqueIdentifier>{90bc73d0-add7-4636-865a-4e632ba574a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\gsm\sprite">
+      <UniqueIdentifier>{baf55fc7-0897-472c-8aa1-2d4bf3e55426}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\gsm\state">
+      <UniqueIdentifier>{f35d14c9-2776-4070-af1a-f3d98b83e296}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\gsm\world">
+      <UniqueIdentifier>{97a13e2b-28b7-4d21-ba1a-924fd06cbde8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\gui">
+      <UniqueIdentifier>{e21fd81f-88ca-49ee-9a96-1b24e099911a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\input">
+      <UniqueIdentifier>{14371cab-2544-428b-91bc-7a0117e7084d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\os">
+      <UniqueIdentifier>{6dd86f06-a886-412b-bafc-c6de4361bdb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\platforms">
+      <UniqueIdentifier>{9bdcba03-f882-4eaa-84d4-9e15b558660e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\text">
+      <UniqueIdentifier>{27fe2b86-b010-44f8-bca3-1f9ee33edf2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\timer">
+      <UniqueIdentifier>{12067195-3dda-4ccf-976b-bb78c64b4f1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\platforms\DirectX">
+      <UniqueIdentifier>{fa6cb541-6f90-49e8-b09e-7dcb6e7fe852}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\platforms\Windows">
+      <UniqueIdentifier>{9a2ecd2f-2b7c-47fd-bb83-6c6d66626dd8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\sssf_VS\ReadMe.txt">
+      <Filter>src\sssf_VS</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\sssf_VS\stdafx.cpp">
+      <Filter>src\sssf_VS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\data_loader\GameDataLoader.cpp">
+      <Filter>src\sssf\data_loader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\game\Game.cpp">
+      <Filter>src\sssf\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\game\WStringTable.cpp">
+      <Filter>src\sssf\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\graphics\GameGraphics.cpp">
+      <Filter>src\sssf\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\graphics\RenderList.cpp">
+      <Filter>src\sssf\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\graphics\TextureManager.cpp">
+      <Filter>src\sssf\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\ai\bots\RandomFloatingBot.cpp">
+      <Filter>src\sssf\gsm\ai\bots</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\ai\bots\RandomJumpingBot.cpp">
+      <Filter>src\sssf\gsm\ai\bots</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\ai\BotRecycler.cpp">
+      <Filter>src\sssf\gsm\ai</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\world\SparseLayer.cpp">
+      <Filter>src\sssf\gsm\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\world\TiledLayer.cpp">
+      <Filter>src\sssf\gsm\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\world\World.cpp">
+      <Filter>src\sssf\gsm\world</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\state\GameStateManager.cpp">
+      <Filter>src\sssf\gsm\state</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\sprite\AnimatedSprite.cpp">
+      <Filter>src\sssf\gsm\sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\sprite\AnimatedSpriteType.cpp">
+      <Filter>src\sssf\gsm\sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\sprite\SpriteManager.cpp">
+      <Filter>src\sssf\gsm\sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\physics\AABB.cpp">
+      <Filter>src\sssf\gsm\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\physics\CollidableObject.cpp">
+      <Filter>src\sssf\gsm\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\physics\Physics.cpp">
+      <Filter>src\sssf\gsm\physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gui\Button.cpp">
+      <Filter>src\sssf\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gui\Cursor.cpp">
+      <Filter>src\sssf\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gui\GameGUI.cpp">
+      <Filter>src\sssf\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gui\ScreenGUI.cpp">
+      <Filter>src\sssf\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gui\Viewport.cpp">
+      <Filter>src\sssf\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\input\GameInput.cpp">
+      <Filter>src\sssf\input</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\text\BufferedTextFileReader.cpp">
+      <Filter>src\sssf\text</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\text\GameText.cpp">
+      <Filter>src\sssf\text</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\text\TextFileWriter.cpp">
+      <Filter>src\sssf\text</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\platforms\DirectX\DirectXGraphics.cpp">
+      <Filter>src\sssf\platforms\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\platforms\DirectX\DirectXTextureManager.cpp">
+      <Filter>src\sssf\platforms\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\platforms\Windows\WindowsInput.cpp">
+      <Filter>src\sssf\platforms\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\platforms\Windows\WindowsOS.cpp">
+      <Filter>src\sssf\platforms\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\platforms\Windows\WindowsTimer.cpp">
+      <Filter>src\sssf\platforms\Windows</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\sssf_VS\stdafx.h">
+      <Filter>src\sssf_VS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf_VS\targetver.h">
+      <Filter>src\sssf_VS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\data_loader\GameDataLoader.h">
+      <Filter>src\sssf\data_loader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\game\Game.h">
+      <Filter>src\sssf\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\game\IllegalArgumentException.h">
+      <Filter>src\sssf\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\game\IllegalFileFormatException.h">
+      <Filter>src\sssf\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\game\WStringTable.h">
+      <Filter>src\sssf\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\graphics\GameGraphics.h">
+      <Filter>src\sssf\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\graphics\RenderList.h">
+      <Filter>src\sssf\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\graphics\TextureManager.h">
+      <Filter>src\sssf\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\ai\bots\RandomFloatingBot.h">
+      <Filter>src\sssf\gsm\ai\bots</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\ai\bots\RandomJumpingBot.h">
+      <Filter>src\sssf\gsm\ai\bots</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\ai\Bot.h">
+      <Filter>src\sssf\gsm\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\ai\BotRecycler.h">
+      <Filter>src\sssf\gsm\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\world\SparseLayer.h">
+      <Filter>src\sssf\gsm\world</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\world\Tile.h">
+      <Filter>src\sssf\gsm\world</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\world\TiledLayer.h">
+      <Filter>src\sssf\gsm\world</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\world\World.h">
+      <Filter>src\sssf\gsm\world</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\world\WorldLayer.h">
+      <Filter>src\sssf\gsm\world</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\state\GameState.h">
+      <Filter>src\sssf\gsm\state</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\state\GameStateManager.h">
+      <Filter>src\sssf\gsm\state</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\sprite\AnimatedSprite.h">
+      <Filter>src\sssf\gsm\sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\sprite\AnimatedSpriteType.h">
+      <Filter>src\sssf\gsm\sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\sprite\SpriteManager.h">
+      <Filter>src\sssf\gsm\sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\physics\AABB.h">
+      <Filter>src\sssf\gsm\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\physics\CollidableObject.h">
+      <Filter>src\sssf\gsm\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\physics\Collision.h">
+      <Filter>src\sssf\gsm\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\physics\CollisionListener.h">
+      <Filter>src\sssf\gsm\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\physics\PhysicalProperties.h">
+      <Filter>src\sssf\gsm\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\physics\Physics.h">
+      <Filter>src\sssf\gsm\physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gui\Button.h">
+      <Filter>src\sssf\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gui\Cursor.h">
+      <Filter>src\sssf\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gui\GameGUI.h">
+      <Filter>src\sssf\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gui\OverlayImage.h">
+      <Filter>src\sssf\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gui\ScreenGUI.h">
+      <Filter>src\sssf\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gui\Viewport.h">
+      <Filter>src\sssf\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\input\ButtonEventHandler.h">
+      <Filter>src\sssf\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\input\GameInput.h">
+      <Filter>src\sssf\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\input\KeyEventHandler.h">
+      <Filter>src\sssf\input</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\timer\GameTimer.h">
+      <Filter>src\sssf\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\text\BufferedTextFileReader.h">
+      <Filter>src\sssf\text</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\text\GameText.h">
+      <Filter>src\sssf\text</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\text\TextFileWriter.h">
+      <Filter>src\sssf\text</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\text\TextGenerator.h">
+      <Filter>src\sssf\text</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\platforms\DirectX\DirectXGraphics.h">
+      <Filter>src\sssf\platforms\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\platforms\DirectX\DirectXTextureManager.h">
+      <Filter>src\sssf\platforms\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\platforms\Windows\WindowsInput.h">
+      <Filter>src\sssf\platforms\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\platforms\Windows\WindowsOS.h">
+      <Filter>src\sssf\platforms\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\platforms\Windows\WindowsTimer.h">
+      <Filter>src\sssf\platforms\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\os\GameOS.h">
+      <Filter>src\sssf\os</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
