@@ -18,6 +18,7 @@
 #include "sssf\gsm\world\World.h"
 #include "sssf\gsm\world\TiledLayer.h"
 #include "sssf\gsm\world\Tile.h"
+#include <Box2D\Box2D.h>
 
 const float EPSILON = 0.00001f;
 const float DEFAULT_GRAVITY = 0.3f;

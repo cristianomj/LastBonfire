@@ -30,6 +30,27 @@
 */
 Physics::Physics()
 {
+	const b2Vec2 grav(0.0f, -10.0f);
+	b2AABB aabb;
+	b2World world(grav);
+	
+	/*b2BodyDef bodyDef;
+	bodyDef.type = b2_dynamicBody;
+	bodyDef.position.Set(0.0f, 4.0f);
+	b2Body *body = world.CreateBody(&bodyDef);
+	b2PolygonShape dynamicBox;
+	dynamicBox.SetAsBox(1.0f, 1.0f);
+	b2FixtureDef fixtureDef;
+	fixtureDef.shape = &dynamicBox;
+	fixtureDef.density = 1.0f;
+	fixtureDef.friction = 0.3f;
+	body->CreateFixture(&fixtureDef);
+
+	b2Vec2 position = body->GetPosition();
+	int x = position.x;
+	int y = position.y;*/
+
+
 	// DEFAULT GRAVITY IS 1.0f
 	gravity = DEFAULT_GRAVITY;
 
