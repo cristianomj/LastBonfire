@@ -5,11 +5,11 @@
 
 // LastBonfire GAME INCLUDES
 #include "last_bonfire\LastBonfire.h"
-#include "last_bonfire\BugginOutButtonEventHandler.h"
-#include "last_bonfire\BugginOutCollisionListener.h"
-#include "last_bonfire\BugginOutDataLoader.h"
-#include "last_bonfire\BugginOutKeyEventHandler.h"
-#include "last_bonfire\BugginOutTextGenerator.h"
+#include "last_bonfire\LastBonfireButtonEventHandler.h"
+#include "last_bonfire\LastBonfireCollisionListener.h"
+#include "last_bonfire\LastBonfireDataLoader.h"
+#include "last_bonfire\lastBonfireKeyEventHandler.h"
+#include "last_bonfire\LastBonfireTextGenerator.h"
 
 
 // GAME OBJECT INCLUDES
@@ -49,14 +49,14 @@ int WINAPI WinMain(HINSTANCE hInstance,
                    int nCmdShow)
 {
 	// CREATE THE GAME
-	Game *bugginOutGame = new Game();
+	Game *lastBonfire = new Game();
 
 	// FIRST WE'LL SETUP THE DATA LOADER, SINCE IT MAY NEED TO READ
 	// IN DATA TO SETUP OTHER STUFF
-	BugginOutDataLoader *bugginOutDataLoader = new BugginOutDataLoader();
-	bugginOutDataLoader->initWinHandle(hInstance, nCmdShow);
-	bugginOutGame->setDataLoader(bugginOutDataLoader);
-	bugginOutDataLoader->loadGame(bugginOutGame, W_INIT_FILE);
+	LastBonfireDataLoader *lastBonfireDataLoader = new LastBonfireDataLoader();
+	lastBonfireDataLoader->initWinHandle(hInstance, nCmdShow);
+	lastBonfire->setDataLoader(lastBonfireDataLoader);
+	lastBonfireDataLoader->loadGame(lastBonfire, W_INIT_FILE);
 	
 	// WHAT WE SHOULD BE DOING HERE IS LOADING THE GAME DATA FROM FILES. THIS
 	// MEANS THE GUIS THEMSELVES AS WELL AS THE LEVELS. THAT WILL BE LEFT
@@ -64,33 +64,33 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
 	// LOAD THE GUI STUFF, AGAIN, NOTE THAT THIS SHOULD REALLY
 	// BE DONE FROM A FILE, NOT HARD CODED
-	bugginOutDataLoader->loadGUI(bugginOutGame, W_GUI_INIT_FILE);
+	lastBonfireDataLoader->loadGUI(lastBonfire, W_GUI_INIT_FILE);
 
 	// SPECIFY WHO WILL HANDLE BUTTON EVENTS
-	BugginOutButtonEventHandler *bugginOutButtonHandler = new BugginOutButtonEventHandler();
-	GameGUI *gui = bugginOutGame->getGUI();
-	gui->registerButtonEventHandler((ButtonEventHandler*)bugginOutButtonHandler);
+	LastBonfireButtonEventHandler *lastBonfireButtonHandler = new LastBonfireButtonEventHandler();
+	GameGUI *gui = lastBonfire->getGUI();
+	gui->registerButtonEventHandler((ButtonEventHandler*)lastBonfireButtonHandler);
 
 	// SPECIFY WHO WILL HANDLE KEY EVENTS
-	BugginOutKeyEventHandler *bugginOutKeyHandler = new BugginOutKeyEventHandler();
-	bugginOutGame->getInput()->registerKeyHandler((KeyEventHandler*)bugginOutKeyHandler);
+	LastBonfireKeyEventHandler *lastBonfireKeyHandler = new LastBonfireKeyEventHandler();
+	lastBonfire->getInput()->registerKeyHandler((KeyEventHandler*)lastBonfireKeyHandler);
 
 	// THIS WILL HANDLE PHYSICS COLLISION EVENTS
-	BugginOutCollisionListener *bugginOutCollisionListener = new BugginOutCollisionListener();
-	bugginOutGame->getGSM()->getPhysics()->setCollisionListener(bugginOutCollisionListener);
+	LastBonfireCollisionListener *lastBonfireCollisionListener = new LastBonfireCollisionListener();
+	lastBonfire->getGSM()->getPhysics()->setCollisionListener(lastBonfireCollisionListener);
 
 	// START THE GAME LOOP
-	bugginOutGame->runGameLoop();
+	lastBonfire->runGameLoop();
 
 	// GAME'S OVER SHUTDOWN ALL THE STUFF WE CONSTRUCTED HERE
-	delete (WindowsOS*)bugginOutGame->getOS();
-	delete (WindowsInput*)bugginOutGame->getInput();
-	delete (WindowsTimer*)bugginOutGame->getTimer();
-	delete (DirectXGraphics*)bugginOutGame->getGraphics();
-	delete (BugginOutTextGenerator*)bugginOutGame->getText()->getTextGenerator();
-	delete bugginOutButtonHandler;
-	delete bugginOutKeyHandler;
-	delete bugginOutGame;
+	delete (WindowsOS*)lastBonfire->getOS();
+	delete (WindowsInput*)lastBonfire->getInput();
+	delete (WindowsTimer*)lastBonfire->getTimer();
+	delete (DirectXGraphics*)lastBonfire->getGraphics();
+	delete (LastBonfireTextGenerator*)lastBonfire->getText()->getTextGenerator();
+	delete lastBonfireButtonHandler;
+	delete lastBonfireKeyHandler;
+	delete lastBonfire;
 
 	// AND RETURN
 	return 0;

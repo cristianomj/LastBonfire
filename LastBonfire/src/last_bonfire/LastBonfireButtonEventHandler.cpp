@@ -1,21 +1,11 @@
-/*
-	Author: Richard McKenna
-			Stony Brook University
-			Computer Science Department
-
-	BugginOutButtonEventHandler.cpp
-
-	See BugginOutButtonEventHandler.h for a class description.
-*/
-
 #include "last_bonfire_VS\stdafx.h"
 #include "last_bonfire\LastBonfire.h"
-#include "last_bonfire\BugginOutButtonEventHandler.h"
+#include "last_bonfire\LastBonfireButtonEventHandler.h"
 #include "sssf\game\Game.h"
 #include "sssf\gsm\state\GameStateManager.h"
 
-void BugginOutButtonEventHandler::handleButtonEvents(	Game *game, 
-													wstring command)
+void LastBonfireButtonEventHandler::handleButtonEvents(Game *game,
+	wstring command)
 {
 	// THE USER PRESSED THE Exit BUTTON ON THE MAIN MENU,
 	// SO LET'S SHUTDOWN THE ENTIRE APPLICATION
@@ -34,8 +24,8 @@ void BugginOutButtonEventHandler::handleButtonEvents(	Game *game,
 	// SO LET'S START THE GAME FROM THE FIRST LEVEL
 	else if (command.compare(W_START_COMMAND) == 0)
 	{
-		/*game->setCurrentLevelFileName(W_LEVEL_1_NAME);
-		game->startGame();*/
+		game->setCurrentLevelFileName(W_LEVEL_1_NAME);
+		game->startGame();
 	}
 	// THE USER PRESSED THE Quit BUTTON ON THE IN-GAME MENU,
 	// SO LET'S UNLOAD THE LEVEL AND RETURN TO THE MAIN MENU

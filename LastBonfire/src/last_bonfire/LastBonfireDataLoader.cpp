@@ -1,16 +1,13 @@
 #include "last_bonfire_VS\stdafx.h"
 
-// BugginOut GAME INCLUDES
-#include "last_bonfire\BugginOutButtonEventHandler.h"
-#include "last_bonfire\BugginOutDataLoader.h"
+// LastBonfire GAME INCLUDES
+#include "last_bonfire\LastBonfireDataLoader.h"
+#include "last_bonfire\LastBonfireTextGenerator.h"
 #include "last_bonfire\LastBonfire.h"
-#include "last_bonfire\BugginOutKeyEventHandler.h"
-#include "last_bonfire\BugginOutTextGenerator.h"
 
 // GAME OBJECT INCLUDES
 #include "sssf\game\Game.h"
 #include "sssf\graphics\GameGraphics.h"
-#include "sssf\gsm\ai\bots\RandomJumpingBot.h"
 #include "sssf\gsm\state\GameState.h"
 #include "sssf\gsm\world\TiledLayer.h"
 #include "sssf\gui\Cursor.h"
@@ -36,14 +33,14 @@
 #include "psti\PoseurSpriteTypesImporter.h"
 
 /*
-	loadGame - This method loads the setup game data into the game and
-	constructs all the needed objects for the game to work.
+loadGame - This method loads the setup game data into the game and
+constructs all the needed objects for the game to work.
 */
-void BugginOutDataLoader::loadGame(Game *game, wstring gameInitFile)
+void LastBonfireDataLoader::loadGame(Game *game, wstring gameInitFile)
 {
 	// AND LET'S READ IN THE GAME SETUP INFO
 	// FIRST LOAD ALL THE PROPERTIES
-	map<wstring,wstring> *properties = new map<wstring,wstring>();
+	map<wstring, wstring> *properties = new map<wstring, wstring>();
 	loadGameProperties(game, properties, gameInitFile);
 
 	// WE NEED THE TITLE AND USE_FULLSCREEN_MODE TO INITIALIZE OUR WINDOW
@@ -62,13 +59,13 @@ void BugginOutDataLoader::loadGame(Game *game, wstring gameInitFile)
 
 	// MAKE A CUSTOM GameOS OBJECT (WindowsOS) FOR SOME WINDOWS
 	// PLATFORM STUFF, INCLUDING A Window OF COURSE
-	WindowsOS *bugginOutOS = new WindowsOS(	hInstance, 
-										nCmdShow,
-										useFullscreen,
-										titleProp,
-										screenWidth, screenHeight,
-										game);
-	
+	WindowsOS *bugginOutOS = new WindowsOS(hInstance,
+		nCmdShow,
+		useFullscreen,
+		titleProp,
+		screenWidth, screenHeight,
+		game);
+
 	int textFontSize;
 	wstring textFontSizeProp = (*properties)[W_TEXT_FONT_SIZE];
 	wstringstream(textFontSizeProp) >> textFontSize;
@@ -91,32 +88,32 @@ void BugginOutDataLoader::loadGame(Game *game, wstring gameInitFile)
 
 	// NOW INITIALIZE THE Game WITH ALL THE
 	// PLATFORM AND GAME SPECIFIC DATA WE JUST CREATED
-	game->initPlatformPlugins(	(GameGraphics*)bugginOutGraphics,
-								(GameInput*)bugginOutInput,
-								(GameOS*)bugginOutOS,
-								(GameTimer*)bugginOutTimer);
+	game->initPlatformPlugins((GameGraphics*)bugginOutGraphics,
+		(GameInput*)bugginOutInput,
+		(GameOS*)bugginOutOS,
+		(GameTimer*)bugginOutTimer);
 
 	// LOAD OUR CUSTOM TEXT GENERATOR, WHICH DRAWS
 	// TEXT ON THE SCREEN EACH FRAME
-	BugginOutTextGenerator *bugginOutTextGenerator = new BugginOutTextGenerator();
-	bugginOutTextGenerator->initText(game);
+	LastBonfireTextGenerator *lastBonfireTextGenerator = new LastBonfireTextGenerator();
+	lastBonfireTextGenerator->initText(game);
 	GameText *text = game->getText();
 	text->initDebugFile(W_DEBUG_FILE);
-	text->setTextGenerator((TextGenerator*)bugginOutTextGenerator);
+	text->setTextGenerator((TextGenerator*)lastBonfireTextGenerator);
 
 	// INIT THE VIEWPORT TOO
-	initViewport(game->getGUI(), properties);	
+	initViewport(game->getGUI(), properties);
 
 	// WE DON'T NEED THE PROPERTIES MAP ANYMORE, THE GAME IS ALL LOADED
 	delete properties;
 }
 
 /*
-	initColors - this helper method loads the color key, used for loading
-	images, and the font color, used for rendering text.
+initColors - this helper method loads the color key, used for loading
+images, and the font color, used for rendering text.
 */
-void BugginOutDataLoader::initColors(	GameGraphics *graphics,
-									map<wstring,wstring> *properties)
+void LastBonfireDataLoader::initColors(GameGraphics *graphics,
+	map<wstring, wstring> *properties)
 {
 	int fontRed, fontGreen, fontBlue;
 	wstring fontRedProp = (*properties)[W_FONT_COLOR_RED];
@@ -144,11 +141,11 @@ void BugginOutDataLoader::initColors(	GameGraphics *graphics,
 }
 
 /*
-	loadGUI - This method loads all the GUI assets described in the guiInitFile
-	argument. Note that we are loading all GUI art for all GUIs when the application
-	first starts. We'll learn a better technique later in the semester.
+loadGUI - This method loads all the GUI assets described in the guiInitFile
+argument. Note that we are loading all GUI art for all GUIs when the application
+first starts. We'll learn a better technique later in the semester.
 */
-void BugginOutDataLoader::loadGUI(Game *game, wstring guiInitFile)
+void LastBonfireDataLoader::loadGUI(Game *game, wstring guiInitFile)
 {
 	// WE'RE JUST GOING TO IGNORE THE GUI FILE FOR NOW.
 	// FOR THE MOMENT WE ARE CALLING THIS HARD-CODED GUI LOADER
@@ -156,10 +153,10 @@ void BugginOutDataLoader::loadGUI(Game *game, wstring guiInitFile)
 }
 
 /*
-	loadLevel - This method should load the data the level described by the
-	levelInitFile argument in to the Game's game state manager.
+loadLevel - This method should load the data the level described by the
+levelInitFile argument in to the Game's game state manager.
 */
-void BugginOutDataLoader::loadWorld(Game *game, wstring levelInitFile)	
+void LastBonfireDataLoader::loadWorld(Game *game, wstring levelInitFile)
 {
 	// LOAD THE LEVEL'S BACKGROUND TILES
 	TMXMapImporter tmxMapImporter;
@@ -179,7 +176,7 @@ void BugginOutDataLoader::loadWorld(Game *game, wstring levelInitFile)
 	physics->addCollidableObject(player);
 
 	// NOTE THAT RED BOX MAN IS SPRITE ID 2
-	AnimatedSpriteType *playerSpriteType = spriteManager->getSpriteType(2);
+	AnimatedSpriteType *playerSpriteType = spriteManager->getSpriteType(0);
 	player->setSpriteType(playerSpriteType);
 	player->setAlpha(255);
 	player->setCurrentState(IDLE);
@@ -192,61 +189,14 @@ void BugginOutDataLoader::loadWorld(Game *game, wstring levelInitFile)
 	player->setOnTileThisFrame(false);
 	player->setOnTileLastFrame(false);
 	player->affixTightAABBBoundingVolume();
-
-	AnimatedSpriteType *botSpriteType = spriteManager->getSpriteType(1);
-	// AND LET'S ADD A BUNCH OF RANDOM JUMPING BOTS, FIRST ALONG
-	// A LINE NEAR THE TOP
-
-// UNCOMMENT THE FOLLOWING CODE BLOCK WHEN YOU ARE READY TO ADD SOME BOTS
-
-	for (int i = 2; i <= 26; i++)
-	{
-		float botX = 400.0f + (i * 100.0f);
-		float botY = 100.0f;
-		makeRandomJumpingBot(game, botSpriteType, botX, botY);
-	}
-
-	// AND THEN STRATEGICALLY PLACED AROUND THE LEVEL
-	makeRandomJumpingBot(game, botSpriteType, 400, 100);
-	makeRandomJumpingBot(game, botSpriteType, 200, 400);
-	makeRandomJumpingBot(game, botSpriteType, 400, 400);
-	makeRandomJumpingBot(game, botSpriteType, 800, 700);
-	makeRandomJumpingBot(game, botSpriteType, 900, 700);
-	makeRandomJumpingBot(game, botSpriteType, 1000, 700);
-	makeRandomJumpingBot(game, botSpriteType, 100, 1000);
-	makeRandomJumpingBot(game, botSpriteType, 300, 1000);	
-	makeRandomJumpingBot(game, botSpriteType, 500, 1000);
-	makeRandomJumpingBot(game, botSpriteType, 100, 1400);
-	makeRandomJumpingBot(game, botSpriteType, 400, 1400);	
-	makeRandomJumpingBot(game, botSpriteType, 700, 1400);
-
-	// AND THEN A BUNCH LINED UP NEAR THE LEVEL EXIT
-	for (int i = 0; i < 14; i++)
-		makeRandomJumpingBot(game, botSpriteType, 1700.0f + (i*100.0f), 1300.0f);
-
-}
-
-void BugginOutDataLoader::makeRandomJumpingBot(Game *game, AnimatedSpriteType *randomJumpingBotType, float initX, float initY)
-{
-	SpriteManager *spriteManager = game->getGSM()->getSpriteManager();
-	Physics *physics = game->getGSM()->getPhysics();
-	RandomJumpingBot *bot = new RandomJumpingBot(physics, 30, 120, 40);
-	physics->addCollidableObject(bot);
-	PhysicalProperties *pp = bot->getPhysicalProperties();
-	pp->setPosition(initX, initY);
-	bot->setSpriteType(randomJumpingBotType);
-	bot->setCurrentState(JUMPING);
-	bot->setAlpha(255);
-	spriteManager->addBot(bot);
-	bot->affixTightAABBBoundingVolume();
 }
 
 /*
-	initBugginOutGUI - This method builds a GUI for the BugginOut Game application.
-	Note that we load all the GUI components from this method, including
-	the ScreenGUI with Buttons and Overlays and the Cursor.
+initBugginOutGUI - This method builds a GUI for the BugginOut Game application.
+Note that we load all the GUI components from this method, including
+the ScreenGUI with Buttons and Overlays and the Cursor.
 */
-void BugginOutDataLoader::hardCodedLoadGUIExample(Game *game)
+void LastBonfireDataLoader::hardCodedLoadGUIExample(Game *game)
 {
 	GameGUI *gui = game->getGUI();
 	GameGraphics *graphics = game->getGraphics();
@@ -260,9 +210,9 @@ void BugginOutDataLoader::hardCodedLoadGUIExample(Game *game)
 }
 
 /*
-	initCursor - initializes a simple little cursor for the gui.
+initCursor - initializes a simple little cursor for the gui.
 */
-void BugginOutDataLoader::initCursor(GameGUI *gui, DirectXTextureManager *guiTextureManager)
+void LastBonfireDataLoader::initCursor(GameGUI *gui, DirectXTextureManager *guiTextureManager)
 {
 	// SETUP THE CURSOR
 	vector<unsigned int> *imageIDs = new vector<unsigned int>();
@@ -278,21 +228,21 @@ void BugginOutDataLoader::initCursor(GameGUI *gui, DirectXTextureManager *guiTex
 
 	// - NOW BUILD AND LOAD THE CURSOR
 	Cursor *cursor = new Cursor();
-	cursor->initCursor(	imageIDs,
-						*(imageIDs->begin()),
-						0,
-						0,
-						0,
-						255,
-						32,
-						32);
+	cursor->initCursor(imageIDs,
+		*(imageIDs->begin()),
+		0,
+		0,
+		0,
+		255,
+		32,
+		32);
 	gui->setCursor(cursor);
 }
 
 /*
-	initSplashScreen - initializes the game's splash screen gui.
+initSplashScreen - initializes the game's splash screen gui.
 */
-void BugginOutDataLoader::initSplashScreen(Game *game, GameGUI *gui,	DirectXTextureManager *guiTextureManager)
+void LastBonfireDataLoader::initSplashScreen(Game *game, GameGUI *gui, DirectXTextureManager *guiTextureManager)
 {
 	// NOW, FIRST LET'S ADD A SPLASH SCREEN GUI
 	ScreenGUI *splashScreenGUI = new ScreenGUI();
@@ -314,16 +264,16 @@ void BugginOutDataLoader::initSplashScreen(Game *game, GameGUI *gui,	DirectXText
 
 	// INIT THE QUIT BUTTON
 	Button *buttonToAdd = new Button();
-	buttonToAdd->initButton(normalTextureID, 
-							mouseOverTextureID,
-							300,
-							257,
-							0,
-							255,
-							400,
-							409,
-							false,
-							W_GO_TO_MM_COMMAND);
+	buttonToAdd->initButton(normalTextureID,
+		mouseOverTextureID,
+		300,
+		257,
+		0,
+		255,
+		400,
+		409,
+		false,
+		W_GO_TO_MM_COMMAND);
 	splashScreenGUI->addButton(buttonToAdd);
 
 	// AND REGISTER IT WITH THE GUI
@@ -331,9 +281,9 @@ void BugginOutDataLoader::initSplashScreen(Game *game, GameGUI *gui,	DirectXText
 }
 
 /*
-	initMainMenu - initializes the game's main menu gui.
+initMainMenu - initializes the game's main menu gui.
 */
-void BugginOutDataLoader::initMainMenu(GameGUI *gui,	DirectXTextureManager *guiTextureManager)
+void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *guiTextureManager)
 {
 	// NOW LET'S LOAD A MAIN MENU GUI SCREEN
 	ScreenGUI *mainMenuGUI = new ScreenGUI();
@@ -356,16 +306,16 @@ void BugginOutDataLoader::initMainMenu(GameGUI *gui,	DirectXTextureManager *guiT
 	int mouseOverTextureID = guiTextureManager->loadTexture(W_EXIT_IMAGE_MO_PATH);
 
 	// - INIT THE EXIT BUTTON
-	buttonToAdd->initButton(normalTextureID, 
-							mouseOverTextureID,
-							400,
-							700,
-							0,
-							255,
-							200,
-							50,
-							false,
-							W_EXIT_COMMAND);
+	buttonToAdd->initButton(normalTextureID,
+		mouseOverTextureID,
+		400,
+		700,
+		0,
+		255,
+		200,
+		50,
+		false,
+		W_EXIT_COMMAND);
 
 	// AND NOW LOAD IT INTO A ScreenGUI
 	mainMenuGUI->addButton(buttonToAdd);
@@ -379,16 +329,16 @@ void BugginOutDataLoader::initMainMenu(GameGUI *gui,	DirectXTextureManager *guiT
 	mouseOverTextureID = guiTextureManager->loadTexture(W_START_IMAGE_MO_PATH);
 
 	// - INIT THE START BUTTON
-	buttonToAdd->initButton(normalTextureID, 
-							mouseOverTextureID,
-							100,
-							700,
-							0,
-							255,
-							200,
-							50,
-							false,
-							W_START_COMMAND);
+	buttonToAdd->initButton(normalTextureID,
+		mouseOverTextureID,
+		100,
+		700,
+		0,
+		255,
+		200,
+		50,
+		false,
+		W_START_COMMAND);
 
 	// AND NOW LOAD IT INTO A ScreenGUI
 	mainMenuGUI->addButton(buttonToAdd);
@@ -396,55 +346,55 @@ void BugginOutDataLoader::initMainMenu(GameGUI *gui,	DirectXTextureManager *guiT
 	buttonToAdd = new Button();
 	normalTextureID = guiTextureManager->loadTexture(W_LOAD_IMAGE_PATH);
 	mouseOverTextureID = guiTextureManager->loadTexture(W_LOAD_IMAGE_MO_PATH);
-	buttonToAdd->initButton(normalTextureID, 
-							mouseOverTextureID,
-							700,
-							700,
-							0,
-							255,
-							200,
-							50,
-							false,
-							W_LOAD_COMMAND);
+	buttonToAdd->initButton(normalTextureID,
+		mouseOverTextureID,
+		700,
+		700,
+		0,
+		255,
+		200,
+		50,
+		false,
+		W_LOAD_COMMAND);
 	mainMenuGUI->addButton(buttonToAdd);
 
 	// AND LET'S ADD OUR SCREENS
-	gui->addScreenGUI(GS_MAIN_MENU,	mainMenuGUI);
+	gui->addScreenGUI(GS_MAIN_MENU, mainMenuGUI);
 }
 
 /*
-	initInGameGUI - initializes the game's in-game gui.
+initInGameGUI - initializes the game's in-game gui.
 */
-void BugginOutDataLoader::initInGameGUI(GameGUI *gui, DirectXTextureManager *guiTextureManager)
+void LastBonfireDataLoader::initInGameGUI(GameGUI *gui, DirectXTextureManager *guiTextureManager)
 {
 	// NOW ADD THE IN-GAME GUI
 	ScreenGUI *inGameGUI = new ScreenGUI();
 
-	unsigned int normalTextureID = guiTextureManager->loadTexture(W_QUIT_IMAGE_PATH);
-	unsigned int mouseOverTextureID = guiTextureManager->loadTexture(W_QUIT_IMAGE_MO_PATH);
+	//unsigned int normalTextureID = guiTextureManager->loadTexture(W_QUIT_IMAGE_PATH);
+	//unsigned int mouseOverTextureID = guiTextureManager->loadTexture(W_QUIT_IMAGE_MO_PATH);
 
-	// INIT THE QUIT BUTTON
-	Button *buttonToAdd = new Button();
-	buttonToAdd->initButton(normalTextureID, 
-							mouseOverTextureID,
-							0,
-							0,
-							0,
-							255,
-							200,
-							100,
-							false,
-							W_QUIT_COMMAND);
-	inGameGUI->addButton(buttonToAdd);
+	//// INIT THE QUIT BUTTON
+	//Button *buttonToAdd = new Button();
+	//buttonToAdd->initButton(normalTextureID,
+	//	mouseOverTextureID,
+	//	0,
+	//	0,
+	//	0,
+	//	255,
+	//	200,
+	//	100,
+	//	false,
+	//	W_QUIT_COMMAND);
+	//inGameGUI->addButton(buttonToAdd);
 
 	// AND LET'S ADD OUR SCREENS
-	gui->addScreenGUI(GS_GAME_IN_PROGRESS,	inGameGUI);
+	gui->addScreenGUI(GS_GAME_IN_PROGRESS, inGameGUI);
 }
 
 /*
-	initViewport - initializes the game's viewport.
+initViewport - initializes the game's viewport.
 */
-void BugginOutDataLoader::initViewport(GameGUI *gui, map<wstring,wstring> *properties)
+void LastBonfireDataLoader::initViewport(GameGUI *gui, map<wstring, wstring> *properties)
 {
 	// AND NOW SPECIFY THE VIEWPORT SIZE AND LOCATION. NOTE THAT IN THIS EXAMPLE,
 	// WE ARE PUTTING A TOOLBAR WITH A BUTTON ACCROSS THE NORTH OF THE APPLICATION.
@@ -468,6 +418,5 @@ void BugginOutDataLoader::initViewport(GameGUI *gui, map<wstring,wstring> *prope
 	viewport->setViewportWidth(viewportWidth);
 	viewport->setViewportHeight(viewportHeight);
 	viewport->setViewportOffsetX(viewportOffsetX);
-	viewport->setViewportOffsetY(viewportOffsetY);
 	viewport->setToggleOffsetY(toggleOffsetY);
 }

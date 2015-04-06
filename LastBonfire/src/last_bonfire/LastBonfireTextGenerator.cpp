@@ -1,16 +1,6 @@
-/*
-	Author: Richard McKenna
-			Stony Brook University
-			Computer Science Department
-
-	BugginOutTextGenerator.cpp
-
-	See BugginOutTextGenerator.h for a class description.
-*/
-
 #include "last_bonfire_VS\stdafx.h"
 #include "last_bonfire\LastBonfire.h"
-#include "last_bonfire\BugginOutTextGenerator.h"
+#include "last_bonfire\LastBonfireTextGenerator.h"
 #include "sssf\game\Game.h"
 #include "sssf\graphics\GameGraphics.h"
 #include "sssf\text\GameText.h"
@@ -22,7 +12,7 @@ static const wstring	W_MOUSE_COORDS_TEXT = L"Mouse: (";
 static const int		W_TEXT_X = 200;
 static const int		W_TEXT_Y = 10;
 
-void BugginOutTextGenerator::appendMouseCoords(Game *game)
+void LastBonfireTextGenerator::appendMouseCoords(Game *game)
 {
 	wstringstream wss;
 	WindowsInput *input = (WindowsInput*)game->getInput();
@@ -36,12 +26,12 @@ void BugginOutTextGenerator::appendMouseCoords(Game *game)
 }
 
 /*
-	initText - Provides an example of how to render text to our screen every frame,
-	allowing for the text to continually change. This method adds a text object
-	to the text manager (GameText), which allows it to be updated each frame. This
-	method should be called only once for each object.
+initText - Provides an example of how to render text to our screen every frame,
+allowing for the text to continually change. This method adds a text object
+to the text manager (GameText), which allows it to be updated each frame. This
+method should be called only once for each object.
 */
-void BugginOutTextGenerator::initText(Game *game)
+void LastBonfireTextGenerator::initText(Game *game)
 {
 	// FIRST UPDATE THE TEXT THIS GENERATOR IS USING
 	appendMouseCoords(game);
@@ -52,11 +42,11 @@ void BugginOutTextGenerator::initText(Game *game)
 }
 
 /*
-	updateText - updates the text. Note that the text must already have been added
-	to the text manager via the initText method. Also not that there should be a
-	separate TextGenerator for each line of text we wish to render.
+updateText - updates the text. Note that the text must already have been added
+to the text manager via the initText method. Also not that there should be a
+separate TextGenerator for each line of text we wish to render.
 */
-void BugginOutTextGenerator::updateText(Game *game)
+void LastBonfireTextGenerator::updateText(Game *game)
 {
 	// THE TEXT MANAGER (GameText) HAS A POINTER TO OUR TEXT, SO WE CAN
 	// SIMPLY CLEAR IT OUT OF OLD CHARACTER DATA AND FILL IT IN WITH

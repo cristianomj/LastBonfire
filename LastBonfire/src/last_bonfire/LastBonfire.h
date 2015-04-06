@@ -9,8 +9,8 @@
 */
 
 // HERE IS THE BugginOut GAME SETUP/INIT FILE. EVERYTHING WOULD START FROM HERE
-static const wstring	W_LEVEL_1_DIR			= L"data/levels/SideScrollerDesert/";
-static const wstring	W_LEVEL_1_NAME			= L"SideScrollerDesertLevel.tmx";
+static const wstring	W_LEVEL_1_DIR			= L"data/levels/SideScrollerRoom/";
+static const wstring	W_LEVEL_1_NAME			= L"SideScrollerRoomLevel.tmx";
 static const wstring	W_LEVEL_1_PATH			= W_LEVEL_1_DIR + W_LEVEL_1_NAME;
 static const wstring	W_INIT_FILE				= L"data/LastBonfireInit.txt";
 static const wstring	W_GUI_INIT_FILE			= L"data/LastBonfireGUI.txt";
@@ -38,7 +38,7 @@ static const wstring	W_START_COMMAND			= L"Start";
 static const wstring	W_LOAD_COMMAND			= L"Load";
 static const wstring	W_EXIT_COMMAND			= L"Exit";
 static const wstring	W_QUIT_COMMAND			= L"Quit";
-static const wstring	W_GREEN_CURSOR_PATH		= L"data/gui/cursor/green_cursor.png";
+static const wstring	W_GREEN_CURSOR_PATH		= L"data/gui/cursor/flame_cursor.png";
 static const wstring	W_RED_CURSOR_PATH		= L"data/gui/cursor/red_cursor.png";
 static const wstring	W_SPLASH_SCREEN_PATH	= L"data/gui/overlays/last_bonfire_splash_screen_overlay.png";
 static const wstring	W_MAIN_MENU_PATH		= L"data/gui/overlays/last_bonfire_main_menu_overlay.png";

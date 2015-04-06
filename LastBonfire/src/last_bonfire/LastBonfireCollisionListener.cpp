@@ -1,8 +1,8 @@
 #include "sssf\game\Game.h"
 #include "sssf\gsm\physics\Collision.h"
-#include "last_bonfire\BugginOutCollisionListener.h"
+#include "last_bonfire\LastBonfireCollisionListener.h"
 
-void BugginOutCollisionListener::respondToCollision(Game *game, Collision *collision)
+void LastBonfireCollisionListener::respondToCollision(Game *game, Collision *collision)
 {
 	// NOTE FROM THE COLLIDABLE OBJECTS, WHICH ARE IN THE COLLISION,
 	// WE CAN CHECK AND SEE ON WHICH SIDE THE COLLISION HAPPENED AND

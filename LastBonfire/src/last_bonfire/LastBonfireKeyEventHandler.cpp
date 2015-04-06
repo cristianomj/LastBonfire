@@ -1,16 +1,6 @@
-/*
-	Author: Richard McKenna
-			Stony Brook University
-			Computer Science Department
-
-	BugginOutKeyEventHandler.cpp
-
-	See BugginOutKeyEventHandler.h for a class description.
-*/
-
 #include "last_bonfire_VS\stdafx.h"
 #include "last_bonfire\LastBonfire.h"
-#include "last_bonfire\BugginOutKeyEventHandler.h"
+#include "last_bonfire\LastBonfireKeyEventHandler.h"
 #include "sssf\game\Game.h"
 #include "sssf\game\WStringTable.h"
 #include "sssf\graphics\GameGraphics.h"
@@ -26,12 +16,12 @@
 #include "sssf\platforms\Windows\WindowsTimer.h"
 
 /*
-	handleKeyEvent - this method handles all keyboard interactions. Note that every frame this method
-	gets called and it can respond to key interactions in any custom way. Ask the GameInput class for
-	key states since the last frame, which can allow us to respond to key presses, including when keys
-	are held down for multiple frames.
+handleKeyEvent - this method handles all keyboard interactions. Note that every frame this method
+gets called and it can respond to key interactions in any custom way. Ask the GameInput class for
+key states since the last frame, which can allow us to respond to key presses, including when keys
+are held down for multiple frames.
 */
-void BugginOutKeyEventHandler::handleKeyEvents(Game *game)
+void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 {
 	// WE CAN QUERY INPUT TO SEE WHAT WAS PRESSED
 	GameInput *input = game->getInput();
@@ -41,7 +31,7 @@ void BugginOutKeyEventHandler::handleKeyEvents(Game *game)
 	AnimatedSprite *player = gsm->getSpriteManager()->getPlayer();
 	PhysicalProperties *pp = player->getPhysicalProperties();
 	Viewport *viewport = game->getGUI()->getViewport();
-	
+
 	// IF THE GAME IS IN PROGRESS
 	if (gsm->isGameInProgress())
 	{
@@ -94,7 +84,7 @@ void BugginOutKeyEventHandler::handleKeyEvents(Game *game)
 		}
 
 		// NOW SET THE ACTUAL PLAYER VELOCITY
- 		pp->setVelocity(vX, vY);
+		pp->setVelocity(vX, vY);
 
 		bool viewportMoved = false;
 		float viewportVx = 0.0f;
@@ -121,8 +111,8 @@ void BugginOutKeyEventHandler::handleKeyEvents(Game *game)
 		}
 		Viewport *viewport = game->getGUI()->getViewport();
 		if (viewportMoved)
-			viewport->moveViewport((int)floor(viewportVx+0.5f), (int)floor(viewportVy+0.5f), game->getGSM()->getWorld()->getWorldWidth(), game->getGSM()->getWorld()->getWorldHeight());
-		
+			viewport->moveViewport((int)floor(viewportVx + 0.5f), (int)floor(viewportVy + 0.5f), game->getGSM()->getWorld()->getWorldWidth(), game->getGSM()->getWorld()->getWorldHeight());
+
 	}
 
 	// 0X43 is HEX FOR THE 'C' VIRTUAL KEY
@@ -134,7 +124,7 @@ void BugginOutKeyEventHandler::handleKeyEvents(Game *game)
 		unsigned int id = cursor->getActiveCursorID();
 		id++;
 		if (id == cursor->getNumCursorIDs())
-			id = 0;		
+			id = 0;
 		cursor->setActiveCursorID(id);
 	}
 

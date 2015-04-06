@@ -94,23 +94,23 @@
     <Text Include="src\last_bonfire_VS\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\last_bonfire\BugginOutButtonEventHandler.h" />
-    <ClInclude Include="src\last_bonfire\BugginOutCollisionListener.h" />
-    <ClInclude Include="src\last_bonfire\BugginOutDataLoader.h" />
-    <ClInclude Include="src\last_bonfire\BugginOutKeyEventHandler.h" />
-    <ClInclude Include="src\last_bonfire\BugginOutTextGenerator.h" />
     <ClInclude Include="src\last_bonfire\LastBonfire.h" />
+    <ClInclude Include="src\last_bonfire\LastBonfireButtonEventHandler.h" />
+    <ClInclude Include="src\last_bonfire\LastBonfireCollisionListener.h" />
+    <ClInclude Include="src\last_bonfire\LastBonfireDataLoader.h" />
+    <ClInclude Include="src\last_bonfire\LastBonfireKeyEventHandler.h" />
+    <ClInclude Include="src\last_bonfire\LastBonfireTextGenerator.h" />
     <ClInclude Include="src\last_bonfire_VS\Resource.h" />
     <ClInclude Include="src\last_bonfire_VS\stdafx.h" />
     <ClInclude Include="src\last_bonfire_VS\targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\last_bonfire\BugginOutButtonEventHandler.cpp" />
-    <ClCompile Include="src\last_bonfire\BugginOutCollisionListener.cpp" />
-    <ClCompile Include="src\last_bonfire\BugginOutDataLoader.cpp" />
-    <ClCompile Include="src\last_bonfire\BugginOutKeyEventHandler.cpp" />
-    <ClCompile Include="src\last_bonfire\BugginOutTextGenerator.cpp" />
     <ClCompile Include="src\last_bonfire\LastBonfire.cpp" />
+    <ClCompile Include="src\last_bonfire\LastBonfireButtonEventHandler.cpp" />
+    <ClCompile Include="src\last_bonfire\LastBonfireCollisionListener.cpp" />
+    <ClCompile Include="src\last_bonfire\LastBonfireDataLoader.cpp" />
+    <ClCompile Include="src\last_bonfire\LastBonfireKeyEventHandler.cpp" />
+    <ClCompile Include="src\last_bonfire\LastBonfireTextGenerator.cpp" />
     <ClCompile Include="src\last_bonfire_VS\stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
