@@ -77,7 +77,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
 	// THIS WILL HANDLE PHYSICS COLLISION EVENTS
 	LastBonfireCollisionListener *lastBonfireCollisionListener = new LastBonfireCollisionListener();
-	lastBonfire->getGSM()->getPhysics()->setCollisionListener(lastBonfireCollisionListener);
+	//lastBonfire->getGSM()->getPhysics()->setCollisionListener(lastBonfireCollisionListener);
 
 	// START THE GAME LOOP
 	lastBonfire->runGameLoop();

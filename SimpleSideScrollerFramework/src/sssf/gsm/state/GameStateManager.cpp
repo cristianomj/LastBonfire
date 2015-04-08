@@ -224,8 +224,8 @@ void GameStateManager::update(Game *game)
 {
 	spriteManager->update(game);
 	world.update(game);
-	if (physics.isActivated() || physics.isActivatedForSingleUpdate())
-	{
+	/*if (physics.isActivated() || physics.isActivatedForSingleUpdate())
+	{*/
 		physics.update(game);
-	}
+	//}
 }

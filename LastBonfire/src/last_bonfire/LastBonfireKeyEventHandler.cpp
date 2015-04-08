@@ -76,11 +76,11 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 		}
 		if (input->isKeyDownForFirstTime(P_KEY))
 		{
-			gsm->getPhysics()->togglePhysics();
+			//gsm->getPhysics()->togglePhysics();
 		}
 		if (input->isKeyDownForFirstTime(T_KEY))
 		{
-			gsm->getPhysics()->activateForSingleUpdate();
+			//gsm->getPhysics()->activateForSingleUpdate();
 		}
 
 		// NOW SET THE ACTUAL PLAYER VELOCITY

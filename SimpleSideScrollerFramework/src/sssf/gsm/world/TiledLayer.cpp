@@ -294,7 +294,7 @@ void TiledLayer::setTile(Tile *initTile, int row, int column)
 void TiledLayer::findTileCollisionsForSprite(	Physics *physics,
 												CollidableObject *dynamicObject)
 {
-	int startColumn, endColumn, startRow, endRow;
+	/*int startColumn, endColumn, startRow, endRow;
 	AABB *aabb = dynamicObject->getSweptShape();
 	initOverlappingCellRange(aabb, startColumn, endColumn, startRow, endRow);
 	if (aabb->getCenterX() >= 288)
@@ -311,13 +311,13 @@ void TiledLayer::findTileCollisionsForSprite(	Physics *physics,
 				physics->addTileCollision(dynamicObject, testTile, tileX, tileY, (float)tileWidth, (float)tileHeight);
 			}
 		}
-	}
+	}*/
 }
 
 bool TiledLayer::willSpriteCollideOnTile(	Physics *physics,
 											CollidableObject *dynamicObject)
 {
-	int startCol, endCol, startRow, endRow;
+	/*int startCol, endCol, startRow, endRow;
 	AABB *ss = dynamicObject->getSweptShape();
 	initOverlappingCellRange(ss, startCol, endCol, startRow, endRow);
 	AABB tileAABB;
@@ -337,7 +337,7 @@ bool TiledLayer::willSpriteCollideOnTile(	Physics *physics,
 			if (willCollide)
 				return true;
 		}
-	}
+	}*/
 	return false;
 }
 
