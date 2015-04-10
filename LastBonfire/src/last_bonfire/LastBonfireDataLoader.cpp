@@ -170,6 +170,7 @@ void LastBonfireDataLoader::loadWorld(Game *game, wstring levelInitFile)
 	// @TODO - IT WOULD BE BETTER TO LOAD THIS STUFF FROM A FILE
 	GameStateManager *gsm = game->getGSM();
 	Physics *physics = gsm->getPhysics();
+
 	//physics->setGravity(W_GRAVITY);
 	SpriteManager *spriteManager = gsm->getSpriteManager();
 	AnimatedSprite *player = spriteManager->getPlayer();
@@ -189,6 +190,9 @@ void LastBonfireDataLoader::loadWorld(Game *game, wstring levelInitFile)
 	player->setOnTileThisFrame(false);
 	player->setOnTileLastFrame(false);
 	player->affixTightAABBBoundingVolume();
+	player->getPhysicalProperties()->setPosition(300, 64);
+
+	physics->createPlayer(player);
 }
 
 /*

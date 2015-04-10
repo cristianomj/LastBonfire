@@ -7,12 +7,6 @@
 #include "sssf\gsm\world\Tile.h"
 #include <Box2D\Box2D.h>
 
-const float EPSILON = 0.00001f;
-const float DEFAULT_GRAVITY = 0.3f;
-const float BUFFER_BETWEEN_OBJECTS = 0.2f;
-const float NUDGE_VELOCITY = 0.3f;
-const float ENERGY_LOSS = 0.95f;
-
 struct Settings
 {
 	Settings()
@@ -21,27 +15,30 @@ struct Settings
 		ratio = 64.0f;
 		velocityIterations = 6;
 		positionIterations = 2;
-		enableWarmStarting = 1;
-		enableContinuous = 1;
-		enableSleep = 1;
+		enableWarmStarting = true;
+		enableContinuous = true;
+		enableSleep = true;
 	}
 
 	float32 hz;
 	float32 ratio;
 	int32 velocityIterations;
 	int32 positionIterations;
-	int32 enableWarmStarting;
-	int32 enableContinuous;
-	int32 enableSleep;
+	bool enableWarmStarting;
+	bool enableContinuous;
+	bool enableSleep;
 	
 };
 
+class AnimatedSprite;
+
 class Physics : public b2ContactListener
 {
-//private:
 public:
 	// BOX2D STUFF
-	b2World *world;
+	b2World* world;
+	b2Body* playerbody;
+	AnimatedSprite* player;
 
 	// CONSTRUCTOR/DESTRUCTOR
 	Physics();
@@ -51,11 +48,11 @@ public:
 
 	// PUBLIC METHODS DEFINED INSIDE Physics.cpp
 	void update(Game* game);
+	void createPlayer(AnimatedSprite* initPlayer);
 
 	// HELPER METHODS DEFINED INSIDE Physics.cpp
 private:
 	void Step(Settings* settings);
 	void createWorld(Settings* settings);
 	void createRoom(Settings* settings);
-	void createPlayer(Settings* settings);
 };
