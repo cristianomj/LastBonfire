@@ -21,9 +21,6 @@ AnimatedSprite::AnimatedSprite()
 	spriteType = 0;
 	frameIndex = 0;
 	animationCounter = 0;
-	pp.setVelocity(0.0f, 0.0f);
-	pp.setAccelerationX(0.0f);
-	pp.setAccelerationY(0.0f);
 	pp.setPosition(0.0f, 0.0f);
 }
 

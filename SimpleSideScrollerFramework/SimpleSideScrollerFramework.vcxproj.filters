@@ -65,6 +65,12 @@
     <Filter Include="src\sssf\platforms\Windows">
       <UniqueIdentifier>{9a2ecd2f-2b7c-47fd-bb83-6c6d66626dd8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\sssf\gsm\rubestuff">
+      <UniqueIdentifier>{c5704c44-90a4-4f38-8cf7-7766ec19ab52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sssf\gsm\rubestuff\json">
+      <UniqueIdentifier>{6962607c-54fd-4eac-8354-3fb77d9079aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="src\sssf_VS\ReadMe.txt">
@@ -173,6 +179,15 @@
     </ClCompile>
     <ClCompile Include="src\sssf\platforms\Windows\WindowsTimer.cpp">
       <Filter>src\sssf\platforms\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\rubestuff\b2dJson.cpp">
+      <Filter>src\sssf\gsm\rubestuff</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\rubestuff\b2dJsonImage.cpp">
+      <Filter>src\sssf\gsm\rubestuff</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\rubestuff\jsoncpp.cpp">
+      <Filter>src\sssf\gsm\rubestuff</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -325,6 +340,21 @@
     </ClInclude>
     <ClInclude Include="src\sssf\os\GameOS.h">
       <Filter>src\sssf\os</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\rubestuff\b2dJson.h">
+      <Filter>src\sssf\gsm\rubestuff</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\rubestuff\b2dJsonImage.h">
+      <Filter>src\sssf\gsm\rubestuff</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\rubestuff\bitmap.h">
+      <Filter>src\sssf\gsm\rubestuff</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\rubestuff\json\json.h">
+      <Filter>src\sssf\gsm\rubestuff\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\rubestuff\json\json-forwards.h">
+      <Filter>src\sssf\gsm\rubestuff\json</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

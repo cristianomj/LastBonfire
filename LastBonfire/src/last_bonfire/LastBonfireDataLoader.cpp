@@ -174,7 +174,6 @@ void LastBonfireDataLoader::loadWorld(Game *game, wstring levelInitFile)
 	//physics->setGravity(W_GRAVITY);
 	SpriteManager *spriteManager = gsm->getSpriteManager();
 	AnimatedSprite *player = spriteManager->getPlayer();
-	//physics->addCollidableObject(player);
 
 	// NOTE THAT RED BOX MAN IS SPRITE ID 2
 	AnimatedSpriteType *playerSpriteType = spriteManager->getSpriteType(0);
@@ -182,17 +181,16 @@ void LastBonfireDataLoader::loadWorld(Game *game, wstring levelInitFile)
 	player->setAlpha(255);
 	player->setCurrentState(IDLE);
 	PhysicalProperties *playerProps = player->getPhysicalProperties();
-	playerProps->setX(PLAYER_INIT_X);
-	playerProps->setY(PLAYER_INIT_Y);
 	playerProps->setVelocity(0.0f, 0.0f);
 	playerProps->setAccelerationX(0);
 	playerProps->setAccelerationY(0);
 	player->setOnTileThisFrame(false);
 	player->setOnTileLastFrame(false);
 	player->affixTightAABBBoundingVolume();
-	player->getPhysicalProperties()->setPosition(300, 64);
+	player->getPhysicalProperties()->setPosition(800.0f, 384.0f);
 
-	physics->createPlayer(player);
+	physics->setPlayerProperties(player);
+	physics->loadScene(RUBE_LEVEL_1);
 }
 
 /*

@@ -31,6 +31,7 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 	AnimatedSprite *player = gsm->getSpriteManager()->getPlayer();
 	PhysicalProperties *pp = player->getPhysicalProperties();
 	Viewport *viewport = game->getGUI()->getViewport();
+	Physics* physics = game->getGSM()->getPhysics();
 
 	// IF THE GAME IS IN PROGRESS
 	if (gsm->isGameInProgress())

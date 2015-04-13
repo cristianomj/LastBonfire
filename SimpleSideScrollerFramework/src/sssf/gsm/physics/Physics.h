@@ -13,21 +13,17 @@ struct Settings
 	{
 		hz = 60.0f;
 		ratio = 64.0f;
-		velocityIterations = 6;
+		velocityIterations = 8;
 		positionIterations = 2;
-		enableWarmStarting = true;
-		enableContinuous = true;
-		enableSleep = true;
 	}
 
 	float32 hz;
 	float32 ratio;
 	int32 velocityIterations;
 	int32 positionIterations;
-	bool enableWarmStarting;
-	bool enableContinuous;
-	bool enableSleep;
 	
+	float32 playerOffsetX;
+	float32 playerOffsetY;
 };
 
 class AnimatedSprite;
@@ -37,8 +33,9 @@ class Physics : public b2ContactListener
 public:
 	// BOX2D STUFF
 	b2World* world;
-	b2Body* playerbody;
+	b2Body* playerBody;
 	AnimatedSprite* player;
+	Settings settings;
 
 	// CONSTRUCTOR/DESTRUCTOR
 	Physics();
@@ -49,10 +46,10 @@ public:
 	// PUBLIC METHODS DEFINED INSIDE Physics.cpp
 	void update(Game* game);
 	void createPlayer(AnimatedSprite* initPlayer);
+	void loadScene(const char* level);
+	void setPlayerProperties(AnimatedSprite* initPlayer);
 
 	// HELPER METHODS DEFINED INSIDE Physics.cpp
 private:
-	void Step(Settings* settings);
-	void createWorld(Settings* settings);
-	void createRoom(Settings* settings);
+	void Box2DToScreen(float32 &, float32 &);
 };

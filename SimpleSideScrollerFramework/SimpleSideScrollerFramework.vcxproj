@@ -26,6 +26,9 @@
     <ClCompile Include="src\sssf\gsm\physics\AABB.cpp" />
     <ClCompile Include="src\sssf\gsm\physics\CollidableObject.cpp" />
     <ClCompile Include="src\sssf\gsm\physics\Physics.cpp" />
+    <ClCompile Include="src\sssf\gsm\rubestuff\b2dJson.cpp" />
+    <ClCompile Include="src\sssf\gsm\rubestuff\b2dJsonImage.cpp" />
+    <ClCompile Include="src\sssf\gsm\rubestuff\jsoncpp.cpp" />
     <ClCompile Include="src\sssf\gsm\sprite\AnimatedSprite.cpp" />
     <ClCompile Include="src\sssf\gsm\sprite\AnimatedSpriteType.cpp" />
     <ClCompile Include="src\sssf\gsm\sprite\SpriteManager.cpp" />
@@ -68,6 +71,11 @@
     <ClInclude Include="src\sssf\gsm\physics\CollisionListener.h" />
     <ClInclude Include="src\sssf\gsm\physics\PhysicalProperties.h" />
     <ClInclude Include="src\sssf\gsm\physics\Physics.h" />
+    <ClInclude Include="src\sssf\gsm\rubestuff\b2dJson.h" />
+    <ClInclude Include="src\sssf\gsm\rubestuff\b2dJsonImage.h" />
+    <ClInclude Include="src\sssf\gsm\rubestuff\bitmap.h" />
+    <ClInclude Include="src\sssf\gsm\rubestuff\json\json-forwards.h" />
+    <ClInclude Include="src\sssf\gsm\rubestuff\json\json.h" />
     <ClInclude Include="src\sssf\gsm\sprite\AnimatedSprite.h" />
     <ClInclude Include="src\sssf\gsm\sprite\AnimatedSpriteType.h" />
     <ClInclude Include="src\sssf\gsm\sprite\SpriteManager.h" />
