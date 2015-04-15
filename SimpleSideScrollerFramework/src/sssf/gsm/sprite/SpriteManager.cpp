@@ -70,13 +70,13 @@ void SpriteManager::addSpriteItemsToRenderList(	Game *game)
 		addSpriteToRenderList(&player, renderList, viewport);
 
 		// NOW ADD THE REST OF THE SPRITES
-		list<Bot*>::iterator botIterator;
-		botIterator = bots.begin();
-		while (botIterator != bots.end())
+		list<LifelessObject*>::iterator objectIterator;
+		objectIterator = objects.begin();
+		while (objectIterator != objects.end())
 		{			
-			Bot *bot = (*botIterator);
-			addSpriteToRenderList(bot, renderList, viewport);
-			botIterator++;
+			LifelessObject *object = (*objectIterator);
+			addSpriteToRenderList(object, renderList, viewport);
+			objectIterator++;
 		}
 	}
 }
@@ -86,9 +86,9 @@ void SpriteManager::addSpriteItemsToRenderList(	Game *game)
 	this sprite manager. Once a sprite is added it can be 
 	scheduled for rendering.
 */
-void SpriteManager::addBot(Bot *botToAdd)
+void SpriteManager::addObject(LifelessObject *objectToAdd)
 {
-	bots.push_back(botToAdd);
+	objects.push_back(objectToAdd);
 }
 
 /*
@@ -112,7 +112,7 @@ unsigned int SpriteManager::addSpriteType(AnimatedSpriteType *spriteTypeToAdd)
 void SpriteManager::clearSprites()
 {
 	spriteTypes.clear();
-	bots.clear();
+	objects.clear();
 }
 
 /*
@@ -136,7 +136,7 @@ void SpriteManager::unloadSprites()
 	// @TODO - WE'LL DO THIS LATER WHEN WE LEARN MORE ABOUT MEMORY MANAGEMENT
 }
 
-Bot* SpriteManager::removeBot(Bot *botToRemove)
+LifelessObject* SpriteManager::removeObject(LifelessObject *objectToRemove)
 {
 	return NULL;
 	// @TODO - WE'LL DO THIS LATER WHEN WE LEARN MORE ABOUT MEMORY MANAGEMENT
@@ -152,14 +152,20 @@ void SpriteManager::update(Game *game)
 	// UPDATE THE PLAYER SPRITE
 	player.updateSprite();
 
-	// NOW UPDATE THE REST OF THE SPRITES
-	list<Bot*>::iterator botIterator;
-	botIterator = bots.begin();
-	while (botIterator != bots.end())
+	Viewport *viewport = game->getGUI()->getViewport();
+
+	viewport->moveViewport(player.getPhysicalProperties()->getVelocityX() * 1.5,
+		player.getPhysicalProperties()->getVelocityY() * 1.5,
+		game->getGSM()->getWorld()->getWorldWidth(),
+		game->getGSM()->getWorld()->getWorldHeight());
+
+	// NOW UPDATE LIFELESS OBJECTS
+	list<LifelessObject*>::iterator objectIterator;
+	objectIterator = objects.begin();
+	while (objectIterator != objects.end())
 	{
-		Bot *bot = (*botIterator);
-		bot->think(game);
-		bot->updateSprite();
-		botIterator++;
+		LifelessObject *object = (*objectIterator);
+		object->updateSprite();
+		objectIterator++;
 	}
 }

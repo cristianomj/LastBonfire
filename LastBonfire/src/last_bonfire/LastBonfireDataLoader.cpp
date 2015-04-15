@@ -9,6 +9,7 @@
 #include "sssf\game\Game.h"
 #include "sssf\graphics\GameGraphics.h"
 #include "sssf\gsm\state\GameState.h"
+#include "sssf\gsm\ai\LifelessObject.h"
 #include "sssf\gsm\world\TiledLayer.h"
 #include "sssf\gui\Cursor.h"
 #include "sssf\gui\GameGUI.h"
@@ -190,7 +191,7 @@ void LastBonfireDataLoader::loadWorld(Game *game, wstring levelInitFile)
 	player->getPhysicalProperties()->setPosition(800.0f, 384.0f);
 
 	physics->setPlayerProperties(player);
-	physics->loadScene(RUBE_LEVEL_1);
+	physics->loadScene(game, RUBE_LEVEL_1);
 }
 
 /*

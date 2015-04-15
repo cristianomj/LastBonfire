@@ -48,11 +48,15 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 		{
 			vX = -PLAYER_SPEED;
 			player->setCurrentState(ATTACKING_LEFT);
+
+			physics->movePlayer(LEFT);
 		}
 		else if (input->isKeyDown(D_KEY))
 		{
 			vX = PLAYER_SPEED;
 			player->setCurrentState(ATTACKING_RIGHT);
+
+			physics->movePlayer(RIGHT);
 		}
 		else if (input->isKeyDownForFirstTime(G_KEY))
 		{
@@ -63,17 +67,12 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 		{
 			vX = 0.0f;
 			player->setCurrentState(IDLE);
+
+			physics->movePlayer(STOP);
 		}
 		if (input->isKeyDownForFirstTime(SPACE_KEY))
 		{
-			if (player->wasOnTileLastFrame())
-			{
-				vY = JUMP_SPEED;
-			}
-			else
-			{
-				cout << "WHAT HAPPENED?";
-			}
+			physics->movePlayer(JUMP);
 		}
 		if (input->isKeyDownForFirstTime(P_KEY))
 		{

@@ -12,7 +12,7 @@
 #pragma once
 #include "sssf_VS\stdafx.h"
 #include "sssf\graphics\GameGraphics.h"
-#include "sssf\gsm\ai\Bot.h"
+#include "sssf\gsm\ai\LifelessObject.h"
 #include "sssf\gsm\ai\BotRecycler.h"
 #include "sssf\gsm\sprite\AnimatedSprite.h"
 #include "sssf\gsm\sprite\AnimatedSpriteType.h"
@@ -26,7 +26,8 @@ private:
 
 	// THESE ARE THE BOTS IN THE GAME, LIKE ENEMIES, ROCKETS, OR ANYTHING
 	// THAT MOVES AROUND AND IS NOT THE PLAYER
-	list<Bot*> bots;
+	//list<Bot*> bots;
+	list<LifelessObject*> objects;
 
 	// AND THIS IS THE PLAYER. AS-IS, WE ONLY ALLOW FOR ONE PLAYER AT A TIME
 	AnimatedSprite player;
@@ -41,19 +42,19 @@ public:
 	~SpriteManager()	{}
 
 	// INLINED ACCESSOR METHODS
-	int						getNumberOfSprites()	{ return bots.size();		}
-	AnimatedSprite*			getPlayer()				{ return &player;			}
-	list<Bot*>::iterator	getBotsIterator()		{ return bots.begin();		}
-	list<Bot*>::iterator	getEndOfBotsIterator()	{ return bots.end();		}
+	int						getNumberOfSprites()				{ return objects.size();		}
+	AnimatedSprite*			getPlayer()							{ return &player;				}
+	list<LifelessObject*>::iterator	getObjectsIterator()		{ return objects.begin();		}
+	list<LifelessObject*>::iterator	getEndOfObjectsIterator()	{ return objects.end();			}
 
 	// METHODS DEFINED IN SpriteManager.cpp
-	void				addBot(Bot *botToAdd);
+	void				addObject(LifelessObject *objectToAdd);
 	void				addSpriteItemsToRenderList(Game *game);
 	unsigned int		addSpriteType(AnimatedSpriteType *spriteTypeToAdd);
 	void				addSpriteToRenderList(AnimatedSprite *sprite, RenderList *renderList, Viewport *viewport);
 	void				clearSprites();
 	AnimatedSpriteType* getSpriteType(unsigned int typeIndex);
-	Bot*				removeBot(Bot *botToRemove);
+	LifelessObject*		removeObject(LifelessObject *objectToRemove);
 	void				unloadSprites();
 	void				update(Game *game);
 };

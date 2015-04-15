@@ -14,6 +14,7 @@
     <Text Include="src\sssf_VS\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Box.cpp" />
     <ClCompile Include="src\sssf\data_loader\GameDataLoader.cpp" />
     <ClCompile Include="src\sssf\game\Game.cpp" />
     <ClCompile Include="src\sssf\game\WStringTable.cpp" />
@@ -53,6 +54,8 @@
     <ClCompile Include="src\sssf_VS\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Box.h" />
+    <ClInclude Include="LevelObject.h" />
     <ClInclude Include="src\sssf\data_loader\GameDataLoader.h" />
     <ClInclude Include="src\sssf\game\Game.h" />
     <ClInclude Include="src\sssf\game\IllegalArgumentException.h" />
@@ -65,6 +68,7 @@
     <ClInclude Include="src\sssf\gsm\ai\BotRecycler.h" />
     <ClInclude Include="src\sssf\gsm\ai\bots\RandomFloatingBot.h" />
     <ClInclude Include="src\sssf\gsm\ai\bots\RandomJumpingBot.h" />
+    <ClInclude Include="src\sssf\gsm\ai\LifelessObject.h" />
     <ClInclude Include="src\sssf\gsm\physics\AABB.h" />
     <ClInclude Include="src\sssf\gsm\physics\CollidableObject.h" />
     <ClInclude Include="src\sssf\gsm\physics\Collision.h" />
