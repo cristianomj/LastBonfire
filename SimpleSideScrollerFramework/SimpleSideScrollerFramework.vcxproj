@@ -71,8 +71,6 @@
     <ClInclude Include="src\sssf\gsm\ai\LifelessObject.h" />
     <ClInclude Include="src\sssf\gsm\physics\AABB.h" />
     <ClInclude Include="src\sssf\gsm\physics\CollidableObject.h" />
-    <ClInclude Include="src\sssf\gsm\physics\Collision.h" />
-    <ClInclude Include="src\sssf\gsm\physics\CollisionListener.h" />
     <ClInclude Include="src\sssf\gsm\physics\PhysicalProperties.h" />
     <ClInclude Include="src\sssf\gsm\physics\Physics.h" />
     <ClInclude Include="src\sssf\gsm\rubestuff\b2dJson.h" />

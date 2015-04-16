@@ -72,9 +72,9 @@ static const float		PLAYER_SPEED = 6.0f;
 static const int		MIN_FPS = 5;
 static const int		MAX_FPS = 100;
 static const int		FPS_INC = 1;
-static const wstring	ATTACKING_RIGHT(L"ATTACKING_RIGHT");
-static const wstring	ATTACKING_LEFT(L"ATTACKING_LEFT");
-static const wstring	IDLE(L"IDLE");
+//static const wstring	ATTACKING_RIGHT(L"ATTACKING_RIGHT");
+//static const wstring	ATTACKING_LEFT(L"ATTACKING_LEFT");
+//static const wstring	IDLE(L"IDLE");
 
 // USED FOR MOVEMENT
 const unsigned int W_KEY = (unsigned int)'W';

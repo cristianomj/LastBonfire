@@ -275,12 +275,6 @@
     <ClInclude Include="src\sssf\gsm\physics\CollidableObject.h">
       <Filter>src\sssf\gsm\physics</Filter>
     </ClInclude>
-    <ClInclude Include="src\sssf\gsm\physics\Collision.h">
-      <Filter>src\sssf\gsm\physics</Filter>
-    </ClInclude>
-    <ClInclude Include="src\sssf\gsm\physics\CollisionListener.h">
-      <Filter>src\sssf\gsm\physics</Filter>
-    </ClInclude>
     <ClInclude Include="src\sssf\gsm\physics\PhysicalProperties.h">
       <Filter>src\sssf\gsm\physics</Filter>
     </ClInclude>

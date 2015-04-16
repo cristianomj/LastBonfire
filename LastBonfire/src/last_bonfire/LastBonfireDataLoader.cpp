@@ -167,30 +167,8 @@ void LastBonfireDataLoader::loadWorld(Game *game, wstring levelInitFile)
 	PoseurSpriteTypesImporter psti;
 	psti.loadSpriteTypes(game, SPRITE_TYPES_LIST);
 
-	// LET'S MAKE A PLAYER SPRITE
-	// @TODO - IT WOULD BE BETTER TO LOAD THIS STUFF FROM A FILE
-	GameStateManager *gsm = game->getGSM();
-	Physics *physics = gsm->getPhysics();
-
-	//physics->setGravity(W_GRAVITY);
-	SpriteManager *spriteManager = gsm->getSpriteManager();
-	AnimatedSprite *player = spriteManager->getPlayer();
-
-	// NOTE THAT RED BOX MAN IS SPRITE ID 2
-	AnimatedSpriteType *playerSpriteType = spriteManager->getSpriteType(0);
-	player->setSpriteType(playerSpriteType);
-	player->setAlpha(255);
-	player->setCurrentState(IDLE);
-	PhysicalProperties *playerProps = player->getPhysicalProperties();
-	playerProps->setVelocity(0.0f, 0.0f);
-	playerProps->setAccelerationX(0);
-	playerProps->setAccelerationY(0);
-	player->setOnTileThisFrame(false);
-	player->setOnTileLastFrame(false);
-	player->affixTightAABBBoundingVolume();
-	player->getPhysicalProperties()->setPosition(800.0f, 384.0f);
-
-	physics->setPlayerProperties(player);
+	// LOAD RUBE LEVEL
+	Physics *physics = game->getGSM()->getPhysics();
 	physics->loadScene(game, RUBE_LEVEL_1);
 }
 
