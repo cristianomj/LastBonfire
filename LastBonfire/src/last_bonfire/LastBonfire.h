@@ -8,6 +8,8 @@
 	all of this data would better serve us if loaded from files.
 */
 
+// JOEY TEST
+
 // HERE IS THE BugginOut GAME SETUP/INIT FILE. EVERYTHING WOULD START FROM HERE
 static const wstring	W_LEVEL_1_DIR			= L"data/levels/CaveLevel/";
 static const wstring	W_LEVEL_1_NAME			= L"CaveLevel.tmx";
