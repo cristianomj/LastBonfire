@@ -12,6 +12,9 @@ static const int		LEFT = 2;
 static const int		JUMP = 3;
 static const int		PLAYER_SPRITE = 0;
 static const int		BOX_SPRITE = 1;
+static const int		BALL_SPRITE = 2;
+static const int		WHEEL_SPRITE = 3;
+static const int		SCOOTER_SPRITE = 4;
 static const wstring	ATTACKING_RIGHT(L"ATTACKING_RIGHT");
 static const wstring	ATTACKING_LEFT(L"ATTACKING_LEFT");
 static const wstring	IDLE(L"IDLE");
@@ -25,6 +28,8 @@ struct Settings
 		velocityIterations = 8;
 		positionIterations = 2;
 		gravity.Set(0.0f, -10.0f);
+		playerWalkingVel = 10.0f;
+		playerJumpingVel = 400.0f;
 		moveState = STOP;
 	}
 
@@ -34,13 +39,19 @@ struct Settings
 	int32 positionIterations;
 	b2Vec2 gravity;
 
+	// PLAYER SETTINGS
 	float32 playerOffsetX;
 	float32 playerOffsetY;
+	float32 playerWalkingVel;
+	float32 playerJumpingVel;
+	int moveState;
 	
+	// WORLD SETTINGS
 	float32 worldWidth;
 	float32 worldHeight;
 
-	int moveState;
+	int boxes;
+	int wheels;
 };
 
 class AnimatedSprite;

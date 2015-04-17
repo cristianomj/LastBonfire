@@ -81,7 +81,8 @@ void ScreenGUI::addRenderItemsToRenderList(RenderList *renderList)
 									image->z,
 									image->alpha,
 									image->width,
-									image->height	);
+									image->height,
+									0.0f);
 
 		// ADVANCE THE ITERATOR
 		imageIterator++;
@@ -113,7 +114,8 @@ void ScreenGUI::addRenderItemsToRenderList(RenderList *renderList)
 									buttonToRender->getZ(),
 									buttonToRender->getAlpha(),
 									buttonToRender->getWidth(),
-									buttonToRender->getHeight());
+									buttonToRender->getHeight(),
+									0.0f);
 
 		// ADVANCE THE ITERATOR
 		buttonIterator++;

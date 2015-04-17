@@ -88,6 +88,7 @@ WindowsOS::WindowsOS(	HINSTANCE hInstance,
 	// WE'LL DEAL WITH THE CURSOR ELSEWHERE
 	wc.hCursor = NULL;
 
+	// WINDOW ICON
 //	wc.hIcon = ??
 //	wc.hIconSm = ??
 
@@ -116,13 +117,13 @@ WindowsOS::WindowsOS(	HINSTANCE hInstance,
 		NULL);					// NO MULTIPLE WINDOWS
 	
 	// LOAD THE BLANK CURSOR FILE
-//	LPCWSTR LcursorName = L"BlankCursor.cur";
-//	blankWindowsCursor = LoadCursorFromFile(LcursorName);
+	/*LPCWSTR LcursorName = L"BlankCursor.cur";
+	blankWindowsCursor = LoadCursorFromFile(LcursorName);*/
 
 	// THIS WILL MAKE THE WINDOWS CURSOR DISAPPEAR
 	// REMEMBER, WE'LL DRAW OUR OWN ANOTHER WAY
-//	SetCursor(blankWindowsCursor);
-//	ShowCursor(TRUE);
+	/*SetCursor(blankWindowsCursor);
+	ShowCursor(TRUE);*/
 
     // OPEN UP YOUR WINDOW TO THE SCREEN
     ShowWindow(windowHandle, nCmdShow);

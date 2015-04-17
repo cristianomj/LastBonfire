@@ -131,7 +131,8 @@ void TiledLayer::addRenderItemsToRenderList(RenderList *renderList,
 										z,
 										255,
 										tileWidth,
-										tileHeight);
+										tileHeight,
+										0.0f);
 		}
 	}
 }

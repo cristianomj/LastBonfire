@@ -44,7 +44,8 @@ void RenderList::addRenderItem(	unsigned int id,
 								int z,
 								int a,
 								int width,
-								int height)
+								int height,
+								float rotationInRadians)
 {
 	if (size < maxItems)
 	{
@@ -55,6 +56,7 @@ void RenderList::addRenderItem(	unsigned int id,
 		renderList[size].a = a;
 		renderList[size].width = width;
 		renderList[size].height = height;
+		renderList[size].rotationInRadians = rotationInRadians;
 		size++;
 	}
 }

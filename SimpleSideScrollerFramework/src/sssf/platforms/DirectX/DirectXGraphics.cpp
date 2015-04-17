@@ -496,8 +496,8 @@ void DirectXGraphics::renderWorldRenderList()
 				if (position.x < viewport->getViewportOffsetX())
 				{
 					int xDiff = viewport->getViewportOffsetX() - (int)position.x;
-					rect->left = xDiff;
-					position.x += xDiff;
+					//rect->left = xDiff;
+					//position.x += xDiff;
 				}
 				if (position.y < viewport->getViewportOffsetY())
 				{
@@ -507,6 +507,55 @@ void DirectXGraphics::renderWorldRenderList()
 				}	
 			}
 
+			//////////////////////////////
+			// LET'S PUT THE STANDARD ROTATION MATRIX ASIDE
+			// FOR A SECOND. IT WILL BE USED FOR RENDERING THE
+			// GUI, BUT WE'LL WANT A CUSTOM ONE FOR WORLD OBJECTS
+			D3DXMATRIX defaultTransform;
+			D3DXMatrixIdentity(&defaultTransform);
+
+			// TO RENDER A PROPERLY ROTATED OBJECT TO THE WORLD,
+			// FIRST WE NEED TO MOVE IT TO THE ORIGIN, CENTERED
+			// ABOUT THE ORIGIN SO WE SET UP THIS MATRIX
+			// TO DO THIS
+			D3DXMATRIX translationToOrigin;
+			D3DXMatrixIdentity(&translationToOrigin);
+			translationToOrigin._41 = -(itemToRender.width / 2);
+			translationToOrigin._42 = -(itemToRender.height / 2);
+
+			// THEN WE NEED A MATRIX TO DO THE ROTATION
+			D3DXMATRIX rotationAboutOrigin;
+			D3DXMatrixIdentity(&rotationAboutOrigin);
+
+			// THE PROBLEM ANGLES ARE 0, 90, 180, and 270
+			float cosTheta = cos(itemToRender.rotationInRadians);
+			float sinTheta = sin(itemToRender.rotationInRadians);
+			if (cosTheta != cosTheta)
+				cosTheta = 0;
+			if (sinTheta != sinTheta)
+				sinTheta = 0;
+			rotationAboutOrigin._11 = cosTheta;
+			rotationAboutOrigin._21 = -sinTheta;
+			rotationAboutOrigin._12 = sinTheta;
+			rotationAboutOrigin._22 = cosTheta;
+
+			// AND THEN WE NEED A MATRIX TO ROTATE THE OBJECT
+			// TO THE LOCATION WE WANT IT RENDERED
+			D3DXMATRIX translationBackToCenter;
+			D3DXMatrixIdentity(&translationBackToCenter);
+			translationBackToCenter._41 = ((position.x) + (itemToRender.width / 2));
+			translationBackToCenter._42 = ((position.y) + (itemToRender.height / 2));
+
+			// THE COMBINED MATRIX COMBINES THESE 3 OPERATIONS
+			// INTO A SINGLE MATRIX
+			D3DXMATRIX combinedMatrix = translationToOrigin;
+			combinedMatrix *= rotationAboutOrigin;
+			combinedMatrix *= translationBackToCenter;
+
+			// NOW LET'S USE THE COMBINED MATRIX TO POSITION AND ROTATE THE ITEM
+			spriteHandler->SetTransform(&combinedMatrix);
+			/////////////////////////////////////
+
 
 			// RENDER THE OPAQUE ITEMS
 			if (itemToRender.a == 255)
@@ -515,7 +564,7 @@ void DirectXGraphics::renderWorldRenderList()
 					texture, 
 					rect,
 			        NULL,
-					&position,
+					NULL,
 					DEFAULT_ALPHA_COLOR)))
 				{
 					game->getText()->writeDebugOutput("\nspriteHandler->Draw: FAILED");
@@ -533,7 +582,7 @@ void DirectXGraphics::renderWorldRenderList()
 						texture,
 						rect,
 						NULL,
-						&position,
+						NULL,
 						D3DCOLOR_ARGB(itemToRender.a, 255, 255, 255))))
 					{
 						game->getText()->writeDebugOutput("\nspriteHandler->Draw: FAILED");
@@ -547,6 +596,11 @@ void DirectXGraphics::renderWorldRenderList()
 	worldRenderList->clear();
 	if (rect != NULL)
 		delete rect;
+
+	// AND RESTORE THE MATRIX USED FOR RENDERING THE GUI
+	D3DXMATRIX identityMatrix;
+	D3DXMatrixIdentity(&identityMatrix);
+	spriteHandler->SetTransform(&identityMatrix);
 }
 
 

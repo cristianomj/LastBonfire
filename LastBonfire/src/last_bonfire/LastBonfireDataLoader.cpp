@@ -351,22 +351,22 @@ void LastBonfireDataLoader::initInGameGUI(GameGUI *gui, DirectXTextureManager *g
 	// NOW ADD THE IN-GAME GUI
 	ScreenGUI *inGameGUI = new ScreenGUI();
 
-	//unsigned int normalTextureID = guiTextureManager->loadTexture(W_QUIT_IMAGE_PATH);
-	//unsigned int mouseOverTextureID = guiTextureManager->loadTexture(W_QUIT_IMAGE_MO_PATH);
+	unsigned int normalTextureID = guiTextureManager->loadTexture(W_QUIT_IMAGE_PATH);
+	unsigned int mouseOverTextureID = guiTextureManager->loadTexture(W_QUIT_IMAGE_MO_PATH);
 
-	//// INIT THE QUIT BUTTON
-	//Button *buttonToAdd = new Button();
-	//buttonToAdd->initButton(normalTextureID,
-	//	mouseOverTextureID,
-	//	0,
-	//	0,
-	//	0,
-	//	255,
-	//	200,
-	//	100,
-	//	false,
-	//	W_QUIT_COMMAND);
-	//inGameGUI->addButton(buttonToAdd);
+	// INIT THE QUIT BUTTON
+	Button *buttonToAdd = new Button();
+	buttonToAdd->initButton(normalTextureID,
+		mouseOverTextureID,
+		0,
+		0,
+		0,
+		255,
+		200,
+		100,
+		false,
+		W_QUIT_COMMAND);
+	inGameGUI->addButton(buttonToAdd);
 
 	// AND LET'S ADD OUR SCREENS
 	gui->addScreenGUI(GS_GAME_IN_PROGRESS, inGameGUI);
@@ -399,5 +399,6 @@ void LastBonfireDataLoader::initViewport(GameGUI *gui, map<wstring, wstring> *pr
 	viewport->setViewportWidth(viewportWidth);
 	viewport->setViewportHeight(viewportHeight);
 	viewport->setViewportOffsetX(viewportOffsetX);
+	viewport->setViewportOffsetY(viewportOffsetY);
 	viewport->setToggleOffsetY(toggleOffsetY);
 }

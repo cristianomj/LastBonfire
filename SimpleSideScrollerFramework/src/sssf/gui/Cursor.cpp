@@ -57,7 +57,8 @@ void Cursor::addRenderItemToRenderList(RenderList *renderList)
 								z,
 								alpha,
 								width,
-								height);
+								height,
+								0.0f);
 }
 
 /*

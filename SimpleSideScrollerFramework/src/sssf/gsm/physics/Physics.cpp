@@ -28,12 +28,16 @@
 Physics::Physics()
 {
 	settings = Settings();
+	world = NULL;
+	playerBody = NULL;
 }
 
 Physics::~Physics()
 {
-	delete world;
-	world = NULL;
+	if (world != NULL) {
+		delete world;
+		world = NULL;
+	}
 }
 
 void Physics::update(Game* game)
@@ -59,6 +63,7 @@ void Physics::update(Game* game)
 	// MOVE THE PLAYER SPRITE
 	float32 px = playerBody->GetPosition().x;
 	float32 py = playerBody->GetPosition().y;
+
 	// Convert box2d coordinates to screen coordinates
 	b2dToScreen(player, px, py);
 	// Change sprite position
@@ -69,10 +74,11 @@ void Physics::update(Game* game)
 	{
 		float32 ox = b2Objects[i]->GetPosition().x;
 		float32 oy = b2Objects[i]->GetPosition().y;
-
+		// Convert box2d coordinates to screen coordinates
 		b2dToScreen(objects[i], ox, oy);
-
+		// Change sprite position and rotation
 		objects[i]->getPhysicalProperties()->setPosition(ox, oy);
+		objects[i]->setRotationInRadians(b2Objects[i]->GetAngle());
 	}
 	
 }
@@ -91,7 +97,7 @@ void Physics::loadScene(Game* game, const char* level)
 	world->SetGravity(settings.gravity);
 
 	// LOAD GROUND
-	ground = json.getBodyByName("Ground");
+	//ground = json.getBodyByName("Ground");
 
 	// LOAD PLAYER
 	playerBody = json.getBodyByName("Player");
@@ -106,6 +112,7 @@ void Physics::loadScene(Game* game, const char* level)
 
 	// LOAD ALL OBJECTS
 	json.getBodiesByName("Box", b2Objects);
+	settings.boxes = b2Objects.size();
 	AnimatedSpriteType *object = spriteManager->getSpriteType(BOX_SPRITE);
 	for (int i = 0; i < b2Objects.size(); i++)
 	{
@@ -117,10 +124,30 @@ void Physics::loadScene(Game* game, const char* level)
 		objects[i]->getPhysicalProperties()->setPosition(x, y);
 
 		// SET BODY DEFINITIONS
-		b2Objects[i]->GetFixtureList()->SetFriction(1.0f);
-		b2Objects[i]->SetGravityScale(10);
-		b2Objects[i]->GetFixtureList()->SetDensity(10.0f);
+		b2Objects[i]->GetFixtureList()->SetFriction(0.4f);
+		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
+
 	}
+	json.getBodiesByName("ScooterWheel", b2Objects);
+	object = spriteManager->getSpriteType(WHEEL_SPRITE);
+	for (int i = settings.boxes; i < b2Objects.size(); i++)
+	{
+		objects.push_back(makeLifelessObject(game, object, 0, 0));
+		float32 x = b2Objects[i]->GetPosition().x;
+		float32 y = b2Objects[i]->GetPosition().y;
+
+		b2dToScreen(objects[i], x, y);
+		objects[i]->getPhysicalProperties()->setPosition(x, y);
+	}
+	b2Objects.push_back(json.getBodyByName("Scooter"));
+	object = spriteManager->getSpriteType(SCOOTER_SPRITE);
+	objects.push_back(makeLifelessObject(game, object, 0, 0));
+	x = b2Objects[b2Objects.size() - 1]->GetPosition().x;
+	y = b2Objects[b2Objects.size() - 1]->GetPosition().y;
+
+	b2dToScreen(objects[b2Objects.size() - 1], x, y);
+	objects[b2Objects.size() - 1]->getPhysicalProperties()->setPosition(x, y);
+
 }
 
 void Physics::b2dToScreen(AnimatedSprite* sprite, float32 &x, float32 &y)
@@ -133,18 +160,18 @@ void Physics::movePlayer(const int moveState)
 {
 	settings.moveState = moveState;
 	b2Vec2 vel = playerBody->GetLinearVelocity();
-	float desiredVelX = 0, desiredVelY = 0;
+	float32 desiredVelX = 0.0f, desiredVelY = 0.0f;
 	switch (moveState)
 	{
-		case LEFT:  desiredVelX = -10; break;
-		case STOP:  desiredVelX = 0; break;
-		case RIGHT: desiredVelX = 10; break;
-		case JUMP:  desiredVelY = 400; break;
+		case LEFT:  desiredVelX = -settings.playerWalkingVel; break;
+		case STOP:  desiredVelX = 0.0f; break;
+		case RIGHT: desiredVelX = settings.playerWalkingVel; break;
+		case JUMP:  desiredVelY = settings.playerJumpingVel; break;
 	}
-	float velChangeX = desiredVelX - vel.x;
-	float velChangeY = desiredVelY - vel.y;
-	float impulseX = playerBody->GetMass() * velChangeX; // disregard time factor
-	float inpulseY = playerBody->GetMass() * velChangeY;
+	float32 velChangeX = desiredVelX - vel.x;
+	float32 velChangeY = desiredVelY - vel.y;
+	float32 impulseX = playerBody->GetMass() * velChangeX; // disregard time factor
+	float32 inpulseY = playerBody->GetMass() * velChangeY;
 	playerBody->ApplyLinearImpulse(b2Vec2(impulseX, velChangeY), playerBody->GetWorldCenter(), true);
 }
 
@@ -158,6 +185,7 @@ void Physics::makePlayer(Game* game, float initX, float initY)
 	playerSprite->setSpriteType(playerSpriteType);
 	playerSprite->setAlpha(255);
 	playerSprite->setCurrentState(IDLE);
+	playerSprite->setRotationInRadians(0.0f);
 
 	PhysicalProperties *playerProps = playerSprite->getPhysicalProperties();
 	playerSprite->affixTightAABBBoundingVolume();
@@ -178,6 +206,7 @@ LifelessObject* Physics::makeLifelessObject(Game* game, AnimatedSpriteType *life
 	PhysicalProperties *pp = object->getPhysicalProperties();
 	pp->setPosition(initX, initY);
 	object->setSpriteType(lifeLessType);
+	object->setRotationInRadians(0.0f);
 
 	object->setCurrentState(L"IDLE");
 	object->setAlpha(255);

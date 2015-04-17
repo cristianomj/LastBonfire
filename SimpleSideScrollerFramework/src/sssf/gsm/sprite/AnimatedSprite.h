@@ -39,6 +39,8 @@ protected:
 	// USED TO ITERATE THROUGH THE CURRENT ANIMATION SEQUENCE
 	unsigned int animationCounter;
 
+	float rotationInRadians;
+
 public:
 	// INLINED ACCESSOR METHODS
 	int					getAlpha()			{ return alpha;				}
@@ -61,4 +63,13 @@ public:
 	void updateSprite();
 	void affixTightAABBBoundingVolume();
 	void correctToTightBoundingVolume();
+	
+	float getRotationInRadians()
+	{
+		return rotationInRadians;
+	}
+	void setRotationInRadians(float initRotation)
+	{
+		rotationInRadians = initRotation;
+	}
 };

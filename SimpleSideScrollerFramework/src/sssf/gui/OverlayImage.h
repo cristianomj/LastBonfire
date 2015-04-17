@@ -22,4 +22,5 @@ struct OverlayImage
 	int alpha;		// TRANSPARENCY
 	int width;		// TEXTURE WIDTH TO USE
 	int height;		// TEXTURE HEIGHT TO USE
+	float rotationInRadians;
 };
