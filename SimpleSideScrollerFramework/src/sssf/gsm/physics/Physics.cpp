@@ -127,6 +127,7 @@ void Physics::loadScene(Game* game, const char* level)
 		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
 
 	}
+	
 	json.getBodiesByName("ScooterWheel", b2Objects);
 	object = spriteManager->getSpriteType(WHEEL_SPRITE);
 	for (int i = settings.boxes; i < b2Objects.size(); i++)
