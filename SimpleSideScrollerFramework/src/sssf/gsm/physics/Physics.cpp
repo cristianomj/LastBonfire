@@ -104,8 +104,7 @@ void Physics::loadScene(Game* game, const char* level)
 	float32 x = playerBody->GetPosition().x;
 	float32 y = playerBody->GetPosition().y;
 	makePlayer(game, x, y);
-
-	// SET PLAYER DEFINITIONS
+	// Set player definitions
 	playerBody->GetFixtureList()->SetFriction(0.0f);
 	playerBody->SetGravityScale(20);
 	//playerBody->SetUserData(player);
@@ -144,10 +143,12 @@ void Physics::loadScene(Game* game, const char* level)
 	objects.push_back(makeLifelessObject(game, object, 0, 0));
 	x = b2Objects[b2Objects.size() - 1]->GetPosition().x;
 	y = b2Objects[b2Objects.size() - 1]->GetPosition().y;
-
 	b2dToScreen(objects[b2Objects.size() - 1], x, y);
 	objects[b2Objects.size() - 1]->getPhysicalProperties()->setPosition(x, y);
 
+
+	/*b2Objects[b2Objects.size() - 1]->GetFixtureList()->SetSensor(false);
+	b2Objects[b2Objects.size() - 1]->SetType(b2_dynamicBody);*/
 }
 
 void Physics::b2dToScreen(AnimatedSprite* sprite, float32 &x, float32 &y)
