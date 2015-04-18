@@ -8,7 +8,7 @@
 	all of this data would better serve us if loaded from files.
 */
 
-// ERICA TESTING YO
+// ERICA TESTING YO 2
 
 // HERE IS THE BugginOut GAME SETUP/INIT FILE. EVERYTHING WOULD START FROM HERE
 static const wstring	W_LEVEL_1_DIR			= L"data/levels/CaveLevel/";
