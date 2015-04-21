@@ -8,13 +8,11 @@
 	all of this data would better serve us if loaded from files.
 */
 
-// ERICA TESTING YO
-
 // HERE IS THE BugginOut GAME SETUP/INIT FILE. EVERYTHING WOULD START FROM HERE
-static const wstring	W_LEVEL_1_DIR			= L"data/levels/CaveLevel/";
-static const wstring	W_LEVEL_1_NAME			= L"C";
+static const wstring	W_LEVEL_1_DIR			= L"data/levels/SnowTest/";
+static const wstring	W_LEVEL_1_NAME			= L"SnowTest.tmx";
 static const wstring	W_LEVEL_1_PATH			= W_LEVEL_1_DIR + W_LEVEL_1_NAME;
-static const char *		RUBE_LEVEL_1			= "data/levels/CaveLevel/CaveLevel.json";
+static const char *		RUBE_LEVEL_1			= "data/levels/SnowTest/SnowTest.json";
 static const wstring	W_INIT_FILE				= L"data/LastBonfireInit.txt";
 static const wstring	W_GUI_INIT_FILE			= L"data/LastBonfireGUI.txt";
 static const string		W_DEBUG_FILE			= "DebugOutput.txt";
