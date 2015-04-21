@@ -5,7 +5,7 @@
 	LastBonfire.h
 
 	This file contains setup data for making the LastBonfire game. Note that nearly
-	all of this data would better serve us if loaded from files.
+	all of this data would better serve us if loaded from files. 
 */
 
 // HERE IS THE BugginOut GAME SETUP/INIT FILE. EVERYTHING WOULD START FROM HERE
