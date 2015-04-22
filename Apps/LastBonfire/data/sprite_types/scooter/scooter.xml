@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sprite_type>
+ <width>177</width>
+ <height>173</height>
+ <images_list>
+  <image_file id="1" file_name="scooter.png"/>
+ </images_list>
+ <animations_list>
+  <animation_state>
+   <state>IDLE</state>
+   <animation_sequence>
+    <pose image_id="1" duration="30"/>
+   </animation_sequence>
+  </animation_state>
+ </animations_list>  
+</sprite_type>
