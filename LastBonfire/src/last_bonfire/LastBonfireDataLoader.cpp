@@ -159,9 +159,28 @@ levelInitFile argument in to the Game's game state manager.
 */
 void LastBonfireDataLoader::loadWorld(Game *game, wstring levelInitFile)
 {
+	wstring LEVEL_DIR, LEVEL_NAME;
+	const char * RUBE_LEVEL = NULL;
+	// SELECT LEVEL
+	if (levelInitFile == W_LEVEL_1_NAME) {
+		LEVEL_DIR = W_LEVEL_1_DIR;
+		LEVEL_NAME = W_LEVEL_1_NAME;
+		RUBE_LEVEL = RUBE_LEVEL_1;
+	}
+	else if (levelInitFile == W_LEVEL_2_NAME) {
+		LEVEL_DIR = W_LEVEL_2_DIR;
+		LEVEL_NAME = W_LEVEL_2_NAME;
+		RUBE_LEVEL = RUBE_LEVEL_2;
+	}
+	else if (levelInitFile == W_LEVEL_3_NAME) {
+		LEVEL_DIR = W_LEVEL_3_DIR;
+		LEVEL_NAME = W_LEVEL_3_NAME;
+		RUBE_LEVEL = RUBE_LEVEL_3;
+	}
+
 	// LOAD THE LEVEL'S BACKGROUND TILES
 	TMXMapImporter tmxMapImporter;
-	tmxMapImporter.loadWorld(game, W_LEVEL_1_DIR, W_LEVEL_1_NAME);
+	tmxMapImporter.loadWorld(game, LEVEL_DIR, LEVEL_NAME);
 
 	// LOAD THE LEVEL'S SPRITE IMAGES
 	PoseurSpriteTypesImporter psti;
@@ -169,7 +188,7 @@ void LastBonfireDataLoader::loadWorld(Game *game, wstring levelInitFile)
 
 	// LOAD RUBE LEVEL
 	Physics *physics = game->getGSM()->getPhysics();
-	physics->loadScene(game, RUBE_LEVEL_1);
+	physics->loadScene(game, RUBE_LEVEL);
 }
 
 /*
@@ -239,11 +258,22 @@ void LastBonfireDataLoader::initSplashScreen(Game *game, GameGUI *gui, DirectXTe
 	imageToAdd->imageID = imageID;
 	splashScreenGUI->addOverlayImage(imageToAdd);
 
+	imageID = guiTextureManager->loadTexture(W_MAIN_MENU_PATH);
+	imageToAdd = new OverlayImage();
+	imageToAdd->x = 1024;
+	imageToAdd->y = 0;
+	imageToAdd->z = 0;
+	imageToAdd->alpha = 255;
+	imageToAdd->width = 1024;
+	imageToAdd->height = 768;
+	imageToAdd->imageID = imageID;
+	splashScreenGUI->addOverlayImage(imageToAdd);
+
 	// WE'LL ONLY HAVE ONE IMAGE FOR OUR GIANT BUTTON
 	unsigned int normalTextureID = guiTextureManager->loadTexture(W_BONFIRE_OFF_PATH);
 	unsigned int mouseOverTextureID = guiTextureManager->loadTexture(W_BONFIRE_ON_PATH);
 
-	// INIT THE QUIT BUTTON
+	// BONFIRE BUTTON
 	Button *buttonToAdd = new Button();
 	buttonToAdd->initButton(normalTextureID,
 		mouseOverTextureID,
@@ -268,9 +298,31 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 {
 	// NOW LET'S LOAD A MAIN MENU GUI SCREEN
 	ScreenGUI *mainMenuGUI = new ScreenGUI();
-	unsigned int imageID = guiTextureManager->loadTexture(W_MAIN_MENU_PATH);
+	unsigned int imageID = guiTextureManager->loadTexture(W_BONFIRE_LEVEL_1_PATH);
 	OverlayImage *imageToAdd = new OverlayImage();
 	imageToAdd->x = 0;
+	imageToAdd->y = 0;
+	imageToAdd->z = 0;
+	imageToAdd->alpha = 200;
+	imageToAdd->width = 1024;
+	imageToAdd->height = 768;
+	imageToAdd->imageID = imageID;
+	mainMenuGUI->addOverlayImage(imageToAdd);
+	
+	imageID = guiTextureManager->loadTexture(W_BONFIRE_LEVEL_2_PATH);
+	imageToAdd = new OverlayImage();
+	imageToAdd->x = 1024;
+	imageToAdd->y = 0;
+	imageToAdd->z = 0;
+	imageToAdd->alpha = 200;
+	imageToAdd->width = 1024;
+	imageToAdd->height = 768;
+	imageToAdd->imageID = imageID;
+	mainMenuGUI->addOverlayImage(imageToAdd);
+	
+	imageID = guiTextureManager->loadTexture(W_BONFIRE_LEVEL_3_PATH);
+	imageToAdd = new OverlayImage();
+	imageToAdd->x = 2048;
 	imageToAdd->y = 0;
 	imageToAdd->z = 0;
 	imageToAdd->alpha = 200;
@@ -285,7 +337,6 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 	// - GET THE BUTTON COMMAND AND IMAGE IDs
 	int normalTextureID = guiTextureManager->loadTexture(W_EXIT_IMAGE_PATH);
 	int mouseOverTextureID = guiTextureManager->loadTexture(W_EXIT_IMAGE_MO_PATH);
-
 	// - INIT THE EXIT BUTTON
 	buttonToAdd->initButton(normalTextureID,
 		mouseOverTextureID,
@@ -297,7 +348,6 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 		50,
 		false,
 		W_EXIT_COMMAND);
-
 	// AND NOW LOAD IT INTO A ScreenGUI
 	mainMenuGUI->addButton(buttonToAdd);
 
@@ -305,10 +355,8 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 	buttonToAdd = new Button();
 
 	// - GET THE BUTTON COMMAND AND IMAGE IDs
-
 	normalTextureID = guiTextureManager->loadTexture(W_START_IMAGE_PATH);
 	mouseOverTextureID = guiTextureManager->loadTexture(W_START_IMAGE_MO_PATH);
-
 	// - INIT THE START BUTTON
 	buttonToAdd->initButton(normalTextureID,
 		mouseOverTextureID,
@@ -320,23 +368,39 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 		50,
 		false,
 		W_START_COMMAND);
-
 	// AND NOW LOAD IT INTO A ScreenGUI
 	mainMenuGUI->addButton(buttonToAdd);
 
+	// SPIN LEFT BUTTON
+	normalTextureID = guiTextureManager->loadTexture(W_BONFIRE_LEFT_PATH);
+	mouseOverTextureID = guiTextureManager->loadTexture(W_BONFIRE_LEFT_MO_PATH);
 	buttonToAdd = new Button();
-	normalTextureID = guiTextureManager->loadTexture(W_LOAD_IMAGE_PATH);
-	mouseOverTextureID = guiTextureManager->loadTexture(W_LOAD_IMAGE_MO_PATH);
 	buttonToAdd->initButton(normalTextureID,
 		mouseOverTextureID,
-		700,
-		700,
+		0,
+		350,
 		0,
 		255,
-		200,
-		50,
+		128,
+		128,
 		false,
-		W_LOAD_COMMAND);
+		W_SPIN_LEFT_COMMAND);
+	mainMenuGUI->addButton(buttonToAdd);
+
+	// SPIN RIGHT BUTTON
+	normalTextureID = guiTextureManager->loadTexture(W_BONFIRE_RIGHT_PATH);
+	mouseOverTextureID = guiTextureManager->loadTexture(W_BONFIRE_RIGHT_MO_PATH);
+	buttonToAdd = new Button();
+	buttonToAdd->initButton(normalTextureID,
+		mouseOverTextureID,
+		1024 - 128,
+		350,
+		0,
+		255,
+		128,
+		128,
+		false,
+		W_SPIN_RIGHT_COMMAND);
 	mainMenuGUI->addButton(buttonToAdd);
 
 	// AND LET'S ADD OUR SCREENS
