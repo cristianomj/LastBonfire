@@ -1,0 +1,428 @@
+
+{
+	"allowSleep" : true,
+	"autoClearForces" : true,
+	"body" : 
+	[
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixedRotation" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1.250130653381348,
+					"friction" : 0.2,
+					"name" : "fixture3",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								1.000018119812012,
+								0.9997047781944275,
+								-0.9999383687973023,
+								-0.9999765157699585
+							],
+							"y" : 
+							[
+								-0.9999708533287048,
+								0.9998790621757507,
+								1.000106692314148,
+								-0.9999876022338867
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"massData-I" : 2.588517133972346e-008,
+			"massData-center" : 
+			{
+				"x" : -6.835653766756877e-005,
+				"y" : -2.245925134047866e-005
+			},
+			"massData-mass" : 5,
+			"name" : "Box",
+			"position" : 
+			{
+				"x" : 0,
+				"y" : -2.207746505737305
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixedRotation" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1.250130653381348,
+					"friction" : 0.2,
+					"name" : "fixture3",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								1.000018119812012,
+								0.9997047781944275,
+								-0.9999383687973023,
+								-0.9999765157699585
+							],
+							"y" : 
+							[
+								-0.9999708533287048,
+								0.9998790621757507,
+								1.000106692314148,
+								-0.9999876022338867
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"massData-I" : 2.588517133972346e-008,
+			"massData-center" : 
+			{
+				"x" : -6.835653766756877e-005,
+				"y" : -2.245925134047866e-005
+			},
+			"massData-mass" : 5,
+			"name" : "Box",
+			"position" : 
+			{
+				"x" : 0,
+				"y" : 2.107394456863403
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixedRotation" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1.250130653381348,
+					"friction" : 0.2,
+					"name" : "fixture3",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								1.000018119812012,
+								0.9997047781944275,
+								-0.9999383687973023,
+								-0.9999765157699585
+							],
+							"y" : 
+							[
+								-0.9999708533287048,
+								0.9998790621757507,
+								1.000106692314148,
+								-0.9999876022338867
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"massData-I" : 2.588517133972346e-008,
+			"massData-center" : 
+			{
+				"x" : -6.835653766756877e-005,
+				"y" : -2.245925134047866e-005
+			},
+			"massData-mass" : 5,
+			"name" : "Box",
+			"position" : 0,
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"bullet" : true,
+			"fixedRotation" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1.249986886978149,
+					"friction" : 0.2,
+					"name" : "fixture1",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								1.000014066696167,
+								1.000013351440430,
+								-0.9999229907989502,
+								-0.9999883770942688
+							],
+							"y" : 
+							[
+								-2.000002622604370,
+								2.000166893005371,
+								1.999960184097290,
+								-2.000076293945313
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"massData-I" : 1.195669518949671e-008,
+			"massData-center" : 
+			{
+				"x" : 3.456331251072697e-005,
+				"y" : 1.023185291160189e-006
+			},
+			"massData-mass" : 10,
+			"name" : "Player",
+			"position" : 
+			{
+				"x" : -9.401625633239746,
+				"y" : -2.979547023773193
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture2",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ 0.5, 0.5, -0.5, -0.5 ],
+							"y" : 
+							[
+								-5.993072032928467,
+								5.987226486206055,
+								6.000542640686035,
+								-5.993072509765625
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "body1",
+			"position" : 
+			{
+				"x" : -11.99344730377197,
+				"y" : 0
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								11.49659347534180,
+								-11.50033950805664,
+								-11.49760437011719,
+								11.49349594116211
+							],
+							"y" : [ 0.5, 0.5, -0.5, -0.5 ]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "body0",
+			"position" : 
+			{
+				"x" : 0,
+				"y" : 5.486413478851318
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								11.49659347534180,
+								-11.50033950805664,
+								-11.49760437011719,
+								11.49349594116211
+							],
+							"y" : [ 0.5, 0.5, -0.5, -0.5 ]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "body0",
+			"position" : 
+			{
+				"x" : 0,
+				"y" : -5.500805377960205
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture2",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ 0.5, 0.5, -0.5, -0.5 ],
+							"y" : 
+							[
+								-5.993072032928467,
+								5.987226486206055,
+								6.000542640686035,
+								-5.993072509765625
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "body1",
+			"position" : 
+			{
+				"x" : 12.02708148956299,
+				"y" : 0
+			},
+			"type" : 0
+		}
+	],
+	"collisionbitplanes" : 
+	{
+		"names" : 
+		[
+			"bitplane1",
+			"bitplane2",
+			"bitplane3",
+			"bitplane4",
+			"bitplane5",
+			"bitplane6",
+			"bitplane7",
+			"bitplane8",
+			"bitplane9",
+			"bitplane10",
+			"bitplane11",
+			"bitplane12",
+			"bitplane13",
+			"bitplane14",
+			"bitplane15",
+			"bitplane16",
+			"bitplane17",
+			"bitplane18",
+			"bitplane19",
+			"bitplane20",
+			"bitplane21",
+			"bitplane22",
+			"bitplane23",
+			"bitplane24",
+			"bitplane25",
+			"bitplane26",
+			"bitplane27",
+			"bitplane28",
+			"bitplane29",
+			"bitplane30",
+			"bitplane31",
+			"bitplane32"
+		]
+	},
+	"continuousPhysics" : true,
+	"gravity" : 
+	{
+		"x" : 0,
+		"y" : -10
+	},
+	"image" : 
+	[
+		
+		{
+			"aspectScale" : 1,
+			"body" : -1,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -12.50, 12.50, 12.50, -12.50 ],
+				"y" : [ -6, -6, 6, 6 ]
+			},
+			"file" : "../../../../../../../../../Desktop/SideScrollerRoomLevel.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -12.50, -6, 12.50, -6, 12.50, 6, -12.50, 6 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 12.0
+		}
+	],
+	"positionIterations" : 3,
+	"stepsPerSecond" : 60.0,
+	"subStepping" : false,
+	"velocityIterations" : 8,
+	"warmStarting" : true
+}
