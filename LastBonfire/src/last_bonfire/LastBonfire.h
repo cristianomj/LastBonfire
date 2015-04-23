@@ -8,13 +8,22 @@
 	all of this data would better serve us if loaded from files.
 */
 
-// ERICA TESTING YO 2
-
 // HERE IS THE BugginOut GAME SETUP/INIT FILE. EVERYTHING WOULD START FROM HERE
 static const wstring	W_LEVEL_1_DIR			= L"data/levels/CaveLevel/";
 static const wstring	W_LEVEL_1_NAME			= L"CaveLevel.tmx";
 static const wstring	W_LEVEL_1_PATH			= W_LEVEL_1_DIR + W_LEVEL_1_NAME;
 static const char *		RUBE_LEVEL_1			= "data/levels/CaveLevel/CaveLevel.json";
+
+static const wstring	W_LEVEL_2_DIR			= L"data/levels/CaveLevel/";
+static const wstring	W_LEVEL_2_NAME			= L"CaveLevel.tmx";
+static const wstring	W_LEVEL_2_PATH			= W_LEVEL_1_DIR + W_LEVEL_1_NAME;
+static const char *		RUBE_LEVEL_2			= "data/levels/CaveLevel/CaveLevel.json";
+
+static const wstring	W_LEVEL_3_DIR			= L"data/levels/CaveLevel/";
+static const wstring	W_LEVEL_3_NAME			= L"CaveLevel.tmx";
+static const wstring	W_LEVEL_3_PATH			= W_LEVEL_1_DIR + W_LEVEL_1_NAME;
+static const char *		RUBE_LEVEL_3			= "data/levels/CaveLevel/CaveLevel.json";
+
 static const wstring	W_INIT_FILE				= L"data/LastBonfireInit.txt";
 static const wstring	W_GUI_INIT_FILE			= L"data/LastBonfireGUI.txt";
 static const string		W_DEBUG_FILE			= "DebugOutput.txt";
@@ -37,6 +46,8 @@ static const wstring	W_COLOR_KEY_BLUE		= L"COLOR_KEY_BLUE";
 
 // CONSTANTS FOR ARTWORK - NOTE, THIS SHOULD REALLY BE LOADED FROM A FILE
 static const wstring	W_GO_TO_MM_COMMAND		= L"Go To Main Menu";
+static const wstring	W_SPIN_LEFT_COMMAND		= L"Spin left";
+static const wstring	W_SPIN_RIGHT_COMMAND	= L"Spin right";
 static const wstring	W_START_COMMAND			= L"Start";
 static const wstring	W_LOAD_COMMAND			= L"Load";
 static const wstring	W_EXIT_COMMAND			= L"Exit";
@@ -55,6 +66,13 @@ static const wstring	W_QUIT_IMAGE_PATH		= L"data/gui/buttons/quit.png";
 static const wstring	W_QUIT_IMAGE_MO_PATH	= L"data/gui/buttons/quit_mo.png";
 static const wstring	W_BONFIRE_OFF_PATH		= L"data/gui/buttons/bonfire_off.png";
 static const wstring	W_BONFIRE_ON_PATH		= L"data/gui/buttons/bonfire_on.png";
+static const wstring	W_BONFIRE_LEFT_PATH		= L"data/gui/buttons/left_arrow.png";
+static const wstring	W_BONFIRE_LEFT_MO_PATH	= L"data/gui/buttons/left_arrow_mo.png";
+static const wstring	W_BONFIRE_RIGHT_PATH	= L"data/gui/buttons/right_arrow.png";
+static const wstring	W_BONFIRE_RIGHT_MO_PATH = L"data/gui/buttons/right_arrow_mo.png";
+static const wstring	W_BONFIRE_LEVEL_1_PATH	= L"data/gui/overlays/last_bonfire_level_one.png";
+static const wstring	W_BONFIRE_LEVEL_2_PATH	= L"data/gui/overlays/last_bonfire_level_two.png";
+static const wstring	W_BONFIRE_LEVEL_3_PATH	= L"data/gui/overlays/last_bonfire_level_three.png";
 
 // FOR OUR SPRITE
 static const wstring	SPRITE_TYPES_DIR = L"data/sprite_types/";

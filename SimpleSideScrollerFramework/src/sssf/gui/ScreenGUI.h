@@ -38,7 +38,9 @@ public:
 	// INLINED ACCESSOR METHODS
 	int getNumButtons()			{ return buttons->size();		}
 	int getNumOverlayImages()	{ return overlayImages->size(); }
-	wstring getScreenName()			{ return screenName;			}
+	wstring getScreenName()		{ return screenName;			}
+	list<OverlayImage*>::iterator getOverlayIterator()		{ return overlayImages->begin(); }
+	list<OverlayImage*>::iterator getEndOfOverlayIterator()	{ return overlayImages->end(); }
 
 	// INLINED MUTATOR METHODS
 	void setScreenName(wchar_t *initScreenName)
