@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{2b878fa1-acde-4093-b2c2-5b1455ca7eb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\last_bonfire_VS">
+      <UniqueIdentifier>{23e40830-b5ed-43a8-ad35-aee61e586549}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\last_bonfire">
+      <UniqueIdentifier>{58480d9f-3552-4d78-87d1-8b582a54f3a0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\last_bonfire_VS\ReadMe.txt">
+      <Filter>src\last_bonfire_VS</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\last_bonfire_VS\Resource.h">
+      <Filter>src\last_bonfire_VS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\last_bonfire_VS\stdafx.h">
+      <Filter>src\last_bonfire_VS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\last_bonfire_VS\targetver.h">
+      <Filter>src\last_bonfire_VS</Filter>
+    </ClInclude>
+    <ClInclude Include="src\last_bonfire\LastBonfire.h">
+      <Filter>src\last_bonfire</Filter>
+    </ClInclude>
+    <ClInclude Include="src\last_bonfire\LastBonfireTextGenerator.h">
+      <Filter>src\last_bonfire</Filter>
+    </ClInclude>
+    <ClInclude Include="src\last_bonfire\LastBonfireDataLoader.h">
+      <Filter>src\last_bonfire</Filter>
+    </ClInclude>
+    <ClInclude Include="src\last_bonfire\LastBonfireButtonEventHandler.h">
+      <Filter>src\last_bonfire</Filter>
+    </ClInclude>
+    <ClInclude Include="src\last_bonfire\LastBonfireKeyEventHandler.h">
+      <Filter>src\last_bonfire</Filter>
+    </ClInclude>
+    <ClInclude Include="src\last_bonfire\LastBonfireCollisionListener.h">
+      <Filter>src\last_bonfire</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\last_bonfire_VS\stdafx.cpp">
+      <Filter>src\last_bonfire_VS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\last_bonfire\LastBonfire.cpp">
+      <Filter>src\last_bonfire</Filter>
+    </ClCompile>
+    <ClCompile Include="src\last_bonfire\LastBonfireTextGenerator.cpp">
+      <Filter>src\last_bonfire</Filter>
+    </ClCompile>
+    <ClCompile Include="src\last_bonfire\LastBonfireDataLoader.cpp">
+      <Filter>src\last_bonfire</Filter>
+    </ClCompile>
+    <ClCompile Include="src\last_bonfire\LastBonfireButtonEventHandler.cpp">
+      <Filter>src\last_bonfire</Filter>
+    </ClCompile>
+    <ClCompile Include="src\last_bonfire\LastBonfireKeyEventHandler.cpp">
+      <Filter>src\last_bonfire</Filter>
+    </ClCompile>
+    <ClCompile Include="src\last_bonfire\LastBonfireCollisionListener.cpp">
+      <Filter>src\last_bonfire</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,769 @@
+
+{
+  "collisionbitplanes" : 
+  {
+    "names" : 
+    [
+      "bitplane1",
+      "bitplane2",
+      "bitplane3",
+      "bitplane4",
+      "bitplane5",
+      "bitplane6",
+      "bitplane7",
+      "bitplane8",
+      "bitplane9",
+      "bitplane10",
+      "bitplane11",
+      "bitplane12",
+      "bitplane13",
+      "bitplane14",
+      "bitplane15",
+      "bitplane16",
+      "bitplane17",
+      "bitplane18",
+      "bitplane19",
+      "bitplane20",
+      "bitplane21",
+      "bitplane22",
+      "bitplane23",
+      "bitplane24",
+      "bitplane25",
+      "bitplane26",
+      "bitplane27",
+      "bitplane28",
+      "bitplane29",
+      "bitplane30",
+      "bitplane31",
+      "bitplane32"
+    ]
+  },
+  "metaworld" : 
+  {
+    "allowSleep" : true,
+    "autoClearForces" : true,
+    "continuousPhysics" : true,
+    "exportOptions" : 
+    {
+      "compactCommonFloats" : true,
+      "compactZeroVecs" : true,
+      "saveFullPathForImages" : false,
+      "saveFullPathForSamplerOutput" : false,
+      "saveImagePathsRelativeToRUBEFile" : false,
+      "saveSamplerOutputPathsRelativeToRUBEFile" : false,
+      "useGsonFormat" : false,
+      "useHumanReadableFloats" : true,
+      "usePrettyPrint" : true
+    },
+    "gravity" : 
+    {
+      "x" : 0,
+      "y" : -10
+    },
+    "metabody" : 
+    [
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 1,
+            "name" : "fixture0",
+            "shapes" : 
+            [
+              
+              {
+                "type" : "polygon"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : 
+              [
+                20.14319229125977,
+                21.20558357238770,
+                24.06209945678711,
+                29.64774322509766,
+                35.74044418334961,
+                39.191406250,
+                41.31227111816406,
+                44.25070190429688,
+                44.44042205810547,
+                32.60531997680664,
+                11.67834854125977,
+                4.136220455169678,
+                -4.154041290283203,
+                -4.232418060302734,
+                1.043861389160156,
+                1.840244293212891,
+                1.877784729003906,
+                2.743236541748047,
+                3.840530395507813,
+                5.094583511352539,
+                6.427011489868164,
+                8.543222427368164
+              ],
+              "y" : 
+              [
+                -3.762154817581177,
+                -2.231596469879150,
+                -1.724322319030762,
+                -3.456184387207031,
+                -3.527019977569580,
+                -3.942192077636719,
+                -2.813081026077271,
+                -2.801110744476318,
+                -4.310801506042481,
+                -4.232423305511475,
+                -4.310801506042481,
+                -4.261518001556397,
+                -4.545936107635498,
+                -3.291885375976563,
+                -3.266937732696533,
+                -2.194591045379639,
+                -1.323867678642273,
+                -0.4702714681625366,
+                -1.802700281143189,
+                -2.743238210678101,
+                -3.527019977569580,
+                -3.683776378631592
+              ]
+            }
+          }
+        ],
+        "id" : 1,
+        "linearVelocity" : 0,
+        "name" : "Ground",
+        "position" : 
+        {
+          "x" : -35.91543579101563,
+          "y" : -0.6012125015258789
+        },
+        "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 2,
+            "name" : "fixture1",
+            "shapes" : 
+            [
+              
+              {
+                "type" : "polygon"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : 
+              [
+                0.2410964965820313,
+                2.228782653808594,
+                1.882999420166016,
+                0.1916999816894531
+              ],
+              "y" : 
+              [
+                -1.685408353805542,
+                -1.636010169982910,
+                -1.179649114608765,
+                -1.426636338233948
+              ]
+            }
+          }
+        ],
+        "id" : 2,
+        "linearVelocity" : 0,
+        "name" : "Ground",
+        "position" : 
+        {
+          "x" : -37.49093246459961,
+          "y" : -0.6683197021484375
+        },
+        "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 3,
+            "name" : "fixture1",
+            "shapes" : 
+            [
+              
+              {
+                "type" : "polygon"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : 
+              [
+                0.2410964965820313,
+                4.105894088745117,
+                -1.130252838134766,
+                -2.129989624023438,
+                -3.789111614227295,
+                -3.109767675399780,
+                -1.490526199340820
+              ],
+              "y" : 
+              [
+                -0.7468538284301758,
+                0.2410981655120850,
+                0.5492671728134155,
+                0.4010744094848633,
+                -0.7896404266357422,
+                -0.9069856405258179,
+                0.09148710221052170
+              ]
+            }
+          }
+        ],
+        "id" : 3,
+        "linearVelocity" : 0,
+        "name" : "Ground",
+        "position" : 
+        {
+          "x" : -22.42465972900391,
+          "y" : -2.397236824035645
+        },
+        "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 4,
+            "name" : "fixture1",
+            "shapes" : 
+            [
+              
+              {
+                "type" : "polygon"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : 
+              [
+                -2.525169372558594,
+                0.7468566894531250,
+                1.043239593505859,
+                -2.920349121093750
+              ],
+              "y" : 
+              [
+                0.04350745677947998,
+                -0.4504679441452026,
+                0.4010742306709290,
+                0.6480621099472046
+              ]
+            }
+          }
+        ],
+        "id" : 4,
+        "linearVelocity" : 0,
+        "name" : "Ground",
+        "position" : 
+        {
+          "x" : -27.562011718750,
+          "y" : -0.9153075218200684
+        },
+        "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 5,
+            "name" : "fixture1",
+            "shapes" : 
+            [
+              
+              {
+                "type" : "polygon"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : 
+              [
+                0.4880867004394531,
+                2.080589294433594,
+                2.129989624023438,
+                0.5868797302246094
+              ],
+              "y" : 
+              [
+                -1.981794118881226,
+                -1.636010169982910,
+                -1.327842116355896,
+                -1.229045987129211
+              ]
+            }
+          }
+        ],
+        "id" : 5,
+        "linearVelocity" : 0,
+        "name" : "Ground",
+        "position" : 
+        {
+          "x" : -40.06454849243164,
+          "y" : -1.305548667907715
+        },
+        "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 6,
+            "name" : "fixture2",
+            "shapes" : 
+            [
+              
+              {
+                "type" : "polygon"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : 
+              [
+                -0.3201229572296143,
+                1.752654314041138,
+                0.6165093183517456,
+                -1.308075189590454
+              ],
+              "y" : 
+              [
+                -0.3201248645782471,
+                -0.1225345134735107,
+                0.2707248926162720,
+                0.2213273048400879
+              ]
+            }
+          }
+        ],
+        "id" : 6,
+        "linearVelocity" : 0,
+        "name" : "Ground",
+        "position" : 
+        {
+          "x" : -2.664919614791870,
+          "y" : -2.347296714782715
+        },
+        "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 7,
+            "name" : "fixture2",
+            "shapes" : 
+            [
+              
+              {
+                "type" : "polygon"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.5, 4.945784568786621, 4.945784568786621, -0.5 ],
+              "y" : [ -0.5, -0.5, 0.5, 0.5 ]
+            }
+          }
+        ],
+        "id" : 7,
+        "linearVelocity" : 0,
+        "name" : "Ground",
+        "position" : 
+        {
+          "x" : 9.090632438659668,
+          "y" : -4.514896869659424
+        },
+        "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 8,
+            "name" : "fixture2",
+            "shapes" : 
+            [
+              
+              {
+                "type" : "polygon"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : 
+              [
+                -1.487951278686523,
+                1.339758872985840,
+                1.537349700927734,
+                -1.191566467285156
+              ],
+              "y" : [ -0.253011941909790, -0.3518073558807373, 0.5, 0.253011941909790 ]
+            }
+          }
+        ],
+        "id" : 8,
+        "linearVelocity" : 0,
+        "name" : "Ground",
+        "position" : 
+        {
+          "x" : 11.05665683746338,
+          "y" : -2.731642723083496
+        },
+        "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 9,
+            "name" : "fixture3",
+            "shapes" : 
+            [
+              
+              {
+                "type" : "polygon"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : 
+              [
+                -8.277774810791016,
+                17.51511001586914,
+                17.36019515991211,
+                14.35651302337647,
+                12.55659770965576,
+                8.633753776550293,
+                5.390015602111816,
+                -6.022654533386231,
+                -6.839540481567383,
+                -7.974054336547852,
+                -8.425967216491699
+              ],
+              "y" : 
+              [
+                4.565607547760010,
+                4.516209602355957,
+                5.332325458526611,
+                5.578248023986816,
+                4.964198589324951,
+                5.747651100158691,
+                5.702518939971924,
+                5.626028060913086,
+                6.455483436584473,
+                6.746436595916748,
+                6.351255416870117
+              ]
+            }
+          }
+        ],
+        "id" : 9,
+        "linearVelocity" : 0,
+        "name" : "Ground",
+        "position" : 
+        {
+          "x" : 22.47738838195801,
+          "y" : -9.504050254821777
+        },
+        "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 10,
+            "name" : "fixture4",
+            "shapes" : 
+            [
+              
+              {
+                "type" : "polygon"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : 
+              [
+                -5.832273483276367,
+                3.882978439331055,
+                5.094689369201660,
+                4.053956985473633,
+                -1.647347569465637,
+                -7.215408325195313
+              ],
+              "y" : 
+              [
+                -1.040705323219299,
+                -0.7088643312454224,
+                0.2240577191114426,
+                0.8431150317192078,
+                0.8384425640106201,
+                0.05275332927703857
+              ]
+            }
+          }
+        ],
+        "id" : 10,
+        "linearVelocity" : 0,
+        "name" : "Ground",
+        "position" : 
+        {
+          "x" : 26.99581718444824,
+          "y" : -0.1257647573947907
+        },
+        "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 11,
+            "name" : "fixture5",
+            "shapes" : 
+            [
+              
+              {
+                "type" : "polygon"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.4694862365722656, 1.079746246337891, 1.049232482910156, -0.5 ],
+              "y" : [ -3.24618387222290, -3.246183633804321, 0.5, 0.5 ]
+            }
+          }
+        ],
+        "id" : 11,
+        "linearVelocity" : 0,
+        "name" : "Player",
+        "position" : 
+        {
+          "x" : -38.90642547607422,
+          "y" : 3.371038675308228
+        },
+        "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 12,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "type" : "polygon"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.5, 0.5, 0.5, -0.5 ],
+              "y" : [ -0.5, -0.5, 0.5, 0.5 ]
+            }
+          }
+        ],
+        "id" : 12,
+        "linearVelocity" : 0,
+        "name" : "Scooter",
+        "position" : 
+        {
+          "x" : 35.75818252563477,
+          "y" : 0.5508213043212891
+        },
+        "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 13,
+            "name" : "fixture7",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ 0.0 ],
+              "y" : [ 0.0 ]
+            }
+          }
+        ],
+        "id" : 13,
+        "linearVelocity" : 0,
+        "name" : "ScooterWheel",
+        "position" : 
+        {
+          "x" : 33.94825744628906,
+          "y" : 2.360748767852783
+        },
+        "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 14,
+            "name" : "fixture7",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ 0.0 ],
+              "y" : [ 0.0 ]
+            }
+          }
+        ],
+        "id" : 14,
+        "linearVelocity" : 0,
+        "name" : "ScooterWheel",
+        "position" : 
+        {
+          "x" : 36.79243087768555,
+          "y" : 2.360748767852783
+        },
+        "type" : "static"
+      }
+    ],
+    "metaimage" : 
+    [
+      
+      {
+        "aspectScale" : 1,
+        "center" : 0,
+        "file" : "Snow2.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 1,
+        "name" : "image0",
+        "opacity" : 0.5,
+        "scale" : 10
+      }
+    ],
+    "positionIterations" : 3,
+    "stepsPerSecond" : 60.0,
+    "subStepping" : false,
+    "velocityIterations" : 8,
+    "warmStarting" : true
+  }
+}

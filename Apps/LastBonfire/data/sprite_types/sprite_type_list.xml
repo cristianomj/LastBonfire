@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sprite_type_list>
+  <sprite_type>player</sprite_type>
+  <sprite_type>box</sprite_type>
+  <sprite_type>ball</sprite_type>
+  <sprite_type>scooter_wheel</sprite_type>
+  <sprite_type>scooter</sprite_type>
+</sprite_type_list>

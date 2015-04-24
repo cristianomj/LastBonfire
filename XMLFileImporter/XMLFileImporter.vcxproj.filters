@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\xmlfi">
+      <UniqueIdentifier>{0a43f796-6a0d-4345-a967-2704f2decf35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\xmlfi_VS">
+      <UniqueIdentifier>{54831451-c2f0-4152-ac21-8668ad6d5541}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\xmlfi\XMLFileImporter.cpp">
+      <Filter>src\xmlfi</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xmlfi_VS\stdafx.cpp">
+      <Filter>src\xmlfi_VS</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\xmlfi\XMLFileImporter.h">
+      <Filter>src\xmlfi</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xmlfi_VS\stdafx.h">
+      <Filter>src\xmlfi_VS</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="src\xmlfi_VS\ReadMe.txt">
+      <Filter>src\xmlfi_VS</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

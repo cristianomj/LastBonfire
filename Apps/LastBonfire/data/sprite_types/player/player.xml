@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sprite_type>
+    <image_config>SEPARATED</image_config>
+    <width>128</width>
+    <height>256</height>
+    <images_list>
+        <image_file id="1" file_name="idle1.png"/>
+        <image_file id="2" file_name="idle2.png"/>
+        <image_file id="3" file_name="idle3.png"/>
+        <image_file id="4" file_name="idle4.png"/>
+		
+        <image_file id="5" file_name="Walking1.png"/>
+        <image_file id="6" file_name="Walking2.png"/>
+        <image_file id="7" file_name="Walking3.png"/>
+        <image_file id="8" file_name="Walking4.png"/>
+        <image_file id="9" file_name="Walking5.png"/>
+		
+        <image_file id="10" file_name="WalkingL1.png"/>
+		<image_file id="11" file_name="WalkingL2.png"/>
+		<image_file id="12" file_name="WalkingL3.png"/>
+		<image_file id="13" file_name="WalkingL4.png"/>
+		<image_file id="14" file_name="WalkingL5.png"/>
+		
+		<image_file id="15" file_name="Death1.png"/>
+		<image_file id="16" file_name="Death2.png"/>
+		<image_file id="17" file_name="Death3.png"/>
+		<image_file id="18" file_name="Death4.png"/>
+		<image_file id="19" file_name="Death5.png"/>
+		<image_file id="20" file_name="Death6.png"/>
+	
+    </images_list>
+    <animations_list>
+        <animation_state>
+            <state>IDLE</state>
+            <animation_sequence>
+                <pose image_id="1" duration="15"/>
+				<pose image_id="2" duration="15"/>
+                <pose image_id="3" duration="15"/>
+				<pose image_id="2" duration="15"/>
+            </animation_sequence>
+        </animation_state>
+       <animation_state>
+            <state>ATTACKING_RIGHT</state>
+            <animation_sequence>
+                <pose image_id="5" duration="5"/>
+                <pose image_id="6" duration="5"/>
+				<pose image_id="7" duration="5"/>
+                <pose image_id="8" duration="5"/>
+                <pose image_id="9" duration="2"/>
+            </animation_sequence>
+        </animation_state>
+        <animation_state>
+            <state>ATTACKING_LEFT</state>
+            <animation_sequence>
+				<pose image_id="10" duration="5"/>
+                <pose image_id="11" duration="5"/>
+				<pose image_id="12" duration="5"/>
+                <pose image_id="13" duration="5"/>
+                <pose image_id="14" duration="2"/>
+            </animation_sequence>
+        </animation_state> 
+		<animation_state>
+            <state>DEATH</state>
+            <animation_sequence>
+				<pose image_id="15" duration="15"/>
+                <pose image_id="16" duration="15"/>
+				<pose image_id="17" duration="15"/>
+                <pose image_id="18" duration="15"/>
+                <pose image_id="19" duration="15"/>
+				<pose image_id="20" duration="30"/>
+            </animation_sequence>
+        </animation_state>
+    </animations_list>  
+</sprite_type>
