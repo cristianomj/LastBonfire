@@ -44,6 +44,9 @@
     <ClInclude Include="src\last_bonfire\LastBonfireCollisionListener.h">
       <Filter>src\last_bonfire</Filter>
     </ClInclude>
+    <ClInclude Include="src\last_bonfire\pch.h">
+      <Filter>src\last_bonfire</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\last_bonfire_VS\stdafx.cpp">

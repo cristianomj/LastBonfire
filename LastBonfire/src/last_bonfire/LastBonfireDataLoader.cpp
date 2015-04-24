@@ -26,6 +26,7 @@
 // DIRECTX INCLUDES
 #include "sssf\platforms\DirectX\DirectXGraphics.h"
 #include "sssf\platforms\DirectX\DirectXTextureManager.h"
+#include <Audio.h>
 
 // TMX MAP LOADING
 #include "tmxmi\TMXMapImporter.h"
@@ -189,6 +190,10 @@ void LastBonfireDataLoader::loadWorld(Game *game, wstring levelInitFile)
 	// LOAD RUBE LEVEL
 	Physics *physics = game->getGSM()->getPhysics();
 	physics->loadScene(game, RUBE_LEVEL);
+
+	//erica added
+	CoInitializeEx(nullptr, COINIT_MULTITHREADED);
+	//end erica added
 }
 
 /*

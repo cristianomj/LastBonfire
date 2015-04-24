@@ -32,6 +32,16 @@
 #include "sssf\platforms\DirectX\DirectXGraphics.h"
 #include "sssf\platforms\DirectX\DirectXTextureManager.h"
 
+//erica added
+#include "pch.h"
+
+using namespace DirectX;
+using namespace DirectX::SimpleMath;
+
+using Microsoft::WRL::ComPtr;
+
+//end erica added
+
 /*
 	WinMain - This is the application's starting point. In this method we will construct a Game object, 
 	then initialize all the platform-dependent technologies, then construct all the custom data for our 

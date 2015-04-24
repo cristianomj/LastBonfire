@@ -57,6 +57,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DirectXTK\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -77,6 +78,7 @@
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DirectXTK\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -100,6 +102,7 @@
     <ClInclude Include="src\last_bonfire\LastBonfireDataLoader.h" />
     <ClInclude Include="src\last_bonfire\LastBonfireKeyEventHandler.h" />
     <ClInclude Include="src\last_bonfire\LastBonfireTextGenerator.h" />
+    <ClInclude Include="src\last_bonfire\pch.h" />
     <ClInclude Include="src\last_bonfire_VS\Resource.h" />
     <ClInclude Include="src\last_bonfire_VS\stdafx.h" />
     <ClInclude Include="src\last_bonfire_VS\targetver.h" />
@@ -112,6 +115,14 @@
     <ClCompile Include="src\last_bonfire\LastBonfireKeyEventHandler.cpp" />
     <ClCompile Include="src\last_bonfire\LastBonfireTextGenerator.cpp" />
     <ClCompile Include="src\last_bonfire_VS\stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DirectXTK\Audio\DirectXTKAudio_Desktop_2013_Win8.vcxproj">
+      <Project>{4f150a30-cecb-49d1-8283-6a3f57438cf5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\DirectXTK\DirectXTK_Desktop_2013.vcxproj">
+      <Project>{e0b52ae7-e160-4d32-bf3f-910b785e5a8e}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

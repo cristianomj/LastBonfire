@@ -1,6 +1,7 @@
 #pragma once
 #include "last_bonfire_VS\stdafx.h"
 
+
 /*
 	LastBonfire.h
 
@@ -112,3 +113,5 @@ const unsigned int SPACE_KEY = VK_SPACE;
 
 // THIS IS JUST FOR SHOWING HOW THE CURSOR CAN BE CHANGED
 const unsigned int C_KEY = (unsigned int)'C';
+
+

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LastBonfire", "LastBonfire\LastBonfire.vcxproj", "{846F4420-9845-472B-9B3D-3D3091F84681}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -26,6 +26,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XMLFileImporter", "XMLFileImporter\XMLFileImporter.vcxproj", "{51ED5B76-A6B6-40B5-954B-C1865A883E7B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Box2D", "Box2D\Build\vs2012\Box2D.vcxproj", "{98400D17-43A5-1A40-95BE-C53AC78E7694}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DirectXTK_Desktop_2013", "DirectXTK\DirectXTK_Desktop_2013.vcxproj", "{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DirectXTKAudio_Desktop_2013_Win8", "DirectXTK\Audio\DirectXTKAudio_Desktop_2013_Win8.vcxproj", "{4F150A30-CECB-49D1-8283-6A3F57438CF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +83,22 @@ Global
 		{98400D17-43A5-1A40-95BE-C53AC78E7694}.Release|Win32.Build.0 = Release|Win32
 		{98400D17-43A5-1A40-95BE-C53AC78E7694}.Release|x64.ActiveCfg = Release|x64
 		{98400D17-43A5-1A40-95BE-C53AC78E7694}.Release|x64.Build.0 = Release|x64
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Debug|Win32.Build.0 = Debug|Win32
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Debug|x64.ActiveCfg = Debug|x64
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Debug|x64.Build.0 = Debug|x64
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Release|Win32.ActiveCfg = Release|Win32
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Release|Win32.Build.0 = Release|Win32
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Release|x64.ActiveCfg = Release|x64
+		{E0B52AE7-E160-4D32-BF3F-910B785E5A8E}.Release|x64.Build.0 = Release|x64
+		{4F150A30-CECB-49D1-8283-6A3F57438CF5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4F150A30-CECB-49D1-8283-6A3F57438CF5}.Debug|Win32.Build.0 = Debug|Win32
+		{4F150A30-CECB-49D1-8283-6A3F57438CF5}.Debug|x64.ActiveCfg = Debug|x64
+		{4F150A30-CECB-49D1-8283-6A3F57438CF5}.Debug|x64.Build.0 = Debug|x64
+		{4F150A30-CECB-49D1-8283-6A3F57438CF5}.Release|Win32.ActiveCfg = Release|Win32
+		{4F150A30-CECB-49D1-8283-6A3F57438CF5}.Release|Win32.Build.0 = Release|Win32
+		{4F150A30-CECB-49D1-8283-6A3F57438CF5}.Release|x64.ActiveCfg = Release|x64
+		{4F150A30-CECB-49D1-8283-6A3F57438CF5}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
