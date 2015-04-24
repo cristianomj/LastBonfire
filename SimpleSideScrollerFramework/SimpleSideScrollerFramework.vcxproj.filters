@@ -195,6 +195,9 @@
     <ClCompile Include="Box.cpp">
       <Filter>src\sssf\gsm\ai\lifeless_objects</Filter>
     </ClCompile>
+    <ClCompile Include="src\sssf\game\pch.cpp">
+      <Filter>src\sssf\game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\sssf_VS\stdafx.h">
@@ -364,6 +367,9 @@
     </ClInclude>
     <ClInclude Include="src\sssf\gsm\ai\LifelessObject.h">
       <Filter>src\sssf\gsm\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\game\pch.h">
+      <Filter>src\sssf\game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

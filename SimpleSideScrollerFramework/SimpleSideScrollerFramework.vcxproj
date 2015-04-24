@@ -17,6 +17,7 @@
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="src\sssf\data_loader\GameDataLoader.cpp" />
     <ClCompile Include="src\sssf\game\Game.cpp" />
+    <ClCompile Include="src\sssf\game\pch.cpp" />
     <ClCompile Include="src\sssf\game\WStringTable.cpp" />
     <ClCompile Include="src\sssf\graphics\GameGraphics.cpp" />
     <ClCompile Include="src\sssf\graphics\RenderList.cpp" />
@@ -60,6 +61,7 @@
     <ClInclude Include="src\sssf\game\Game.h" />
     <ClInclude Include="src\sssf\game\IllegalArgumentException.h" />
     <ClInclude Include="src\sssf\game\IllegalFileFormatException.h" />
+    <ClInclude Include="src\sssf\game\pch.h" />
     <ClInclude Include="src\sssf\game\WStringTable.h" />
     <ClInclude Include="src\sssf\graphics\GameGraphics.h" />
     <ClInclude Include="src\sssf\graphics\RenderList.h" />
@@ -159,6 +161,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DirectXTK\Inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -179,6 +182,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DirectXTK\Inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
