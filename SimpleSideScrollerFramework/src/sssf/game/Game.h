@@ -41,6 +41,7 @@ class GameTimer;
 class GameStateManager;
 class GameGUI;
 class GameText;
+class GameAudio;
 
 static const float PI = 3.1415926535897932384626433f;
 
@@ -67,6 +68,9 @@ private:
 	GameInput			*input;
 	GameOS				*os;
 	GameTimer			*timer;
+
+	// MANAGES GAME AUDIO
+	GameAudio			*gameAudio;
 
 	// THIS WILL KEEP TRACK OF THE NAME OF THE LEVEL FILE
 	// THAT IS CURRENTLY BEING USED

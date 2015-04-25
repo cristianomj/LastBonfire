@@ -74,6 +74,9 @@
     <Filter Include="src\sssf\gsm\ai\lifeless_objects">
       <UniqueIdentifier>{db772ff0-ffe4-4ad7-87e5-b74b44076e87}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\sssf\audio">
+      <UniqueIdentifier>{980e3914-b75c-44b6-b954-d7226759e7a7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="src\sssf_VS\ReadMe.txt">
@@ -197,6 +200,9 @@
     </ClCompile>
     <ClCompile Include="src\sssf\game\pch.cpp">
       <Filter>src\sssf\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\audio\GameAudio.cpp">
+      <Filter>src\sssf\audio</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -370,6 +376,9 @@
     </ClInclude>
     <ClInclude Include="src\sssf\game\pch.h">
       <Filter>src\sssf\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\audio\GameAudio.h">
+      <Filter>src\sssf\audio</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -22,6 +22,7 @@
 #include "sssf\text\TextFileWriter.h"
 #include "sssf\text\TextGenerator.h"
 #include "sssf\timer\GameTimer.h"
+#include "sssf\audio\GameAudio.h"
 
 /*
 	Game  - Constructor, this method begins the 
@@ -44,6 +45,7 @@ Game::Game()
 	gsm = new GameStateManager();
 	gui = new GameGUI();
 	text = new GameText();
+	gameAudio = new GameAudio();
 }
 
 /*
@@ -78,6 +80,7 @@ void Game::initPlatformPlugins(		GameGraphics *initGraphics,
 	input = initInput;
 	os = initOS;
 	timer = initTimer;
+	gameAudio->initAudioEngine();
 }
 
 /*
