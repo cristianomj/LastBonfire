@@ -15,6 +15,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Box.cpp" />
+    <ClCompile Include="src\sssf\audio\GameAudio.cpp" />
     <ClCompile Include="src\sssf\data_loader\GameDataLoader.cpp" />
     <ClCompile Include="src\sssf\game\Game.cpp" />
     <ClCompile Include="src\sssf\game\WStringTable.cpp" />
@@ -56,6 +57,7 @@
   <ItemGroup>
     <ClInclude Include="Box.h" />
     <ClInclude Include="LevelObject.h" />
+    <ClInclude Include="src\sssf\audio\GameAudio.h" />
     <ClInclude Include="src\sssf\data_loader\GameDataLoader.h" />
     <ClInclude Include="src\sssf\game\Game.h" />
     <ClInclude Include="src\sssf\game\IllegalArgumentException.h" />
@@ -111,6 +113,14 @@
     <ClInclude Include="src\sssf_VS\stdafx.h" />
     <ClInclude Include="src\sssf_VS\targetver.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DirectXTK\Audio\DirectXTKAudio_Desktop_2013_DXSDK.vcxproj">
+      <Project>{4f150a30-cecb-49d1-8283-6a3f57438cf5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\DirectXTK\DirectXTK_Desktop_2013.vcxproj">
+      <Project>{e0b52ae7-e160-4d32-bf3f-910b785e5a8e}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CDB6313F-0EFD-4C76-94EE-30084956B2F2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -159,6 +169,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DirectXTK\Inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -179,6 +190,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)\DirectXTK\Inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

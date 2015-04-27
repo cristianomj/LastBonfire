@@ -41,6 +41,7 @@ class GameTimer;
 class GameStateManager;
 class GameGUI;
 class GameText;
+class GameAudio;
 
 static const float PI = 3.1415926535897932384626433f;
 
@@ -68,6 +69,9 @@ private:
 	GameOS				*os;
 	GameTimer			*timer;
 
+	// MANAGES GAME AUDIO
+	GameAudio			*gameAudio;
+
 	// THIS WILL KEEP TRACK OF THE NAME OF THE LEVEL FILE
 	// THAT IS CURRENTLY BEING USED
 	wstring				currentLevelFileName;
@@ -77,6 +81,7 @@ public:
 	GameStateManager*	getGSM()				{ return gsm;								}
 	GameGUI*			getGUI()				{ return gui;								}
 	GameText*			getText()				{ return text;								}
+	GameAudio*			getAudio()				{ return gameAudio;							}	
 
 	// INLINED ACCESSOR METHODS - ACTUALLY SUB-CLASSES
 	GameDataLoader*		getDataLoader()			{ return dataLoader;						}

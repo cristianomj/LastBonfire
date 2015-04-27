@@ -14,6 +14,7 @@
 #include "sssf\input\GameInput.h"
 #include "sssf\timer\GameTimer.h"
 #include "sssf\platforms\Windows\WindowsTimer.h"
+#include "sssf\audio\GameAudio.h"
 
 /*
 handleKeyEvent - this method handles all keyboard interactions. Note that every frame this method
@@ -32,6 +33,7 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 	PhysicalProperties *pp = player->getPhysicalProperties();
 	Viewport *viewport = game->getGUI()->getViewport();
 	Physics* physics = game->getGSM()->getPhysics();
+	GameAudio* audio = game->getAudio();
 
 	// IF THE GAME IS IN PROGRESS
 	if (gsm->isGameInProgress())
@@ -57,6 +59,8 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 			player->setCurrentState(ATTACKING_RIGHT);
 
 			physics->movePlayer(RIGHT);
+
+			audio->update();
 		}
 		else if (input->isKeyDownForFirstTime(G_KEY))
 		{

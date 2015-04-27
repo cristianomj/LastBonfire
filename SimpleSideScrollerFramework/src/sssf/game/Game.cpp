@@ -22,6 +22,7 @@
 #include "sssf\text\TextFileWriter.h"
 #include "sssf\text\TextGenerator.h"
 #include "sssf\timer\GameTimer.h"
+#include "sssf\audio\GameAudio.h"
 
 /*
 	Game  - Constructor, this method begins the 
@@ -44,6 +45,7 @@ Game::Game()
 	gsm = new GameStateManager();
 	gui = new GameGUI();
 	text = new GameText();
+	gameAudio = new GameAudio();
 }
 
 /*
@@ -78,6 +80,7 @@ void Game::initPlatformPlugins(		GameGraphics *initGraphics,
 	input = initInput;
 	os = initOS;
 	timer = initTimer;
+	gameAudio->initAudio();
 }
 
 /*
@@ -127,6 +130,8 @@ void Game::runGameLoop()
 		// GET USER INPUT AND UPDATE GAME, GUI, OR PLAYER
 		// STATE OR WHATEVER IS NECESSARY
 		input->processInput(this);
+
+		//gameAudio->update();
 
 		// IT IS POSSIBLE THE USER REQUESTED A SHUTDOWN
 		// OF THE APP, SO WE NEED TO CHECK AGAIN

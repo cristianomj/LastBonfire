@@ -74,6 +74,9 @@
     <Filter Include="src\sssf\gsm\ai\lifeless_objects">
       <UniqueIdentifier>{db772ff0-ffe4-4ad7-87e5-b74b44076e87}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\sssf\audio">
+      <UniqueIdentifier>{f1ad2884-8861-4de7-94e3-224c16f0435c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="src\sssf_VS\ReadMe.txt">
@@ -194,6 +197,9 @@
     </ClCompile>
     <ClCompile Include="Box.cpp">
       <Filter>src\sssf\gsm\ai\lifeless_objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\audio\GameAudio.cpp">
+      <Filter>src\sssf\audio</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -364,6 +370,9 @@
     </ClInclude>
     <ClInclude Include="src\sssf\gsm\ai\LifelessObject.h">
       <Filter>src\sssf\gsm\ai</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\audio\GameAudio.h">
+      <Filter>src\sssf\audio</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
