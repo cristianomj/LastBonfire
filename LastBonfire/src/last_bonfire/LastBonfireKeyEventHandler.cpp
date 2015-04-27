@@ -59,8 +59,6 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 			player->setCurrentState(ATTACKING_RIGHT);
 
 			physics->movePlayer(RIGHT);
-
-			audio->update();
 		}
 		else if (input->isKeyDownForFirstTime(G_KEY))
 		{

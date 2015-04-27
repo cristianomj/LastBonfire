@@ -12,10 +12,9 @@ public:
 	void update();
 	void suspend();
 	void resume();
+	void playSoundFX(const int);
 
 private:
-	std::unique_ptr<DirectX::AudioEngine> m_audEngine;
-
-	std::unique_ptr<DirectX::SoundEffect> m_explode;
-	std::unique_ptr<DirectX::SoundEffect> m_ambient;
+	std::unique_ptr<DirectX::AudioEngine> m_audioEngine;
+	std::unique_ptr<DirectX::WaveBank> m_sounds;
 };

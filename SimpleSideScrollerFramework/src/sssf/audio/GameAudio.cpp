@@ -7,9 +7,9 @@ using Microsoft::WRL::ComPtr;
 
 GameAudio::~GameAudio()
 {
-	if (m_audEngine)
+	if (m_audioEngine)
 	{
-		m_audEngine->Suspend();
+		m_audioEngine->Suspend();
 	}
 }
 
@@ -21,30 +21,31 @@ void GameAudio::initAudio()
 #ifdef _DEBUG
 	eflags = eflags | AudioEngine_Debug;
 #endif
-	m_audEngine.reset(new AudioEngine(eflags));
+	m_audioEngine.reset(new AudioEngine(eflags));
 
-	m_explode.reset(new SoundEffect(m_audEngine.get(), L"data/audio/explo1.wav"));
-	m_ambient.reset(new SoundEffect(m_audEngine.get(), L"data/audio/NightAmbienceSimple_02.wav"));
+	m_sounds.reset(new WaveBank(m_audioEngine.get(), L"data/audio/sounds.xwb"));
 }
 
 void GameAudio::update()
 {
-	if (!m_audEngine->Update())
+	if (!m_audioEngine->Update())
 	{
 		// more about this below...
 	}
-
-	m_ambient->Play();
-	m_explode->Play();
 }
 
 void GameAudio::suspend()
 {
-	m_audEngine->Suspend();
+	m_audioEngine->Suspend();
 }
 
 void GameAudio::resume()
 {
-	m_audEngine->Resume();
+	m_audioEngine->Resume();
+}
+
+void GameAudio::playSoundFX(const int sfx)
+{
+	m_sounds->Play(sfx);
 }
 

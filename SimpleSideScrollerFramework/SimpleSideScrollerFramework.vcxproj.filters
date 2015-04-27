@@ -374,5 +374,8 @@
     <ClInclude Include="src\sssf\audio\GameAudio.h">
       <Filter>src\sssf\audio</Filter>
     </ClInclude>
+    <ClInclude Include="src\sssf\audio\sounds.h">
+      <Filter>src\sssf\audio</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

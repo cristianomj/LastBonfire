@@ -131,7 +131,8 @@ void Game::runGameLoop()
 		// STATE OR WHATEVER IS NECESSARY
 		input->processInput(this);
 
-		//gameAudio->update();
+		// UPDATES AUDIO EACH FRAME
+		gameAudio->update();
 
 		// IT IS POSSIBLE THE USER REQUESTED A SHUTDOWN
 		// OF THE APP, SO WE NEED TO CHECK AGAIN

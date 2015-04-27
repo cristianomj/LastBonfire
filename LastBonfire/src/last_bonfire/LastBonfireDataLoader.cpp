@@ -270,19 +270,19 @@ void LastBonfireDataLoader::initSplashScreen(Game *game, GameGUI *gui, DirectXTe
 	splashScreenGUI->addOverlayImage(imageToAdd);
 
 	// WE'LL ONLY HAVE ONE IMAGE FOR OUR GIANT BUTTON
-	unsigned int normalTextureID = guiTextureManager->loadTexture(W_BONFIRE_OFF_PATH);
-	unsigned int mouseOverTextureID = guiTextureManager->loadTexture(W_BONFIRE_ON_PATH);
+	unsigned int normalTextureID = guiTextureManager->loadTexture(W_LANTERN_OFF_PATH);
+	unsigned int mouseOverTextureID = guiTextureManager->loadTexture(W_LANTERN_ON_PATH);
 
 	// BONFIRE BUTTON
 	Button *buttonToAdd = new Button();
 	buttonToAdd->initButton(normalTextureID,
 		mouseOverTextureID,
-		300,
-		257,
+		507,
+		506,
 		0,
 		255,
-		400,
-		409,
+		101,
+		170,
 		false,
 		W_GO_TO_MM_COMMAND);
 	splashScreenGUI->addButton(buttonToAdd);

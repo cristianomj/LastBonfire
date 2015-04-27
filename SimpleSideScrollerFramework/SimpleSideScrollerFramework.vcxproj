@@ -58,6 +58,7 @@
     <ClInclude Include="Box.h" />
     <ClInclude Include="LevelObject.h" />
     <ClInclude Include="src\sssf\audio\GameAudio.h" />
+    <ClInclude Include="src\sssf\audio\sounds.h" />
     <ClInclude Include="src\sssf\data_loader\GameDataLoader.h" />
     <ClInclude Include="src\sssf\game\Game.h" />
     <ClInclude Include="src\sssf\game\IllegalArgumentException.h" />
