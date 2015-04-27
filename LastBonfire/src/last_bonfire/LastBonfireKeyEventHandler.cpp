@@ -74,6 +74,7 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 		}
 		if (input->isKeyDownForFirstTime(SPACE_KEY))
 		{
+			vY = JUMP;
 			physics->movePlayer(JUMP);
 		}
 		if (input->isKeyDownForFirstTime(P_KEY))

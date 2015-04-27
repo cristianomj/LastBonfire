@@ -109,19 +109,19 @@ void Button::updateMouseOver(Game* game, long mouseX, long mouseY)
 		// SETTING THIS WILL ENSURE WE USE THE PROPER IMAGE FOR
 		// RENDERING, IT WILL ALSO ENSURE AN EVENT IS FIRED IF
 		// THE MOUSE BUTTON IS CLICKED
-		mouseOver = true;
 		if (lanternOff && command == L"Go To Main Menu") {
-			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_LANTERNON2);
+			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_LANTERNON);
 			lanternOff = false;
 		}
+		mouseOver = true;
 	}
 	else
 	{
 		// THIS WILL ENSURE THE NORMAL IMAGE IS RENDERED
-		mouseOver = false;
 		if (!lanternOff && command == L"Go To Main Menu") {
-			//gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_LANTERNOFF);
+			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_LANTERNOFF);
 			lanternOff = true;
 		}
+		mouseOver = false;
 	}
 }

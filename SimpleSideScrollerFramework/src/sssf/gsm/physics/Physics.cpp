@@ -130,7 +130,7 @@ void Physics::loadScene(Game* game, const char* level)
 
 	}
 	
-	json.getBodiesByName("ScooterWheel", b2Objects);
+	/*json.getBodiesByName("ScooterWheel", b2Objects);
 	object = spriteManager->getSpriteType(WHEEL_SPRITE);
 	for (int i = settings.boxes; i < b2Objects.size(); i++)
 	{
@@ -147,7 +147,7 @@ void Physics::loadScene(Game* game, const char* level)
 	x = b2Objects[b2Objects.size() - 1]->GetPosition().x;
 	y = b2Objects[b2Objects.size() - 1]->GetPosition().y;
 	b2dToScreen(objects[b2Objects.size() - 1], x, y);
-	objects[b2Objects.size() - 1]->getPhysicalProperties()->setPosition(x, y);
+	objects[b2Objects.size() - 1]->getPhysicalProperties()->setPosition(x, y);*/
 
 
 	/*b2Objects[b2Objects.size() - 1]->GetFixtureList()->SetSensor(false);
