@@ -1,6 +1,7 @@
 #pragma once
 
 #include "sssf_VS\stdafx.h"
+#include "sssf\audio\sounds.h"
 
 class GameAudio
 {

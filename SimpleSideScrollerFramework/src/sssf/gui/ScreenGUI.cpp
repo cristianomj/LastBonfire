@@ -220,7 +220,7 @@ void ScreenGUI::registerButtonEventHandler(ButtonEventHandler *eventHandler)
 	visible ScreenGUI such that the buttons are rendered properly
 	and so that button clicks fire events.
 */
-void ScreenGUI::updateAllButtons(long mouseX, long mouseY)
+void ScreenGUI::updateAllButtons(Game* game, long mouseX, long mouseY)
 {
 	list<Button*>::iterator buttonIterator;
 
@@ -239,7 +239,7 @@ void ScreenGUI::updateAllButtons(long mouseX, long mouseY)
 			// UPDATE ALL BUTTONS IN THIS SCREEN SO THEY
 			// KNOW IF THE CURSOR IS CURRENTLY OVER THEM
 			// OR NOT
-			buttonToUpdate->updateMouseOver(mouseX, mouseY);
+			buttonToUpdate->updateMouseOver(game, mouseX, mouseY);
 
 			// ADVANCE THE ITERATOR
 			buttonIterator++;

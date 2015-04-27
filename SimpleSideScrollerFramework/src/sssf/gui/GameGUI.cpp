@@ -131,12 +131,12 @@ void GameGUI::registerButtonEventHandler(ButtonEventHandler *eventHandler)
 	If an illegal mode is provided, meaning a screen index that does not
 	exist, an exception is thrown.
 */
-void GameGUI::updateGUIState(long mouseX, long mouseY, GameState gameState)
+void GameGUI::updateGUIState(Game* game, long mouseX, long mouseY, GameState gameState)
 {
 	ScreenGUI *gui = screens[gameState];
 	if (gui != NULL)
 	{
 		// LET THE CURRENT SCREEN UPDATE IT'S BUTTON STATES
-		gui->updateAllButtons(mouseX, mouseY);
+		gui->updateAllButtons(game, mouseX, mouseY);
 	}
 }
