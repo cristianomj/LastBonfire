@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LastBonfire", "LastBonfire\LastBonfire.vcxproj", "{846F4420-9845-472B-9B3D-3D3091F84681}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -26,6 +26,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XMLFileImporter", "XMLFileImporter\XMLFileImporter.vcxproj", "{51ED5B76-A6B6-40B5-954B-C1865A883E7B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Box2D", "Box2D\Build\vs2012\Box2D.vcxproj", "{98400D17-43A5-1A40-95BE-C53AC78E7694}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LuaPlus", "LuaPlus\LuaPlus.vcxproj", "{C7066E82-5104-4139-AB27-E03506BDBC04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,12 @@ Global
 		{98400D17-43A5-1A40-95BE-C53AC78E7694}.Release|Win32.Build.0 = Release|Win32
 		{98400D17-43A5-1A40-95BE-C53AC78E7694}.Release|x64.ActiveCfg = Release|x64
 		{98400D17-43A5-1A40-95BE-C53AC78E7694}.Release|x64.Build.0 = Release|x64
+		{C7066E82-5104-4139-AB27-E03506BDBC04}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C7066E82-5104-4139-AB27-E03506BDBC04}.Debug|Win32.Build.0 = Debug|Win32
+		{C7066E82-5104-4139-AB27-E03506BDBC04}.Debug|x64.ActiveCfg = Debug|Win32
+		{C7066E82-5104-4139-AB27-E03506BDBC04}.Release|Win32.ActiveCfg = Release|Win32
+		{C7066E82-5104-4139-AB27-E03506BDBC04}.Release|Win32.Build.0 = Release|Win32
+		{C7066E82-5104-4139-AB27-E03506BDBC04}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,10 +9,10 @@
 */
 
 // HERE IS THE BugginOut GAME SETUP/INIT FILE. EVERYTHING WOULD START FROM HERE
-static const wstring	W_LEVEL_1_DIR			= L"data/levels/CaveLevel/";
-static const wstring	W_LEVEL_1_NAME			= L"CaveLevel.tmx";
+static const wstring	W_LEVEL_1_DIR			= L"data/levels/SnowLevel/";
+static const wstring	W_LEVEL_1_NAME			= L"SnowLevel.tmx";
 static const wstring	W_LEVEL_1_PATH			= W_LEVEL_1_DIR + W_LEVEL_1_NAME;
-static const char *		RUBE_LEVEL_1			= "data/levels/CaveLevel/CaveLevel.json";
+static const char *		RUBE_LEVEL_1			= "data/levels/SnowLevel/SnowLevel.json";
 
 static const wstring	W_LEVEL_2_DIR			= L"data/levels/CaveLevel/";
 static const wstring	W_LEVEL_2_NAME			= L"CaveLevel.tmx";

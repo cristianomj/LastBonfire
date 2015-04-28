@@ -129,25 +129,25 @@ void Physics::loadScene(Game* game, const char* level)
 		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
 
 	}
-	
-	json.getBodiesByName("ScooterWheel", b2Objects);
-	object = spriteManager->getSpriteType(WHEEL_SPRITE);
-	for (int i = settings.boxes; i < b2Objects.size(); i++)
-	{
-		objects.push_back(makeLifelessObject(game, object, 0, 0));
-		float32 x = b2Objects[i]->GetPosition().x;
-		float32 y = b2Objects[i]->GetPosition().y;
 
-		b2dToScreen(objects[i], x, y);
-		objects[i]->getPhysicalProperties()->setPosition(x, y);
-	}
-	b2Objects.push_back(json.getBodyByName("Scooter"));
-	object = spriteManager->getSpriteType(SCOOTER_SPRITE);
-	objects.push_back(makeLifelessObject(game, object, 0, 0));
-	x = b2Objects[b2Objects.size() - 1]->GetPosition().x;
-	y = b2Objects[b2Objects.size() - 1]->GetPosition().y;
-	b2dToScreen(objects[b2Objects.size() - 1], x, y);
-	objects[b2Objects.size() - 1]->getPhysicalProperties()->setPosition(x, y);
+//	json.getBodiesByName("ScooterWheel", b2Objects);
+//	object = spriteManager->getSpriteType(WHEEL_SPRITE);
+//	for (int i = settings.boxes; i < b2Objects.size(); i++)
+//	{
+//		objects.push_back(makeLifelessObject(game, object, 0, 0));
+//		float32 x = b2Objects[i]->GetPosition().x;
+	//	float32 y = b2Objects[i]->GetPosition().y;
+
+//		b2dToScreen(objects[i], x, y);
+//		objects[i]->getPhysicalProperties()->setPosition(x, y);
+//	}
+//	b2Objects.push_back(json.getBodyByName("Scooter"));
+//	object = spriteManager->getSpriteType(SCOOTER_SPRITE);
+//	objects.push_back(makeLifelessObject(game, object, 0, 0));
+//	x = b2Objects[b2Objects.size() - 1]->GetPosition().x;
+//	y = b2Objects[b2Objects.size() - 1]->GetPosition().y;
+//	b2dToScreen(objects[b2Objects.size() - 1], x, y);
+//	objects[b2Objects.size() - 1]->getPhysicalProperties()->setPosition(x, y);
 
 
 	/*b2Objects[b2Objects.size() - 1]->GetFixtureList()->SetSensor(false);
