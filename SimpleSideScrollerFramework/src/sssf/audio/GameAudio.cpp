@@ -23,14 +23,34 @@ void GameAudio::initAudio()
 #endif
 	m_audioEngine.reset(new AudioEngine(eflags));
 
+	m_retryAudio = false;
+	m_volume = 1.0f;
+
 	m_sounds.reset(new WaveBank(m_audioEngine.get(), L"data/audio/sounds.xwb"));
+
+	playBackgroundSound(XACT_WAVEBANK_SOUNDS_BACKGROUND);
 }
 
 void GameAudio::update()
 {
+	if (m_retryAudio)
+	{
+		m_retryAudio = false;
+		if (m_audioEngine->Reset())
+		{
+			// TODO: restart any looped sounds here
+			if (m_background_music)
+				m_background_music->Play(true);
+		}
+	}
+
 	if (!m_audioEngine->Update())
 	{
-		// more about this below...
+		// No audio device is active
+		if (m_audioEngine->IsCriticalError())
+		{
+			m_retryAudio = true;
+		}
 	}
 }
 
@@ -47,5 +67,17 @@ void GameAudio::resume()
 void GameAudio::playSoundFX(const int sfx)
 {
 	m_sounds->Play(sfx);
+}
+
+void GameAudio::playBackgroundSound(const int sfx)
+{
+	m_background_music = m_sounds->CreateInstance(sfx);
+	m_background_music->SetVolume(m_volume);
+	m_background_music->Play(true);
+}
+
+void GameAudio::setVolume(float volume)
+{
+	m_background_music->SetVolume(volume);
 }
 

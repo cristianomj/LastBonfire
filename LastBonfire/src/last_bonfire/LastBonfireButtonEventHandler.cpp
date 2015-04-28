@@ -51,7 +51,7 @@ void LastBonfireButtonEventHandler::handleButtonEvents(Game *game,
 		if ((*overlayIterator)->x != (*overlayIterator)->width * -2) {
 
 			// TODO: PLAY CLICK SOUND
-			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_MENUCLICK);
+			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_MENUSELECTIONCLICK);
 
 			while (overlayIterator != game->getGUI()->getScreen(GS_MAIN_MENU)->getEndOfOverlayIterator())
 			{
@@ -68,7 +68,7 @@ void LastBonfireButtonEventHandler::handleButtonEvents(Game *game,
 		if ((*overlayIterator)->x != 0) {
 
 			// TODO: PLAY CLICK SOUND
-			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_MENUCLICK);
+			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_MENUSELECTIONCLICK);
 
 			while (overlayIterator != game->getGUI()->getScreen(GS_MAIN_MENU)->getEndOfOverlayIterator())
 			{
