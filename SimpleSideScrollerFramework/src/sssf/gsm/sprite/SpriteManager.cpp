@@ -156,10 +156,10 @@ void SpriteManager::update(Game *game)
 
 	Viewport *viewport = game->getGUI()->getViewport();
 
-	viewport->moveViewport(player.getPhysicalProperties()->getVelocityX() * 1.5,
-		player.getPhysicalProperties()->getVelocityY() * 1.5,
-		game->getGSM()->getWorld()->getWorldWidth(),
-		game->getGSM()->getWorld()->getWorldHeight());
+//	viewport->moveViewport(player.getPhysicalProperties()->getVelocityX() * 1.5,
+//		player.getPhysicalProperties()->getVelocityY() * 1.5,
+//		game->getGSM()->getWorld()->getWorldWidth(),
+//		game->getGSM()->getWorld()->getWorldHeight());
 
 	// NOW UPDATE LIFELESS OBJECTS
 	list<LifelessObject*>::iterator objectIterator;
