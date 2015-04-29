@@ -59,9 +59,9 @@ void Physics::update(Game* game)
 	// Change sprite position
 	player->getPhysicalProperties()->setPosition(x, y);
 
-	// UPDATE LIFELESS OBJECTS' POSITION
-	set<b2Body*>::iterator it = lifelessObjects.begin();
-	set<b2Body*>::iterator end = lifelessObjects.end();
+	// UPDATE BOTS POSITIONS
+	set<b2Body*>::iterator it = bots.begin();
+	set<b2Body*>::iterator end = bots.end();
 	for (; it != end; ++it)
 	{
 		b2Body* body = *it;
@@ -86,9 +86,9 @@ void Physics::removeScheduledForRemoval(Game* game)
 	{
 		b2Body* toRemove = *it;
 		// Remove from bodies list
-		lifelessObjects.erase(toRemove);
+		bots.erase(toRemove);
 		// Remove sprite from render list
-		spriteManager->removeObject((LifelessObject*)toRemove->GetUserData());
+		spriteManager->removeLifelessObject((LifelessObject*)toRemove->GetUserData());
 		// Destroy body
 		world->DestroyBody(toRemove);
 	}
@@ -142,12 +142,15 @@ void Physics::loadScene(Game* game, const char* level)
 	playerBody->SetGravityScale(20);
 	playerBody->SetUserData(player);
 
+	// LOAD BOTS
+
+
 	// LOAD ALL OBJECTS
 	json.getBodiesByName("Box", tempBodies);
 	AnimatedSpriteType* spriteType = spriteManager->getSpriteType(BOX_SPRITE);
 	for (int i = 0; i < tempBodies.size(); i++)
 	{
-		loadLifelessObject(game, spriteType, i);
+		loadLifelessObject(game, spriteType, tempBodies[i]);
 
 		// TODO: set any body definitions here
 		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
@@ -162,7 +165,7 @@ void Physics::loadScene(Game* game, const char* level)
 	spriteType = spriteManager->getSpriteType(WHEEL_SPRITE);
 	for (int i = 0; i < tempBodies.size(); i++)
 	{
-		loadLifelessObject(game, spriteType, i);
+		loadLifelessObject(game, spriteType, tempBodies[i]);
 
 		// TODO: set any body definitions here
 		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
@@ -177,7 +180,7 @@ void Physics::loadScene(Game* game, const char* level)
 	spriteType = spriteManager->getSpriteType(SCOOTER_SPRITE);
 	for (int i = 0; i < tempBodies.size(); i++)
 	{
-		loadLifelessObject(game, spriteType, i);
+		loadLifelessObject(game, spriteType, tempBodies[i]);
 
 		// TODO: set any body definitions here
 		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
@@ -221,52 +224,32 @@ void Physics::makePlayer(Game* game, float initX, float initY)
 
 	AnimatedSpriteType *playerSpriteType = spriteManager->getSpriteType(PLAYER_SPRITE);
 	playerSprite->setSpriteType(playerSpriteType);
-	playerSprite->setAlpha(255);
-	playerSprite->setCurrentState(IDLE);
-	playerSprite->setRotationInRadians(0.0f);
 
-	PhysicalProperties *playerProps = playerSprite->getPhysicalProperties();
 	playerSprite->affixTightAABBBoundingVolume();
 	b2dToScreen(player, initX, initY);
 	playerSprite->getPhysicalProperties()->setPosition(initX, initY);
-
-	settings.playerOffsetX = playerSprite->getBoundingVolume()->getWidth() / settings.ratio / 2.0f;
-	settings.playerOffsetY = playerSprite->getBoundingVolume()->getHeight() / settings.ratio / 2.0f;
 }
 
-LifelessObject* Physics::makeLifelessObject(Game* game, AnimatedSpriteType *lifeLessType, float initX, float initY)
-{
-	SpriteManager *spriteManager = game->getGSM()->getSpriteManager();
-	Physics *physics = game->getGSM()->getPhysics();
-
-	LifelessObject *object = new LifelessObject();
-
-	PhysicalProperties *pp = object->getPhysicalProperties();
-	pp->setPosition(initX, initY);
-	object->setSpriteType(lifeLessType);
-	object->setRotationInRadians(0.0f);
-
-	object->setCurrentState(L"IDLE");
-	object->setAlpha(255);
-	spriteManager->addObject(object);
-	object->affixTightAABBBoundingVolume();
-
-	return object;
-}
-
-void Physics::loadLifelessObject(Game* game, AnimatedSpriteType* spriteType, int i)
+void Physics::loadLifelessObject(Game* game, AnimatedSpriteType* spriteType, b2Body* body)
 {
 	// Create sprite and add it to sprite manager render list
-	LifelessObject* sprite = makeLifelessObject(game, spriteType, 0, 0);
+	SpriteManager *spriteManager = game->getGSM()->getSpriteManager();
+	LifelessObject* sprite = new LifelessObject();
+	Physics *physics = game->getGSM()->getPhysics();
+
+	sprite->setSpriteType(spriteType);
+	spriteManager->addLifelessObject(sprite);
+	sprite->affixTightAABBBoundingVolume();
+
 	// Associate body with sprite
-	tempBodies[i]->SetUserData(sprite);
+	body->SetUserData(sprite);
 
 	// Add body to lifelessObject set
-	lifelessObjects.insert(tempBodies[i]);
+	bots.insert(body);
 
 	// Give sprite a starting position
-	float32 x = tempBodies[i]->GetPosition().x;
-	float32 y = tempBodies[i]->GetPosition().y;
+	float32 x = body->GetPosition().x;
+	float32 y = body->GetPosition().y;
 	// box2d to world coordinate conversion
 	b2dToScreen(sprite, x, y);
 	sprite->getPhysicalProperties()->setPosition(x, y);

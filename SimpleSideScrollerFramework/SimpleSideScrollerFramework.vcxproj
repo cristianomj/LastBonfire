@@ -14,7 +14,6 @@
     <Text Include="src\sssf_VS\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Box.cpp" />
     <ClCompile Include="src\sssf\audio\GameAudio.cpp" />
     <ClCompile Include="src\sssf\data_loader\GameDataLoader.cpp" />
     <ClCompile Include="src\sssf\game\Game.cpp" />
@@ -55,8 +54,6 @@
     <ClCompile Include="src\sssf_VS\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Box.h" />
-    <ClInclude Include="LevelObject.h" />
     <ClInclude Include="src\sssf\audio\GameAudio.h" />
     <ClInclude Include="src\sssf\audio\sounds.h" />
     <ClInclude Include="src\sssf\data_loader\GameDataLoader.h" />

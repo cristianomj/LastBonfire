@@ -71,6 +71,16 @@ void SpriteManager::addSpriteItemsToRenderList(	Game *game)
 		// ADD THE PLAYER SPRITE
 		addSpriteToRenderList(&player, renderList, viewport);
 
+		// ADD THE BOTS
+		list<Bot*>::iterator botsIterator;
+		botsIterator = bots.begin();
+		while (botsIterator != bots.end())
+		{
+			Bot *bot = *botsIterator;
+			addSpriteToRenderList(bot, renderList, viewport);
+			botsIterator++;
+		}
+
 		// NOW ADD THE REST OF THE SPRITES
 		list<LifelessObject*>::iterator objectIterator;
 		objectIterator = objects.begin();
@@ -88,9 +98,14 @@ void SpriteManager::addSpriteItemsToRenderList(	Game *game)
 	this sprite manager. Once a sprite is added it can be 
 	scheduled for rendering.
 */
-void SpriteManager::addObject(LifelessObject *objectToAdd)
+void SpriteManager::addLifelessObject(LifelessObject *objectToAdd)
 {
 	objects.push_back(objectToAdd);
+}
+
+void SpriteManager::addBot(Bot* botToAdd)
+{
+	bots.push_back(botToAdd);
 }
 
 /*
@@ -138,9 +153,14 @@ void SpriteManager::unloadSprites()
 	// @TODO - WE'LL DO THIS LATER WHEN WE LEARN MORE ABOUT MEMORY MANAGEMENT
 }
 
-void SpriteManager::removeObject(LifelessObject *objectToRemove)
+void SpriteManager::removeLifelessObject(LifelessObject *objectToRemove)
 {
 	objects.remove(objectToRemove);
+}
+
+void SpriteManager::removeBot(Bot* botToRemove)
+{
+	bots.remove(botToRemove);
 }
 
 /*
@@ -159,6 +179,16 @@ void SpriteManager::update(Game *game)
 		player.getPhysicalProperties()->getY(),
 		game->getGSM()->getWorld()->getWorldWidth(),
 		game->getGSM()->getWorld()->getWorldHeight());
+
+	// UPDATE BOTS
+	list<Bot*>::iterator botsIterator;
+	botsIterator = bots.begin();
+	while (botsIterator != bots.end())
+	{
+		Bot *bot = *botsIterator;
+		bot->updateSprite();
+		botsIterator++;
+	}
 
 	// NOW UPDATE LIFELESS OBJECTS
 	list<LifelessObject*>::iterator objectIterator;

@@ -15,6 +15,7 @@ static const int		BOX_SPRITE = 1;
 static const int		BALL_SPRITE = 2;
 static const int		WHEEL_SPRITE = 3;
 static const int		SCOOTER_SPRITE = 4;
+static const int		BAT_SPRITE = 5;
 static const wstring	ATTACKING_RIGHT(L"ATTACKING_RIGHT");
 static const wstring	ATTACKING_LEFT(L"ATTACKING_LEFT");
 static const wstring	IDLE(L"IDLE");
@@ -40,8 +41,6 @@ struct Settings
 	b2Vec2 gravity;
 
 	// PLAYER SETTINGS
-	float32 playerOffsetX;
-	float32 playerOffsetY;
 	float32 playerWalkingVel;
 	float32 playerJumpingVel;
 	int moveState;
@@ -62,18 +61,23 @@ public:
 	// BOX2D STUFF
 	b2World* world;
 	b2Body* ground;
+
+	// PLAYER DATA
 	b2Body* playerBody;
 	AnimatedSprite* player;
-	vector<b2Body*> b2Objects;
-	vector<LifelessObject*> objects;
+
+	// USED TO REMOVE BODIES
 	set<b2Body*> scheduledForRemoval;
 
+	// USED TO TEMPORARILY STORE BODIES
 	vector<b2Body*> tempBodies;
 
+	// BOTS
+	set<b2Body*> bots;
 	// LIFELESS OBJECTS
 	set<b2Body*> lifelessObjects;
-	
 
+	// PHYSICS SETTINGS
 	Settings settings;
 
 	// CONSTRUCTOR/DESTRUCTOR
@@ -91,7 +95,7 @@ public:
 private:
 	void b2dToScreen(AnimatedSprite* sprite, float32 &x, float32 &y);
 	void makePlayer(Game* game, float initX, float initY);
-	LifelessObject* makeLifelessObject(Game* game, AnimatedSpriteType* lifeLessType, float initX, float initY);
 	void removeScheduledForRemoval(Game* game);
-	void loadLifelessObject(Game* game, AnimatedSpriteType* spriteType, int i);
+	void loadLifelessObject(Game* game, AnimatedSpriteType* spriteType, b2Body* body);
+	void loadBots(Game* game, AnimatedSpriteType* spriteType, b2Body* body);
 };
