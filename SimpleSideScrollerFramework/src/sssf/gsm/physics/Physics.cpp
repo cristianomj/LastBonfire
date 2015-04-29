@@ -45,44 +45,74 @@ Physics::~Physics()
 void Physics::update(Game* game)
 {	
 	float32 timeStep = 1.0f / settings.hz;
-
 	world->Step(timeStep, settings.velocityIterations, settings.positionIterations);
 
-	//for (b2Body *b = world->GetBodyList(); b; b = b->GetNext())
-	//{
-	//	if (b->GetUserData() != NULL) {
+	// REMOVE BODIES THAT WERE SCHEDULED TO BE REMOVED
+	if (scheduledForRemoval.size() > 0)
+		removeScheduledForRemoval(game);
 
-	//		// MOVE THE PLAYER SPRITE
-	//		float32 px = b->GetPosition().x;
-	//		float32 py = b->GetPosition().y;
-	//		// Convert box2d coordinates to screen coordinates
-	//		b2ToScreen(player, px, py);
-	//		// Change sprite position
-	//		player->getPhysicalProperties()->setPosition(px, py);
-	//	}
-	//}
-
-	// MOVE THE PLAYER SPRITE
-	float32 px = playerBody->GetPosition().x;
-	float32 py = playerBody->GetPosition().y;
-
+	// UPDATE PLAYER SPRITE'S POSITION
+	float32 x = playerBody->GetPosition().x;
+	float32 y = playerBody->GetPosition().y;
 	// Convert box2d coordinates to screen coordinates
-	b2dToScreen(player, px, py);
+	b2dToScreen(player, x, y);
 	// Change sprite position
-	player->getPhysicalProperties()->setPosition(px, py);
+	player->getPhysicalProperties()->setPosition(x, y);
 
-	// MOVE LIFELESS OBJECTS
-	for (int i = 0; i < b2Objects.size(); i++)
+	// UPDATE LIFELESS OBJECTS' POSITION
+	set<b2Body*>::iterator it = lifelessObjects.begin();
+	set<b2Body*>::iterator end = lifelessObjects.end();
+	for (; it != end; ++it)
 	{
-		float32 ox = b2Objects[i]->GetPosition().x;
-		float32 oy = b2Objects[i]->GetPosition().y;
-		// Convert box2d coordinates to screen coordinates
-		b2dToScreen(objects[i], ox, oy);
-		// Change sprite position and rotation
-		objects[i]->getPhysicalProperties()->setPosition(ox, oy);
-		objects[i]->setRotationInRadians(b2Objects[i]->GetAngle());
+		b2Body* body = *it;
+		LifelessObject* sprite = (LifelessObject*)body->GetUserData();
+		// Get body's position
+		x = body->GetPosition().x;
+		y = body->GetPosition().y;
+		// box2 to screen conversion
+		b2dToScreen(sprite, x, y);
+		// Update sprite position and rotation
+		sprite->getPhysicalProperties()->setPosition(x, y);
+		sprite->setRotationInRadians(body->GetAngle());
 	}
-	
+}
+
+void Physics::removeScheduledForRemoval(Game* game)
+{
+	SpriteManager* spriteManager = game->getGSM()->getSpriteManager();
+	set<b2Body*>::iterator it = scheduledForRemoval.begin();
+	set<b2Body*>::iterator end = scheduledForRemoval.end();
+	for (; it != end; ++it)
+	{
+		b2Body* toRemove = *it;
+		// Remove from bodies list
+		lifelessObjects.erase(toRemove);
+		// Remove sprite from render list
+		spriteManager->removeObject((LifelessObject*)toRemove->GetUserData());
+		// Destroy body
+		world->DestroyBody(toRemove);
+	}
+	// Clear list for next time
+	scheduledForRemoval.clear();
+}
+
+void Physics::BeginContact(b2Contact* contact)
+{
+	b2Fixture* fixtureA = contact->GetFixtureA();
+	b2Fixture* fixtureB = contact->GetFixtureB();
+	b2Body* bodyA = fixtureA->GetBody();
+	b2Body* bodyB = fixtureB->GetBody();
+
+	if (bodyA == playerBody)
+	{
+		if (bodyB->GetType() == b2_dynamicBody)
+			scheduledForRemoval.insert(bodyB);
+	}
+	else if (bodyB == playerBody)
+	{
+		if (bodyA->GetType() == b2_dynamicBody)
+			scheduledForRemoval.insert(bodyA);
+	}
 }
 
 void Physics::loadScene(Game* game, const char* level)
@@ -97,6 +127,7 @@ void Physics::loadScene(Game* game, const char* level)
 	string errorMsg;
 	world = json.readFromFile(level, errorMsg);
 	world->SetGravity(settings.gravity);
+	world->SetContactListener(this);
 
 	// LOAD GROUND
 	//ground = json.getBodyByName("Ground");
@@ -109,49 +140,52 @@ void Physics::loadScene(Game* game, const char* level)
 	// Set player definitions
 	playerBody->GetFixtureList()->SetFriction(0.0f);
 	playerBody->SetGravityScale(20);
-	//playerBody->SetUserData(player);
+	playerBody->SetUserData(player);
 
 	// LOAD ALL OBJECTS
-	json.getBodiesByName("Box", b2Objects);
-	settings.boxes = b2Objects.size();
-	AnimatedSpriteType *object = spriteManager->getSpriteType(BOX_SPRITE);
-	for (int i = 0; i < b2Objects.size(); i++)
+	json.getBodiesByName("Box", tempBodies);
+	AnimatedSpriteType* spriteType = spriteManager->getSpriteType(BOX_SPRITE);
+	for (int i = 0; i < tempBodies.size(); i++)
 	{
-		objects.push_back(makeLifelessObject(game, object, 0, 0));
-		float32 x = b2Objects[i]->GetPosition().x;
-		float32 y = b2Objects[i]->GetPosition().y;
-		
-		b2dToScreen(objects[i], x, y);
-		objects[i]->getPhysicalProperties()->setPosition(x, y);
+		loadLifelessObject(game, spriteType, i);
 
-		// SET BODY DEFINITIONS
-		b2Objects[i]->GetFixtureList()->SetFriction(0.4f);
+		// TODO: set any body definitions here
+		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
 		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
-
 	}
-	
-	/*json.getBodiesByName("ScooterWheel", b2Objects);
-	object = spriteManager->getSpriteType(WHEEL_SPRITE);
-	for (int i = settings.boxes; i < b2Objects.size(); i++)
+
+	// CLEAR TEMP BODIES
+	tempBodies.clear();
+
+	// LOAD SCOOTER WHEELS
+	json.getBodiesByName("ScooterWheel", tempBodies);
+	spriteType = spriteManager->getSpriteType(WHEEL_SPRITE);
+	for (int i = 0; i < tempBodies.size(); i++)
 	{
-		objects.push_back(makeLifelessObject(game, object, 0, 0));
-		float32 x = b2Objects[i]->GetPosition().x;
-		float32 y = b2Objects[i]->GetPosition().y;
+		loadLifelessObject(game, spriteType, i);
 
-		b2dToScreen(objects[i], x, y);
-		objects[i]->getPhysicalProperties()->setPosition(x, y);
+		// TODO: set any body definitions here
+		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
+		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
 	}
-	b2Objects.push_back(json.getBodyByName("Scooter"));
-	object = spriteManager->getSpriteType(SCOOTER_SPRITE);
-	objects.push_back(makeLifelessObject(game, object, 0, 0));
-	x = b2Objects[b2Objects.size() - 1]->GetPosition().x;
-	y = b2Objects[b2Objects.size() - 1]->GetPosition().y;
-	b2dToScreen(objects[b2Objects.size() - 1], x, y);
-	objects[b2Objects.size() - 1]->getPhysicalProperties()->setPosition(x, y);*/
 
+	// CLER TEMP BODIES
+	tempBodies.clear();
 
-	/*b2Objects[b2Objects.size() - 1]->GetFixtureList()->SetSensor(false);
-	b2Objects[b2Objects.size() - 1]->SetType(b2_dynamicBody);*/
+	// LOAD SCOOTER
+	json.getBodiesByName("Scooter", tempBodies);
+	spriteType = spriteManager->getSpriteType(SCOOTER_SPRITE);
+	for (int i = 0; i < tempBodies.size(); i++)
+	{
+		loadLifelessObject(game, spriteType, i);
+
+		// TODO: set any body definitions here
+		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
+		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
+	}
+
+	// CLER TEMP BODIES
+	tempBodies.clear();
 }
 
 void Physics::b2dToScreen(AnimatedSprite* sprite, float32 &x, float32 &y)
@@ -218,4 +252,22 @@ LifelessObject* Physics::makeLifelessObject(Game* game, AnimatedSpriteType *life
 	object->affixTightAABBBoundingVolume();
 
 	return object;
+}
+
+void Physics::loadLifelessObject(Game* game, AnimatedSpriteType* spriteType, int i)
+{
+	// Create sprite and add it to sprite manager render list
+	LifelessObject* sprite = makeLifelessObject(game, spriteType, 0, 0);
+	// Associate body with sprite
+	tempBodies[i]->SetUserData(sprite);
+
+	// Add body to lifelessObject set
+	lifelessObjects.insert(tempBodies[i]);
+
+	// Give sprite a starting position
+	float32 x = tempBodies[i]->GetPosition().x;
+	float32 y = tempBodies[i]->GetPosition().y;
+	// box2d to world coordinate conversion
+	b2dToScreen(sprite, x, y);
+	sprite->getPhysicalProperties()->setPosition(x, y);
 }

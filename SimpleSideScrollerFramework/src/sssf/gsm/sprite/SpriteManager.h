@@ -54,7 +54,7 @@ public:
 	void				addSpriteToRenderList(AnimatedSprite *sprite, RenderList *renderList, Viewport *viewport);
 	void				clearSprites();
 	AnimatedSpriteType* getSpriteType(unsigned int typeIndex);
-	LifelessObject*		removeObject(LifelessObject *objectToRemove);
+	void				removeObject(LifelessObject *objectToRemove);
 	void				unloadSprites();
 	void				update(Game *game);
 };

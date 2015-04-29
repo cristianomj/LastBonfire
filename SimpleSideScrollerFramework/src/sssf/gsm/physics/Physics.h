@@ -66,6 +66,14 @@ public:
 	AnimatedSprite* player;
 	vector<b2Body*> b2Objects;
 	vector<LifelessObject*> objects;
+	set<b2Body*> scheduledForRemoval;
+
+	vector<b2Body*> tempBodies;
+
+	// LIFELESS OBJECTS
+	set<b2Body*> lifelessObjects;
+	
+
 	Settings settings;
 
 	// CONSTRUCTOR/DESTRUCTOR
@@ -74,6 +82,7 @@ public:
 
 	// PUBLIC METHODS DEFINED INSIDE Physics.cpp
 	void update(Game* game);
+	virtual void BeginContact(b2Contact* contact);
 	void createPlayer(AnimatedSprite* initPlayer);
 	void loadScene(Game* game, const char* level);
 	void movePlayer(const int);
@@ -83,4 +92,6 @@ private:
 	void b2dToScreen(AnimatedSprite* sprite, float32 &x, float32 &y);
 	void makePlayer(Game* game, float initX, float initY);
 	LifelessObject* makeLifelessObject(Game* game, AnimatedSpriteType* lifeLessType, float initX, float initY);
+	void removeScheduledForRemoval(Game* game);
+	void loadLifelessObject(Game* game, AnimatedSpriteType* spriteType, int i);
 };

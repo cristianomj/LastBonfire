@@ -138,10 +138,9 @@ void SpriteManager::unloadSprites()
 	// @TODO - WE'LL DO THIS LATER WHEN WE LEARN MORE ABOUT MEMORY MANAGEMENT
 }
 
-LifelessObject* SpriteManager::removeObject(LifelessObject *objectToRemove)
+void SpriteManager::removeObject(LifelessObject *objectToRemove)
 {
-	return NULL;
-	// @TODO - WE'LL DO THIS LATER WHEN WE LEARN MORE ABOUT MEMORY MANAGEMENT
+	objects.remove(objectToRemove);
 }
 
 /*

@@ -1,7 +1,23 @@
-//Started script log at 04/27/15 20:49:08
-
-getBody(7).select();
-getBody(7).deselect();
-getBody(25).select();
-getBody(26).select();
-getBody(24).select();
+//Restarted script log at 04/28/15 22:21:24
+getBody(41).deselect();
+getBody(43).deselect();
+getBody(38).deselect();
+getBody(41).select();
+getBody(43).select();
+getBody(38).select();
+getBody(41).deselect();
+getBody(43).deselect();
+getBody(38).deselect();
+getJoint(12).delete();
+getJoint(11).delete();
+getFixture(42).delete();
+getImage(13).delete();
+getBody(41).delete();
+getJoint(14).delete();
+getJoint(13).delete();
+getFixture(44).delete();
+getImage(11).delete();
+getBody(43).delete();
+getFixture(39).delete();
+getImage(12).delete();
+getBody(38).delete();
