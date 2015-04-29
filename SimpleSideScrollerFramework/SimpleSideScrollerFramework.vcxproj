@@ -22,6 +22,7 @@
     <ClCompile Include="src\sssf\graphics\RenderList.cpp" />
     <ClCompile Include="src\sssf\graphics\TextureManager.cpp" />
     <ClCompile Include="src\sssf\gsm\ai\BotRecycler.cpp" />
+    <ClCompile Include="src\sssf\gsm\ai\bots\Bat.cpp" />
     <ClCompile Include="src\sssf\gsm\ai\bots\RandomFloatingBot.cpp" />
     <ClCompile Include="src\sssf\gsm\ai\bots\RandomJumpingBot.cpp" />
     <ClCompile Include="src\sssf\gsm\physics\AABB.cpp" />
@@ -66,6 +67,7 @@
     <ClInclude Include="src\sssf\graphics\TextureManager.h" />
     <ClInclude Include="src\sssf\gsm\ai\Bot.h" />
     <ClInclude Include="src\sssf\gsm\ai\BotRecycler.h" />
+    <ClInclude Include="src\sssf\gsm\ai\bots\Bat.h" />
     <ClInclude Include="src\sssf\gsm\ai\bots\RandomFloatingBot.h" />
     <ClInclude Include="src\sssf\gsm\ai\bots\RandomJumpingBot.h" />
     <ClInclude Include="src\sssf\gsm\ai\LifelessObject.h" />
