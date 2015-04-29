@@ -7,5 +7,6 @@
 
 class Bat : public Bot
 {
-
+	virtual void think(Game* game);
+	virtual Bot* clone();
 };
