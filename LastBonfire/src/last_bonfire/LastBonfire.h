@@ -12,7 +12,7 @@
 static const wstring	W_LEVEL_1_DIR			= L"data/levels/CaveLevel2/";
 static const wstring	W_LEVEL_1_NAME			= L"caveLevelErica.tmx";
 static const wstring	W_LEVEL_1_PATH			= W_LEVEL_1_DIR + W_LEVEL_1_NAME;
-static const char *		RUBE_LEVEL_1			= "data/levels/CaveLevel2/CaveLevel.json";
+static const char *		RUBE_LEVEL_1			= "data/levels/CaveLevel2/TheCave.json";
 
 static const wstring	W_LEVEL_2_DIR			= L"data/levels/SnowLevel/";
 static const wstring	W_LEVEL_2_NAME			= L"SnowLevel.tmx";
