@@ -70,9 +70,9 @@ static const wstring	W_BONFIRE_LEFT_PATH		= L"data/gui/buttons/left_arrow.png";
 static const wstring	W_BONFIRE_LEFT_MO_PATH	= L"data/gui/buttons/left_arrow_mo.png";
 static const wstring	W_BONFIRE_RIGHT_PATH	= L"data/gui/buttons/right_arrow.png";
 static const wstring	W_BONFIRE_RIGHT_MO_PATH = L"data/gui/buttons/right_arrow_mo.png";
-static const wstring	W_BONFIRE_LEVEL_1_PATH	= L"data/gui/overlays/last_bonfire_level_one.png";
-static const wstring	W_BONFIRE_LEVEL_2_PATH	= L"data/gui/overlays/last_bonfire_level_two.png";
-static const wstring	W_BONFIRE_LEVEL_3_PATH	= L"data/gui/overlays/last_bonfire_level_three.png";
+static const wstring	W_BONFIRE_LEVEL_1_PATH	= L"data/gui/overlays/last_bonfire_level_one1.png";
+static const wstring	W_BONFIRE_LEVEL_2_PATH	= L"data/gui/overlays/last_bonfire_level_two1.png";
+static const wstring	W_BONFIRE_LEVEL_3_PATH	= L"data/gui/overlays/last_bonfire_level_three1.png";
 
 // FOR OUR SPRITE
 static const wstring	SPRITE_TYPES_DIR = L"data/sprite_types/";
