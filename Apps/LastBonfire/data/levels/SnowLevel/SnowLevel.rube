@@ -4348,6 +4348,766 @@
           "y" : 6.909480094909668
         },
         "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 64,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 73,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -78.61447143554688,
+          "y" : 20.40671157836914
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 74,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 74,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -82.36558532714844,
+          "y" : 22.26379013061523
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 75,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 75,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -79.43675994873047,
+          "y" : 22.63335800170898
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 76,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 76,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -76.84978485107422,
+          "y" : 22.30998611450195
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 77,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 77,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -80.7949218750,
+          "y" : 20.51758193969727
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 78,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 78,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -80.92771911621094,
+          "y" : 18.29637527465820
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 79,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 79,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -86.44351959228516,
+          "y" : 18.25017929077148
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 80,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 80,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -84.87285614013672,
+          "y" : 16.50397109985352
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 81,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 81,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -82.69240570068359,
+          "y" : 16.39310073852539
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 82,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 82,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -83.51469421386719,
+          "y" : 18.61974716186523
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 83,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 83,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -69.14814758300781,
+          "y" : 22.73183059692383
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 84,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 84,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -70.91282653808594,
+          "y" : 20.82855606079102
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 85,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 85,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -72.03077697753906,
+          "y" : 19.16550064086914
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 86,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 86,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -71.73512268066406,
+          "y" : 23.05519866943359
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 87,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 87,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -74.66394042968750,
+          "y" : 22.68563461303711
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 88,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 88,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -73.09327697753906,
+          "y" : 20.93942642211914
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 89,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 89,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -68.27966308593750,
+          "y" : 17.30842399597168
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 90,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 90,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -66.51496887207031,
+          "y" : 19.21169662475586
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 91,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 91,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -69.10194396972656,
+          "y" : 19.53506851196289
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 92,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 92,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : -70.46011352539063,
+          "y" : 17.41929244995117
+        },
+        "type" : "kinematic"
       }
     ],
     "metaimage" : 
@@ -4380,6 +5140,346 @@
         "name" : "image1",
         "opacity" : 0.5,
         "scale" : 4
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 79,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 3,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 76,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 4,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 77,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 5,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 86,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 6,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 87,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 7,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 91,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 8,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 80,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 9,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 82,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 10,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 73,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 11,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 84,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 12,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 89,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 13,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 83,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 14,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 90,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 15,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 78,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 16,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 88,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 17,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 75,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 18,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 74,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 19,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 81,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 20,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 92,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 21,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 85,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 22,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
       }
     ],
     "positionIterations" : 3,

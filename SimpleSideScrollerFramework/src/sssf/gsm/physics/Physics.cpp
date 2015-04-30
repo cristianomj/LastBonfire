@@ -60,8 +60,8 @@ void Physics::update(Game* game)
 	player->getPhysicalProperties()->setPosition(x, y);
 
 	// UPDATE BOTS POSITIONS
-	set<b2Body*>::iterator it = bots.begin();
-	set<b2Body*>::iterator end = bots.end();
+	set<b2Body*>::iterator it = lifelessObjects.begin();
+	set<b2Body*>::iterator end = lifelessObjects.end();
 	for (; it != end; ++it)
 	{
 		b2Body* body = *it;
@@ -103,7 +103,7 @@ void Physics::BeginContact(b2Contact* contact)
 	b2Body* bodyA = fixtureA->GetBody();
 	b2Body* bodyB = fixtureB->GetBody();
 
-	if (bodyA == playerBody)
+	/*if (bodyA == playerBody)
 	{
 		if (bodyB->GetType() == b2_dynamicBody)
 			scheduledForRemoval.insert(bodyB);
@@ -112,7 +112,7 @@ void Physics::BeginContact(b2Contact* contact)
 	{
 		if (bodyA->GetType() == b2_dynamicBody)
 			scheduledForRemoval.insert(bodyA);
-	}
+	}*/
 }
 
 void Physics::loadScene(Game* game, const char* level)
@@ -126,7 +126,7 @@ void Physics::loadScene(Game* game, const char* level)
 	b2dJson json;
 	string errorMsg;
 	world = json.readFromFile(level, errorMsg);
-	world->SetGravity(settings.gravity);
+	//world->SetGravity(settings.gravity);
 	world->SetContactListener(this);
 
 	// LOAD GROUND
@@ -138,16 +138,24 @@ void Physics::loadScene(Game* game, const char* level)
 	float32 y = playerBody->GetPosition().y;
 	makePlayer(game, x, y);
 	// Set player definitions
-	playerBody->GetFixtureList()->SetFriction(0.0f);
-	playerBody->SetGravityScale(20);
+	//playerBody->GetFixtureList()->SetFriction(0.0f);
+	//playerBody->SetGravityScale(20);
 	playerBody->SetUserData(player);
 
 	// LOAD BOTS
+	json.getBodiesByName("Bat", tempBodies);
+	AnimatedSpriteType* spriteType = spriteManager->getSpriteType(BAT_SPRITE);
+	for (int i = 0; i < tempBodies.size(); i++)
+	{
+		loadBot(game, spriteType, tempBodies[i]);
 
+		// TODO: set any body definitions here
+	}
+	tempBodies.clear(); // CLEAR TEMP BODIES
 
 	// LOAD ALL OBJECTS
 	json.getBodiesByName("Box", tempBodies);
-	AnimatedSpriteType* spriteType = spriteManager->getSpriteType(BOX_SPRITE);
+	spriteType = spriteManager->getSpriteType(BOX_SPRITE);
 	for (int i = 0; i < tempBodies.size(); i++)
 	{
 		loadLifelessObject(game, spriteType, tempBodies[i]);
@@ -156,8 +164,30 @@ void Physics::loadScene(Game* game, const char* level)
 		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
 		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
 	}
+	tempBodies.clear();
 
-	// CLEAR TEMP BODIES
+	json.getBodiesByName("Bone", tempBodies);
+	spriteType = spriteManager->getSpriteType(BONE_SPRITE);
+	for (int i = 0; i < tempBodies.size(); i++)
+	{
+		loadLifelessObject(game, spriteType, tempBodies[i]);
+
+		// TODO: set any body definitions here
+		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
+		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
+	}
+	tempBodies.clear();
+
+	json.getBodiesByName("SkullPole", tempBodies);
+	spriteType = spriteManager->getSpriteType(SKULLPOLE_SPRITE);
+	for (int i = 0; i < tempBodies.size(); i++)
+	{
+		loadLifelessObject(game, spriteType, tempBodies[i]);
+
+		// TODO: set any body definitions here
+		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
+		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
+	}
 	tempBodies.clear();
 
 	// LOAD SCOOTER WHEELS
@@ -171,8 +201,6 @@ void Physics::loadScene(Game* game, const char* level)
 		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
 		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
 	}
-
-	// CLER TEMP BODIES
 	tempBodies.clear();
 
 	// LOAD SCOOTER
@@ -186,8 +214,6 @@ void Physics::loadScene(Game* game, const char* level)
 		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
 		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
 	}
-
-	// CLER TEMP BODIES
 	tempBodies.clear();
 }
 
@@ -239,6 +265,31 @@ void Physics::loadLifelessObject(Game* game, AnimatedSpriteType* spriteType, b2B
 
 	sprite->setSpriteType(spriteType);
 	spriteManager->addLifelessObject(sprite);
+	sprite->affixTightAABBBoundingVolume();
+
+	// Associate body with sprite
+	body->SetUserData(sprite);
+
+	// Add body to lifelessObject set
+	lifelessObjects.insert(body);
+
+	// Give sprite a starting position
+	float32 x = body->GetPosition().x;
+	float32 y = body->GetPosition().y;
+	// box2d to world coordinate conversion
+	b2dToScreen(sprite, x, y);
+	sprite->getPhysicalProperties()->setPosition(x, y);
+}
+
+void Physics::loadBot(Game* game, AnimatedSpriteType* spriteType, b2Body* body)
+{
+	// Create sprite and add it to sprite manager render list
+	SpriteManager *spriteManager = game->getGSM()->getSpriteManager();
+	Bat* sprite = new Bat();
+	Physics *physics = game->getGSM()->getPhysics();
+
+	sprite->setSpriteType(spriteType);
+	spriteManager->addBot(sprite);
 	sprite->affixTightAABBBoundingVolume();
 
 	// Associate body with sprite

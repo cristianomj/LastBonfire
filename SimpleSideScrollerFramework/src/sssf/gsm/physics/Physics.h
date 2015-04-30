@@ -4,6 +4,8 @@
 #include "sssf\game\Game.h"
 #include "sssf\gsm\sprite\AnimatedSprite.h"
 #include "sssf\gsm\ai\LifelessObject.h"
+#include "sssf\gsm\ai\Bot.h"
+#include "sssf\gsm\ai\bots\Bat.h"
 #include <Box2D\Box2D.h>
 
 static const int		STOP = 0;
@@ -16,6 +18,8 @@ static const int		BALL_SPRITE = 2;
 static const int		WHEEL_SPRITE = 3;
 static const int		SCOOTER_SPRITE = 4;
 static const int		BAT_SPRITE = 5;
+static const int		BONE_SPRITE = 6;
+static const int		SKULLPOLE_SPRITE = 7;
 static const wstring	ATTACKING_RIGHT(L"ATTACKING_RIGHT");
 static const wstring	ATTACKING_LEFT(L"ATTACKING_LEFT");
 static const wstring	IDLE(L"IDLE");
@@ -24,10 +28,10 @@ struct Settings
 {
 	Settings()
 	{
-		hz = 60.0f;
+		hz = 30.0f;
 		ratio = 64.0f;
 		velocityIterations = 8;
-		positionIterations = 2;
+		positionIterations = 3;
 		gravity.Set(0.0f, -10.0f);
 		playerWalkingVel = 10.0f;
 		playerJumpingVel = 400.0f;
@@ -97,5 +101,5 @@ private:
 	void makePlayer(Game* game, float initX, float initY);
 	void removeScheduledForRemoval(Game* game);
 	void loadLifelessObject(Game* game, AnimatedSpriteType* spriteType, b2Body* body);
-	void loadBots(Game* game, AnimatedSpriteType* spriteType, b2Body* body);
+	void loadBot(Game* game, AnimatedSpriteType* spriteType, b2Body* body);
 };

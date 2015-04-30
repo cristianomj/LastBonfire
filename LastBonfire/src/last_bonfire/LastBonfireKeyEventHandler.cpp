@@ -49,15 +49,19 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 		if (input->isKeyDown(A_KEY))
 		{
 			vX = -PLAYER_SPEED;
-			player->setCurrentState(ATTACKING_LEFT);
-
+			if (!(input->isKeyDown(SPACE_KEY)) && vX != 0.0f)
+			{
+				player->setCurrentState(ATTACKING_LEFT);
+			}
 			physics->movePlayer(LEFT);
 		}
 		else if (input->isKeyDown(D_KEY))
 		{
 			vX = PLAYER_SPEED;
-			player->setCurrentState(ATTACKING_RIGHT);
-
+			if (!(input->isKeyDown(SPACE_KEY)) && vX != 0.0f)
+			{
+				player->setCurrentState(ATTACKING_RIGHT);
+			}
 			physics->movePlayer(RIGHT);
 		}
 		else if (input->isKeyDownForFirstTime(G_KEY))
@@ -68,13 +72,19 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 		else
 		{
 			vX = 0.0f;
-			player->setCurrentState(IDLE);
-
+			if (!(input->isKeyDown(SPACE_KEY)))
+			{
+				player->setCurrentState(IDLE);
+			}
 			physics->movePlayer(STOP);
 		}
 		if (input->isKeyDownForFirstTime(SPACE_KEY))
 		{
 			vY = JUMP;
+
+			if (vX > 0.0f) player->setCurrentState(JUMP_RIGHT);
+			else if (vX < 0.0f) player->setCurrentState(JUMP_LEFT);
+
 			physics->movePlayer(JUMP);
 			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_JUMPSOUND);
 		}

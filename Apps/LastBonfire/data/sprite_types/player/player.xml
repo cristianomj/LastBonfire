@@ -27,6 +27,16 @@
 		<image_file id="18" file_name="Death4.png"/>
 		<image_file id="19" file_name="Death5.png"/>
 		<image_file id="20" file_name="Death6.png"/>
+		
+		<image_file id="21" file_name="jump1.png"/>
+		<image_file id="22" file_name="jump2.png"/>
+		<image_file id="23" file_name="jump3.png"/>
+		<image_file id="24" file_name="jump4.png"/>
+		
+		<image_file id="25" file_name="jump1R.png"/>
+		<image_file id="26" file_name="jump2R.png"/>
+		<image_file id="27" file_name="jump3R.png"/>
+		<image_file id="28" file_name="jump4R.png"/>
 	
     </images_list>
     <animations_list>
@@ -68,6 +78,24 @@
                 <pose image_id="18" duration="15"/>
                 <pose image_id="19" duration="15"/>
 				<pose image_id="20" duration="30"/>
+            </animation_sequence>
+        </animation_state>
+		<animation_state>
+			<state>JUMP_LEFT</state>
+            <animation_sequence>
+				<pose image_id="21" duration="5"/>
+                <pose image_id="22" duration="3"/>
+				<pose image_id="23" duration="3"/>
+                <pose image_id="24" duration="5"/>
+            </animation_sequence>
+        </animation_state>
+		<animation_state>
+			<state>JUMP_RIGHT</state>
+            <animation_sequence>
+				<pose image_id="25" duration="5"/>
+                <pose image_id="26" duration="3"/>
+				<pose image_id="27" duration="3"/>
+                <pose image_id="28" duration="5"/>
             </animation_sequence>
         </animation_state>
     </animations_list>  

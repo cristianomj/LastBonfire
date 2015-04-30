@@ -77,7 +77,8 @@ static const wstring	W_BONFIRE_LEVEL_3_PATH	= L"data/gui/overlays/last_bonfire_l
 // FOR OUR SPRITE
 static const wstring	SPRITE_TYPES_DIR = L"data/sprite_types/";
 static const wstring	SPRITE_TYPES_LIST = SPRITE_TYPES_DIR + L"sprite_type_list.xml";
-static const wstring	JUMPING = L"JUMPING";
+static const wstring	JUMP_LEFT = L"JUMP_LEFT";
+static const wstring	JUMP_RIGHT = L"JUMP_RIGHT";
 
 // FOR THE GAME WORLD
 static const float		MAX_VIEWPORT_AXIS_VELOCITY = 20.0f;
