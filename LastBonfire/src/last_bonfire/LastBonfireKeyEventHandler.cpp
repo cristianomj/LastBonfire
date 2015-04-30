@@ -33,7 +33,7 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 	PhysicalProperties *pp = player->getPhysicalProperties();
 	Viewport *viewport = game->getGUI()->getViewport();
 	Physics* physics = game->getGSM()->getPhysics();
-	GameAudio* audio = game->getAudio();
+	GameAudio* gameAudio = game->getAudio();
 
 	// IF THE GAME IS IN PROGRESS
 	if (gsm->isGameInProgress())
@@ -76,6 +76,7 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 		{
 			vY = JUMP;
 			physics->movePlayer(JUMP);
+			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_JUMPSOUND);
 		}
 		if (input->isKeyDownForFirstTime(P_KEY))
 		{
