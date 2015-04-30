@@ -19,10 +19,10 @@ static const wstring	W_LEVEL_2_NAME			= L"SnowLevel.tmx";
 static const wstring	W_LEVEL_2_PATH			= W_LEVEL_1_DIR + W_LEVEL_1_NAME;
 static const char *		RUBE_LEVEL_2			= "data/levels/SnowLevel/SnowLevel.json";
 
-static const wstring	W_LEVEL_3_DIR			= L"data/levels/CaveLevel/";
-static const wstring	W_LEVEL_3_NAME			= L"CaveLevel.tmx";
+static const wstring	W_LEVEL_3_DIR			= L"data/levels/Castle/";
+static const wstring	W_LEVEL_3_NAME			= L"CastleLevel.tmx";
 static const wstring	W_LEVEL_3_PATH			= W_LEVEL_1_DIR + W_LEVEL_1_NAME;
-static const char *		RUBE_LEVEL_3			= "data/levels/CaveLevel/CaveLevel.json";
+static const char *		RUBE_LEVEL_3			= "data/levels/Castle/Castle.json";
 
 static const wstring	W_INIT_FILE				= L"data/LastBonfireInit.txt";
 static const wstring	W_GUI_INIT_FILE			= L"data/LastBonfireGUI.txt";
