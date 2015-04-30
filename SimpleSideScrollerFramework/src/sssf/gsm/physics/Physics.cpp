@@ -139,7 +139,7 @@ void Physics::loadScene(Game* game, const char* level)
 	makePlayer(game, x, y);
 	// Set player definitions
 	//playerBody->GetFixtureList()->SetFriction(0.0f);
-	//playerBody->SetGravityScale(20);
+	playerBody->SetGravityScale(20);
 	playerBody->SetUserData(player);
 
 	// LOAD BOTS
