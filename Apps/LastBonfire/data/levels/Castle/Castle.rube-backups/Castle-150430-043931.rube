@@ -3053,6 +3053,7 @@
         "angle" : 0,
         "angularVelocity" : 0,
         "awake" : true,
+        "bullet" : true,
         "fixedRotation" : true,
         "fixture" : 
         [
@@ -3112,18 +3113,18 @@
         ],
         "id" : 55,
         "linearVelocity" : 0,
-        "massData-I" : 0.4060147106647492,
+        "massData-I" : 0.4060147404670715,
         "massData-center" : 
         {
-          "x" : -0.1491552144289017,
+          "x" : -0.1491552293300629,
           "y" : -0.1801495552062988
         },
         "massData-mass" : 7.422417640686035,
         "name" : "Player",
         "position" : 
         {
-          "x" : -61.42294692993164,
-          "y" : 28.65884017944336
+          "x" : -61.37248611450195,
+          "y" : 28.77906608581543
         },
         "type" : "dynamic"
       },
@@ -3497,7 +3498,7 @@
         "massData-center" : 
         {
           "x" : 0,
-          "y" : -0.3456745147705078
+          "y" : -0.3456744849681854
         },
         "massData-mass" : 0.7853981852531433,
         "name" : "Bone",
@@ -3692,7 +3693,7 @@
         "massData-center" : 
         {
           "x" : 0,
-          "y" : -0.3456745147705078
+          "y" : -0.3456744849681854
         },
         "massData-mass" : 0.7853981852531433,
         "name" : "Bone",
@@ -3822,7 +3823,7 @@
         "massData-center" : 
         {
           "x" : 0,
-          "y" : -0.3456745147705078
+          "y" : -0.3456744849681854
         },
         "massData-mass" : 0.7853981852531433,
         "name" : "Bone",
@@ -3857,7 +3858,7 @@
           "x" : -0.1384487152099609,
           "y" : -0.03509116172790527
         },
-        "file" : "../../sprite_types/player/idle2.png",
+        "file" : "../../LastBonfire/LastBonfire/Apps/LastBonfire/data/sprite_types/player/idle2.png",
         "filter" : 1,
         "flip" : false,
         "id" : 2,

@@ -126,7 +126,7 @@ void Physics::loadScene(Game* game, const char* level)
 	b2dJson json;
 	string errorMsg;
 	world = json.readFromFile(level, errorMsg);
-	//world->SetGravity(settings.gravity);
+	world->SetGravity(settings.gravity);
 	world->SetContactListener(this);
 
 	// LOAD GROUND
@@ -138,8 +138,8 @@ void Physics::loadScene(Game* game, const char* level)
 	float32 y = playerBody->GetPosition().y;
 	makePlayer(game, x, y);
 	// Set player definitions
-	//playerBody->GetFixtureList()->SetFriction(0.0f);
-	playerBody->SetGravityScale(20);
+	playerBody->GetFixtureList()->SetFriction(0.0f);
+	playerBody->SetGravityScale(10);
 	playerBody->SetUserData(player);
 
 	// LOAD BOTS

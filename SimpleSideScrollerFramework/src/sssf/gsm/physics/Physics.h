@@ -28,7 +28,7 @@ struct Settings
 {
 	Settings()
 	{
-		hz = 30.0f;
+		hz = 60.0f;
 		ratio = 64.0f;
 		velocityIterations = 8;
 		positionIterations = 3;
