@@ -6,6 +6,7 @@
 #include "sssf\gsm\ai\LifelessObject.h"
 #include "sssf\gsm\ai\Bot.h"
 #include "sssf\gsm\ai\bots\Bat.h"
+#include "sssf\audio\GameAudio.h"
 #include <Box2D\Box2D.h>
 
 static const int		STOP = 0;
@@ -20,6 +21,7 @@ static const int		SCOOTER_SPRITE = 4;
 static const int		BAT_SPRITE = 5;
 static const int		BONE_SPRITE = 6;
 static const int		SKULLPOLE_SPRITE = 7;
+static const int		ROCK_SPRITE = 8;
 static const wstring	ATTACKING_RIGHT(L"ATTACKING_RIGHT");
 static const wstring	ATTACKING_LEFT(L"ATTACKING_LEFT");
 static const wstring	IDLE(L"IDLE");
@@ -76,6 +78,10 @@ public:
 	// USED TO TEMPORARILY STORE BODIES
 	vector<b2Body*> tempBodies;
 
+	// ROCKS
+	list<b2Body*> rocks;
+	list<b2Body*> rockSchedule;
+
 	// BOTS
 	set<b2Body*> bots;
 	// LIFELESS OBJECTS
@@ -83,6 +89,8 @@ public:
 
 	// PHYSICS SETTINGS
 	Settings settings;
+
+	GameAudio* gameAudio;
 
 	// CONSTRUCTOR/DESTRUCTOR
 	Physics();
@@ -102,4 +110,5 @@ private:
 	void removeScheduledForRemoval(Game* game);
 	void loadLifelessObject(Game* game, AnimatedSpriteType* spriteType, b2Body* body);
 	void loadBot(Game* game, AnimatedSpriteType* spriteType, b2Body* body);
+	void rockFall(Game* game);
 };

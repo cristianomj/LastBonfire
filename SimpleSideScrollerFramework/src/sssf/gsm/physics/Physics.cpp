@@ -20,6 +20,7 @@
 #include "sssf\gsm\world\World.h"
 #include "sssf\gsm\world\WorldLayer.h"
 #include "sssf\gsm\rubestuff\b2dJson.h"
+#include "sssf\audio\GameAudio.h"
 #include <vector>
 #include <list>
 
@@ -32,6 +33,7 @@ Physics::Physics()
 	settings = Settings();
 	world = NULL;
 	playerBody = NULL;
+	gameAudio = NULL;
 }
 
 Physics::~Physics()
@@ -50,6 +52,10 @@ void Physics::update(Game* game)
 	// REMOVE BODIES THAT WERE SCHEDULED TO BE REMOVED
 	if (scheduledForRemoval.size() > 0)
 		removeScheduledForRemoval(game);
+
+	// MAKE ROCKS FALL
+	if (rockSchedule.size() > 0)
+		rockFall(game);
 
 	// UPDATE PLAYER SPRITE'S POSITION
 	float32 x = playerBody->GetPosition().x;
@@ -75,6 +81,26 @@ void Physics::update(Game* game)
 		sprite->getPhysicalProperties()->setPosition(x, y);
 		sprite->setRotationInRadians(body->GetAngle());
 	}
+}
+
+void Physics::rockFall(Game* game)
+{
+	list<b2Body*>::iterator it = rockSchedule.begin();
+	list<b2Body*>::iterator end = rockSchedule.end();
+
+	for (; it != end; ++it)
+	{
+		/*b2Fixture* f;
+		for (f = (*it)->GetFixtureList(); f; f = f->GetNext())
+			if (f->IsSensor()) break;*/
+
+		(*it)->SetType(b2_dynamicBody);
+		/*(*it)->DestroyFixture(f);
+		rocks.remove((*it));
+		++it;*/
+	}
+
+	rockSchedule.clear();
 }
 
 void Physics::removeScheduledForRemoval(Game* game)
@@ -103,21 +129,52 @@ void Physics::BeginContact(b2Contact* contact)
 	b2Body* bodyA = fixtureA->GetBody();
 	b2Body* bodyB = fixtureB->GetBody();
 
-	/*if (bodyA == playerBody)
+	list<b2Body*>::iterator it = rocks.begin();
+	list<b2Body*>::iterator end = rocks.end();
+
+	if (bodyA == playerBody)
 	{
-		if (bodyB->GetType() == b2_dynamicBody)
-			scheduledForRemoval.insert(bodyB);
+		// ROCK FALLING
+		if (bodyB->GetType() == b2_kinematicBody)
+		{
+			for (; it != end; ++it)
+			{
+				if (bodyB == *it)
+				{
+					rockSchedule.push_back(bodyB);
+				}
+			}
+		}
+
+		if (bodyB->GetType() == b2_dynamicBody && bodyB->IsActive() && bodyB->IsBullet()) {
+			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_TAKINGDAMAGESOUND);
+		}
 	}
 	else if (bodyB == playerBody)
 	{
-		if (bodyA->GetType() == b2_dynamicBody)
-			scheduledForRemoval.insert(bodyA);
-	}*/
+		// ROCK FALLING
+		if (bodyA->GetType() == b2_kinematicBody)
+		{
+			for (; it != end; ++it)
+			{
+				if (bodyA == *it)
+				{
+					rockSchedule.push_back(bodyA);
+				}
+			}
+		}
+
+		if (bodyA->GetType() == b2_dynamicBody && bodyA->IsActive() && bodyA->IsBullet()) {
+			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_TAKINGDAMAGESOUND);
+		}
+			
+	}
 }
 
 void Physics::loadScene(Game* game, const char* level)
 {
 	SpriteManager *spriteManager = game->getGSM()->getSpriteManager();
+	gameAudio = game->getAudio();
 
 	settings.worldWidth = game->getGSM()->getWorld()->getWorldWidth();
 	settings.worldHeight = game->getGSM()->getWorld()->getWorldHeight();
@@ -162,6 +219,20 @@ void Physics::loadScene(Game* game, const char* level)
 
 		// TODO: set any body definitions here
 		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
+		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
+	}
+	tempBodies.clear();
+
+	json.getBodiesByName("Rock", tempBodies);
+	spriteType = spriteManager->getSpriteType(ROCK_SPRITE);
+	for (int i = 0; i < tempBodies.size(); i++)
+	{
+		loadLifelessObject(game, spriteType, tempBodies[i]);
+		rocks.push_back(tempBodies[i]);
+
+		// TODO: set any body definitions here
+		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
+		tempBodies[i]->SetGravityScale(20);
 		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
 	}
 	tempBodies.clear();

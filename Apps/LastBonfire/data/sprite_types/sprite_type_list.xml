@@ -8,4 +8,5 @@
   <sprite_type>bat</sprite_type>
   <sprite_type>bone</sprite_type>
   <sprite_type>skullPole</sprite_type>
+  <sprite_type>rock</sprite_type>
 </sprite_type_list>
