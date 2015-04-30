@@ -27,6 +27,7 @@
 #include "sssf\gsm\world\WorldLayer.h"
 
 class Game;
+class Physics;
 
 static const int NO_LEVEL_LOADED = 0;
 

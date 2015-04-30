@@ -4,10 +4,14 @@
 #include "sssf\game\Game.h"
 #include "sssf\gsm\state\GameStateManager.h"
 #include "sssf\gui\ScreenGUI.h"
+#include "sssf\audio\GameAudio.h"
+#include "sssf\audio\sounds.h"
 
 void LastBonfireButtonEventHandler::handleButtonEvents(Game *game,
 	wstring command)
 {
+	GameAudio* gameAudio = game->getAudio();
+
 	// THE USER PRESSED THE Exit BUTTON ON THE MAIN MENU,
 	// SO LET'S SHUTDOWN THE ENTIRE APPLICATION
 	if (command.compare(W_EXIT_COMMAND) == 0)
@@ -38,6 +42,8 @@ void LastBonfireButtonEventHandler::handleButtonEvents(Game *game,
 	else if (command.compare(W_QUIT_COMMAND) == 0)
 	{
 		game->quitGame();
+		gameAudio->initAudio();
+		gameAudio->playBackgroundSound(XACT_WAVEBANK_SOUNDS_BACKGROUND);
 	}
 
 	else if (command.compare(W_SPIN_RIGHT_COMMAND) == 0)
@@ -47,6 +53,7 @@ void LastBonfireButtonEventHandler::handleButtonEvents(Game *game,
 		if ((*overlayIterator)->x != (*overlayIterator)->width * -2) {
 
 			// TODO: PLAY CLICK SOUND
+			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_MENUSELECTIONCLICK);
 
 			while (overlayIterator != game->getGUI()->getScreen(GS_MAIN_MENU)->getEndOfOverlayIterator())
 			{
@@ -55,9 +62,6 @@ void LastBonfireButtonEventHandler::handleButtonEvents(Game *game,
 				overlayIterator++;
 			}
 		}
-
-		// TODO: PLAY WRONG SOUND
-
 	}
 	else if (command.compare(W_SPIN_LEFT_COMMAND) == 0)
 	{
@@ -66,6 +70,7 @@ void LastBonfireButtonEventHandler::handleButtonEvents(Game *game,
 		if ((*overlayIterator)->x != 0) {
 
 			// TODO: PLAY CLICK SOUND
+			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_MENUSELECTIONCLICK);
 
 			while (overlayIterator != game->getGUI()->getScreen(GS_MAIN_MENU)->getEndOfOverlayIterator())
 			{
@@ -74,8 +79,5 @@ void LastBonfireButtonEventHandler::handleButtonEvents(Game *game,
 				overlayIterator++;
 			}
 		}
-
-		// TODO: PLAY WRONG SOUND
-
 	}
 }

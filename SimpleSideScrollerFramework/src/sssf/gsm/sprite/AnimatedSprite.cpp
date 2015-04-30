@@ -18,9 +18,12 @@
 */
 AnimatedSprite::AnimatedSprite()  
 {
+	alpha = 255;
+	currentState = L"IDLE";
 	spriteType = 0;
 	frameIndex = 0;
 	animationCounter = 0;
+	rotationInRadians = 0.0f;
 	pp.setPosition(0.0f, 0.0f);
 }
 

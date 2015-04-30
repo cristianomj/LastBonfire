@@ -24,6 +24,7 @@ class ButtonEventHandler;
 class Game;
 class GameInput;
 class TextureManager;
+class GameAudio;
 
 class Button
 {
@@ -48,6 +49,9 @@ private:
 	// A PROGRAMMED RESPONSE
 	wstring command;
 	ButtonEventHandler *eventHandler;
+
+	// IS OVER BUTTON
+	bool lanternOff = true;
 
 public:
 	// INLINED ACCESSOR METHODS
@@ -90,5 +94,5 @@ public:
 	Button::~Button();
 	void fireEvent(Game *game);
 	void initButton(int initNormalTextureID, int initMouseOverTextureID, int initX, int initY, int initZ, int initAlpha, int initWidth, int initHeight, bool initMouseOver, wstring initCommand);
-	void updateMouseOver(long mouseX, long mouseY);
+	void updateMouseOver(Game* game, long mouseX, long mouseY);
 };

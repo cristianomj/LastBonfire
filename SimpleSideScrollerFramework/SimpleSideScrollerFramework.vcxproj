@@ -14,16 +14,15 @@
     <Text Include="src\sssf_VS\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Box.cpp" />
     <ClCompile Include="src\sssf\audio\GameAudio.cpp" />
     <ClCompile Include="src\sssf\data_loader\GameDataLoader.cpp" />
     <ClCompile Include="src\sssf\game\Game.cpp" />
-    <ClCompile Include="src\sssf\game\pch.cpp" />
     <ClCompile Include="src\sssf\game\WStringTable.cpp" />
     <ClCompile Include="src\sssf\graphics\GameGraphics.cpp" />
     <ClCompile Include="src\sssf\graphics\RenderList.cpp" />
     <ClCompile Include="src\sssf\graphics\TextureManager.cpp" />
     <ClCompile Include="src\sssf\gsm\ai\BotRecycler.cpp" />
+    <ClCompile Include="src\sssf\gsm\ai\bots\Bat.cpp" />
     <ClCompile Include="src\sssf\gsm\ai\bots\RandomFloatingBot.cpp" />
     <ClCompile Include="src\sssf\gsm\ai\bots\RandomJumpingBot.cpp" />
     <ClCompile Include="src\sssf\gsm\physics\AABB.cpp" />
@@ -56,20 +55,19 @@
     <ClCompile Include="src\sssf_VS\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Box.h" />
-    <ClInclude Include="LevelObject.h" />
     <ClInclude Include="src\sssf\audio\GameAudio.h" />
+    <ClInclude Include="src\sssf\audio\sounds.h" />
     <ClInclude Include="src\sssf\data_loader\GameDataLoader.h" />
     <ClInclude Include="src\sssf\game\Game.h" />
     <ClInclude Include="src\sssf\game\IllegalArgumentException.h" />
     <ClInclude Include="src\sssf\game\IllegalFileFormatException.h" />
-    <ClInclude Include="src\sssf\game\pch.h" />
     <ClInclude Include="src\sssf\game\WStringTable.h" />
     <ClInclude Include="src\sssf\graphics\GameGraphics.h" />
     <ClInclude Include="src\sssf\graphics\RenderList.h" />
     <ClInclude Include="src\sssf\graphics\TextureManager.h" />
     <ClInclude Include="src\sssf\gsm\ai\Bot.h" />
     <ClInclude Include="src\sssf\gsm\ai\BotRecycler.h" />
+    <ClInclude Include="src\sssf\gsm\ai\bots\Bat.h" />
     <ClInclude Include="src\sssf\gsm\ai\bots\RandomFloatingBot.h" />
     <ClInclude Include="src\sssf\gsm\ai\bots\RandomJumpingBot.h" />
     <ClInclude Include="src\sssf\gsm\ai\LifelessObject.h" />
@@ -161,8 +159,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)Common\</OutDir>
     <IntDir>$(SolutionDir)Temp\$(ProjectName)\$(Configuration)\</IntDir>
-    <IncludePath>$(ProjectDir)src\;$(DXSDK_DIR)Include;$(SolutionDir)Box2D\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)src\;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(SolutionDir)Box2D\;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

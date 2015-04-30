@@ -9,20 +9,20 @@
 */
 
 // HERE IS THE BugginOut GAME SETUP/INIT FILE. EVERYTHING WOULD START FROM HERE
-static const wstring	W_LEVEL_1_DIR			= L"data/levels/CaveLevel/";
-static const wstring	W_LEVEL_1_NAME			= L"CaveLevel.tmx";
+static const wstring	W_LEVEL_1_DIR			= L"data/levels/CaveLevel2/";
+static const wstring	W_LEVEL_1_NAME			= L"caveLevelErica.tmx";
 static const wstring	W_LEVEL_1_PATH			= W_LEVEL_1_DIR + W_LEVEL_1_NAME;
-static const char *		RUBE_LEVEL_1			= "data/levels/CaveLevel/CaveLevel.json";
+static const char *		RUBE_LEVEL_1			= "data/levels/CaveLevel2/TheCave.json";
 
-static const wstring	W_LEVEL_2_DIR			= L"data/levels/SnowTest/";
-static const wstring	W_LEVEL_2_NAME			= L"SnowTest.tmx";
+static const wstring	W_LEVEL_2_DIR			= L"data/levels/SnowLevel/";
+static const wstring	W_LEVEL_2_NAME			= L"SnowLevel.tmx";
 static const wstring	W_LEVEL_2_PATH			= W_LEVEL_1_DIR + W_LEVEL_1_NAME;
-static const char *		RUBE_LEVEL_2			= "data/levels/SnowTest/SnowTest.json";
+static const char *		RUBE_LEVEL_2			= "data/levels/SnowLevel/SnowLevel.json";
 
-static const wstring	W_LEVEL_3_DIR			= L"data/levels/CaveLevel/";
-static const wstring	W_LEVEL_3_NAME			= L"CaveLevel.tmx";
+static const wstring	W_LEVEL_3_DIR			= L"data/levels/Castle/";
+static const wstring	W_LEVEL_3_NAME			= L"CastleLevel.tmx";
 static const wstring	W_LEVEL_3_PATH			= W_LEVEL_1_DIR + W_LEVEL_1_NAME;
-static const char *		RUBE_LEVEL_3			= "data/levels/CaveLevel/CaveLevel.json";
+static const char *		RUBE_LEVEL_3			= "data/levels/Castle/Castle.json";
 
 static const wstring	W_INIT_FILE				= L"data/LastBonfireInit.txt";
 static const wstring	W_GUI_INIT_FILE			= L"data/LastBonfireGUI.txt";
@@ -64,15 +64,15 @@ static const wstring	W_EXIT_IMAGE_PATH		= L"data/gui/buttons/exit_game.png";
 static const wstring	W_EXIT_IMAGE_MO_PATH	= L"data/gui/buttons/exit_game_mo.png";
 static const wstring	W_QUIT_IMAGE_PATH		= L"data/gui/buttons/quit.png";
 static const wstring	W_QUIT_IMAGE_MO_PATH	= L"data/gui/buttons/quit_mo.png";
-static const wstring	W_BONFIRE_OFF_PATH		= L"data/gui/buttons/bonfire_off.png";
-static const wstring	W_BONFIRE_ON_PATH		= L"data/gui/buttons/bonfire_on.png";
+static const wstring	W_LANTERN_OFF_PATH		= L"data/gui/buttons/lantern_off.png";
+static const wstring	W_LANTERN_ON_PATH		= L"data/gui/buttons/lantern_on.png";
 static const wstring	W_BONFIRE_LEFT_PATH		= L"data/gui/buttons/left_arrow.png";
 static const wstring	W_BONFIRE_LEFT_MO_PATH	= L"data/gui/buttons/left_arrow_mo.png";
 static const wstring	W_BONFIRE_RIGHT_PATH	= L"data/gui/buttons/right_arrow.png";
 static const wstring	W_BONFIRE_RIGHT_MO_PATH = L"data/gui/buttons/right_arrow_mo.png";
-static const wstring	W_BONFIRE_LEVEL_1_PATH	= L"data/gui/overlays/last_bonfire_level_one.png";
-static const wstring	W_BONFIRE_LEVEL_2_PATH	= L"data/gui/overlays/last_bonfire_level_two.png";
-static const wstring	W_BONFIRE_LEVEL_3_PATH	= L"data/gui/overlays/last_bonfire_level_three.png";
+static const wstring	W_BONFIRE_LEVEL_1_PATH	= L"data/gui/overlays/last_bonfire_level_one1.png";
+static const wstring	W_BONFIRE_LEVEL_2_PATH	= L"data/gui/overlays/last_bonfire_level_two1.png";
+static const wstring	W_BONFIRE_LEVEL_3_PATH	= L"data/gui/overlays/last_bonfire_level_three1.png";
 
 // FOR OUR SPRITE
 static const wstring	SPRITE_TYPES_DIR = L"data/sprite_types/";
@@ -92,9 +92,6 @@ static const float		PLAYER_SPEED = 6.0f;
 static const int		MIN_FPS = 5;
 static const int		MAX_FPS = 100;
 static const int		FPS_INC = 1;
-//static const wstring	ATTACKING_RIGHT(L"ATTACKING_RIGHT");
-//static const wstring	ATTACKING_LEFT(L"ATTACKING_LEFT");
-//static const wstring	IDLE(L"IDLE");
 
 // USED FOR MOVEMENT
 const unsigned int W_KEY = (unsigned int)'W';

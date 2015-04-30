@@ -71,11 +71,8 @@
     <Filter Include="src\sssf\gsm\rubestuff\json">
       <UniqueIdentifier>{6962607c-54fd-4eac-8354-3fb77d9079aa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\sssf\gsm\ai\lifeless_objects">
-      <UniqueIdentifier>{db772ff0-ffe4-4ad7-87e5-b74b44076e87}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\sssf\audio">
-      <UniqueIdentifier>{980e3914-b75c-44b6-b954-d7226759e7a7}</UniqueIdentifier>
+      <UniqueIdentifier>{f1ad2884-8861-4de7-94e3-224c16f0435c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -195,14 +192,11 @@
     <ClCompile Include="src\sssf\gsm\rubestuff\jsoncpp.cpp">
       <Filter>src\sssf\gsm\rubestuff</Filter>
     </ClCompile>
-    <ClCompile Include="Box.cpp">
-      <Filter>src\sssf\gsm\ai\lifeless_objects</Filter>
-    </ClCompile>
-    <ClCompile Include="src\sssf\game\pch.cpp">
-      <Filter>src\sssf\game</Filter>
-    </ClCompile>
     <ClCompile Include="src\sssf\audio\GameAudio.cpp">
       <Filter>src\sssf\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sssf\gsm\ai\bots\Bat.cpp">
+      <Filter>src\sssf\gsm\ai\bots</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -365,20 +359,17 @@
     <ClInclude Include="src\sssf\gsm\rubestuff\json\json-forwards.h">
       <Filter>src\sssf\gsm\rubestuff\json</Filter>
     </ClInclude>
-    <ClInclude Include="LevelObject.h">
-      <Filter>src\sssf\gsm\ai\bots</Filter>
-    </ClInclude>
-    <ClInclude Include="Box.h">
-      <Filter>src\sssf\gsm\ai\lifeless_objects</Filter>
-    </ClInclude>
     <ClInclude Include="src\sssf\gsm\ai\LifelessObject.h">
       <Filter>src\sssf\gsm\ai</Filter>
     </ClInclude>
-    <ClInclude Include="src\sssf\game\pch.h">
-      <Filter>src\sssf\game</Filter>
-    </ClInclude>
     <ClInclude Include="src\sssf\audio\GameAudio.h">
       <Filter>src\sssf\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\audio\sounds.h">
+      <Filter>src\sssf\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\ai\bots\Bat.h">
+      <Filter>src\sssf\gsm\ai\bots</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

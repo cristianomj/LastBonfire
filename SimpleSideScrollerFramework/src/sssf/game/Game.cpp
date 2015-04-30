@@ -80,7 +80,7 @@ void Game::initPlatformPlugins(		GameGraphics *initGraphics,
 	input = initInput;
 	os = initOS;
 	timer = initTimer;
-	gameAudio->initAudioEngine();
+	gameAudio->initAudio();
 }
 
 /*
@@ -130,6 +130,9 @@ void Game::runGameLoop()
 		// GET USER INPUT AND UPDATE GAME, GUI, OR PLAYER
 		// STATE OR WHATEVER IS NECESSARY
 		input->processInput(this);
+
+		// UPDATES AUDIO EACH FRAME
+		gameAudio->update();
 
 		// IT IS POSSIBLE THE USER REQUESTED A SHUTDOWN
 		// OF THE APP, SO WE NEED TO CHECK AGAIN

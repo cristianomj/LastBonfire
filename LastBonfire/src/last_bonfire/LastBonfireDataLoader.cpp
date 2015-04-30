@@ -17,6 +17,7 @@
 #include "sssf\input\GameInput.h"
 #include "sssf\os\GameOS.h"
 #include "sssf\text\GameText.h"
+#include "sssf\audio\GameAudio.h"
 
 // WINDOWS PLATFORM INCLUDES
 #include "sssf\platforms\Windows\WindowsOS.h"
@@ -161,21 +162,25 @@ void LastBonfireDataLoader::loadWorld(Game *game, wstring levelInitFile)
 {
 	wstring LEVEL_DIR, LEVEL_NAME;
 	const char * RUBE_LEVEL = NULL;
+	int LEVEL_SOUND;
 	// SELECT LEVEL
 	if (levelInitFile == W_LEVEL_1_NAME) {
 		LEVEL_DIR = W_LEVEL_1_DIR;
 		LEVEL_NAME = W_LEVEL_1_NAME;
 		RUBE_LEVEL = RUBE_LEVEL_1;
+		LEVEL_SOUND = XACT_WAVEBANK_SOUNDS_CAVEMUSIC;
 	}
 	else if (levelInitFile == W_LEVEL_2_NAME) {
 		LEVEL_DIR = W_LEVEL_2_DIR;
 		LEVEL_NAME = W_LEVEL_2_NAME;
 		RUBE_LEVEL = RUBE_LEVEL_2;
+		LEVEL_SOUND = XACT_WAVEBANK_SOUNDS_SNOWMUSIC;
 	}
 	else if (levelInitFile == W_LEVEL_3_NAME) {
 		LEVEL_DIR = W_LEVEL_3_DIR;
 		LEVEL_NAME = W_LEVEL_3_NAME;
 		RUBE_LEVEL = RUBE_LEVEL_3;
+		LEVEL_SOUND = XACT_WAVEBANK_SOUNDS_CASTLEMUSIC;
 	}
 
 	// LOAD THE LEVEL'S BACKGROUND TILES
@@ -189,6 +194,9 @@ void LastBonfireDataLoader::loadWorld(Game *game, wstring levelInitFile)
 	// LOAD RUBE LEVEL
 	Physics *physics = game->getGSM()->getPhysics();
 	physics->loadScene(game, RUBE_LEVEL);
+
+	// LOAD LEVEL SOUND
+	game->getAudio()->playBackgroundSound(LEVEL_SOUND);
 }
 
 /*
@@ -270,19 +278,19 @@ void LastBonfireDataLoader::initSplashScreen(Game *game, GameGUI *gui, DirectXTe
 	splashScreenGUI->addOverlayImage(imageToAdd);
 
 	// WE'LL ONLY HAVE ONE IMAGE FOR OUR GIANT BUTTON
-	unsigned int normalTextureID = guiTextureManager->loadTexture(W_BONFIRE_OFF_PATH);
-	unsigned int mouseOverTextureID = guiTextureManager->loadTexture(W_BONFIRE_ON_PATH);
+	unsigned int normalTextureID = guiTextureManager->loadTexture(W_LANTERN_OFF_PATH);
+	unsigned int mouseOverTextureID = guiTextureManager->loadTexture(W_LANTERN_ON_PATH);
 
 	// BONFIRE BUTTON
 	Button *buttonToAdd = new Button();
 	buttonToAdd->initButton(normalTextureID,
 		mouseOverTextureID,
-		300,
-		257,
+		507,
+		506,
 		0,
 		255,
-		400,
-		409,
+		101,
+		170,
 		false,
 		W_GO_TO_MM_COMMAND);
 	splashScreenGUI->addButton(buttonToAdd);

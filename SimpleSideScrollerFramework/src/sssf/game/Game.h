@@ -81,6 +81,7 @@ public:
 	GameStateManager*	getGSM()				{ return gsm;								}
 	GameGUI*			getGUI()				{ return gui;								}
 	GameText*			getText()				{ return text;								}
+	GameAudio*			getAudio()				{ return gameAudio;							}	
 
 	// INLINED ACCESSOR METHODS - ACTUALLY SUB-CLASSES
 	GameDataLoader*		getDataLoader()			{ return dataLoader;						}

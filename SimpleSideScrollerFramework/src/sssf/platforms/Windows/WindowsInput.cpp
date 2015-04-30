@@ -66,7 +66,7 @@ void WindowsInput::respondToMouseInput(Game *game)
 {
 	GameGUI *gui = game->getGUI();
 	GameStateManager *gsm = game->getGSM();
-	gui->updateGUIState(mousePoint->x, mousePoint->y, gsm->getCurrentGameState());
+	gui->updateGUIState(game, mousePoint->x, mousePoint->y, gsm->getCurrentGameState());
 	
 	if ( (GetAsyncKeyState(VK_LBUTTON) & 0X8000)
 		&& (inputState[VK_LBUTTON].isFirstPress))

@@ -13,6 +13,7 @@
 #include "sssf_VS\stdafx.h"
 #include "sssf\graphics\GameGraphics.h"
 #include "sssf\gsm\ai\LifelessObject.h"
+#include "sssf\gsm\ai\Bot.h"
 #include "sssf\gsm\ai\BotRecycler.h"
 #include "sssf\gsm\sprite\AnimatedSprite.h"
 #include "sssf\gsm\sprite\AnimatedSpriteType.h"
@@ -26,7 +27,7 @@ private:
 
 	// THESE ARE THE BOTS IN THE GAME, LIKE ENEMIES, ROCKETS, OR ANYTHING
 	// THAT MOVES AROUND AND IS NOT THE PLAYER
-	//list<Bot*> bots;
+	list<Bot*> bots;
 	list<LifelessObject*> objects;
 
 	// AND THIS IS THE PLAYER. AS-IS, WE ONLY ALLOW FOR ONE PLAYER AT A TIME
@@ -48,13 +49,18 @@ public:
 	list<LifelessObject*>::iterator	getEndOfObjectsIterator()	{ return objects.end();			}
 
 	// METHODS DEFINED IN SpriteManager.cpp
-	void				addObject(LifelessObject *objectToAdd);
+	void				addLifelessObject(LifelessObject *objectToAdd);
+	void				addBot(Bot* botToAdd);
+	
 	void				addSpriteItemsToRenderList(Game *game);
 	unsigned int		addSpriteType(AnimatedSpriteType *spriteTypeToAdd);
 	void				addSpriteToRenderList(AnimatedSprite *sprite, RenderList *renderList, Viewport *viewport);
 	void				clearSprites();
 	AnimatedSpriteType* getSpriteType(unsigned int typeIndex);
-	LifelessObject*		removeObject(LifelessObject *objectToRemove);
+	
+	void				removeLifelessObject(LifelessObject *objectToRemove);
+	void				removeBot(Bot* botToRemove);
+	
 	void				unloadSprites();
 	void				update(Game *game);
 };

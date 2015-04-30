@@ -59,5 +59,5 @@ public:
 	void addScreenGUI(GameState gameState, ScreenGUI *screenToAdd);
 	bool checkCurrentScreenForAction(Game *game);
 	void registerButtonEventHandler(ButtonEventHandler *eventHandler);
-	void updateGUIState(long mouseX, long mouseY, GameState gameState);
+	void updateGUIState(Game* game, long mouseX, long mouseY, GameState gameState);
 };

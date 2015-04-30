@@ -15,6 +15,7 @@
 #include "sssf\gui\Button.h"
 #include "sssf\input\ButtonEventHandler.h"
 #include "sssf\input\GameInput.h"
+#include "sssf\audio\GameAudio.h"
 
 /*
 	Button - Default Constructor, it sets all int instance
@@ -95,8 +96,10 @@ void Button::initButton(int initNormalTextureID,
 	isMouseOver is a simple accessor method that returns
 	the instance variable set by this method.
 */
-void Button::updateMouseOver(long mouseX, long mouseY)
+void Button::updateMouseOver(Game* game, long mouseX, long mouseY)
 {
+	GameAudio* gameAudio = game->getAudio();
+
 	// IS THE CURSOR OVER THIS BUTTON?
 	if ((mouseX >= x)  &&
 		(mouseX <= (x + width)) &&
@@ -106,11 +109,19 @@ void Button::updateMouseOver(long mouseX, long mouseY)
 		// SETTING THIS WILL ENSURE WE USE THE PROPER IMAGE FOR
 		// RENDERING, IT WILL ALSO ENSURE AN EVENT IS FIRED IF
 		// THE MOUSE BUTTON IS CLICKED
+		if (lanternOff && command == L"Go To Main Menu") {
+			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_LANTERNON);
+			lanternOff = false;
+		}
 		mouseOver = true;
 	}
 	else
 	{
 		// THIS WILL ENSURE THE NORMAL IMAGE IS RENDERED
+		if (!lanternOff && command == L"Go To Main Menu") {
+			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_LANTERNOFF);
+			lanternOff = true;
+		}
 		mouseOver = false;
 	}
 }

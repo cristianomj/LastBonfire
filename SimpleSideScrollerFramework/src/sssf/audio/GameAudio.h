@@ -1,20 +1,7 @@
 #pragma once
 
-#include "CommonStates.h"
-#include "DDSTextureLoader.h"
-#include "DirectXHelpers.h"
-#include "Effects.h"
-#include "GamePad.h"
-#include "GeometricPrimitive.h"
-#include "Model.h"
-#include "PrimitiveBatch.h"
-#include "ScreenGrab.h"
-#include "SimpleMath.h"
-#include "SpriteBatch.h"
-#include "SpriteFont.h"
-#include "VertexTypes.h"
-#include "WICTextureLoader.h"
-#include "Audio.h"
+#include "sssf_VS\stdafx.h"
+#include "sssf\audio\sounds.h"
 
 class GameAudio
 {
@@ -22,11 +9,18 @@ public:
 	GameAudio() {}
 	~GameAudio();
 
-	void initAudioEngine();
+	void initAudio();
 	void update();
 	void suspend();
 	void resume();
+	void setVolume(float);
+	void playSoundFX(const int);
+	void playBackgroundSound(const int);
 
 private:
-	std::unique_ptr<DirectX::AudioEngine> m_audEngine;
+	std::unique_ptr<DirectX::AudioEngine> m_audioEngine;
+	std::unique_ptr<DirectX::WaveBank> m_sounds;
+	std::unique_ptr<DirectX::SoundEffectInstance> m_background_music;
+	bool m_retryAudio;
+	float m_volume;
 };

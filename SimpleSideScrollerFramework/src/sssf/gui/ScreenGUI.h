@@ -56,5 +56,5 @@ public:
 	void addRenderItemsToRenderList(RenderList *renderList);
 	bool fireButtonCommand(Game *game);
 	void registerButtonEventHandler(ButtonEventHandler *eventHandler);
-	void updateAllButtons(long mouseX, long mouseY);
+	void updateAllButtons(Game* game, long mouseX, long mouseY);
 };
