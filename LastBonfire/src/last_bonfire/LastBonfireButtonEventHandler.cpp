@@ -42,6 +42,8 @@ void LastBonfireButtonEventHandler::handleButtonEvents(Game *game,
 	else if (command.compare(W_QUIT_COMMAND) == 0)
 	{
 		game->quitGame();
+		gameAudio->initAudio();
+		gameAudio->playBackgroundSound(XACT_WAVEBANK_SOUNDS_BACKGROUND);
 	}
 
 	else if (command.compare(W_SPIN_RIGHT_COMMAND) == 0)
