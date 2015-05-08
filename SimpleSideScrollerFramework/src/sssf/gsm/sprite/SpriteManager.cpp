@@ -151,6 +151,9 @@ AnimatedSpriteType* SpriteManager::getSpriteType(unsigned int typeIndex)
 void SpriteManager::unloadSprites()
 {
 	// @TODO - WE'LL DO THIS LATER WHEN WE LEARN MORE ABOUT MEMORY MANAGEMENT
+	//erica added
+	bots.clear();
+	objects.clear();
 }
 
 void SpriteManager::removeLifelessObject(LifelessObject *objectToRemove)
@@ -175,10 +178,10 @@ void SpriteManager::update(Game *game)
 
 	Viewport *viewport = game->getGUI()->getViewport();
 
-	viewport->moveViewport(player.getPhysicalProperties()->getX(),
+	/*viewport->moveViewport(player.getPhysicalProperties()->getX(),
 		player.getPhysicalProperties()->getY(),
 		game->getGSM()->getWorld()->getWorldWidth(),
-		game->getGSM()->getWorld()->getWorldHeight());
+		game->getGSM()->getWorld()->getWorldHeight());*/
 
 	// UPDATE BOTS
 	list<Bot*>::iterator botsIterator;

@@ -34,6 +34,7 @@ Physics::Physics()
 	world = NULL;
 	playerBody = NULL;
 	gameAudio = NULL;
+	moveState = MS_STOP;
 }
 
 Physics::~Physics()
@@ -54,10 +55,11 @@ void Physics::update(Game* game)
 		removeScheduledForRemoval(game);
 
 	// MAKE ROCKS FALL
-	if (rockSchedule.size() > 0)
-		rockFall(game);
+	if (fixturesToDestroy.size() > 0)
+		destroyFixtures();
 
 	// UPDATE PLAYER SPRITE'S POSITION
+	movePlayer();
 	float32 x = playerBody->GetPosition().x;
 	float32 y = playerBody->GetPosition().y;
 	// Convert box2d coordinates to screen coordinates
@@ -83,94 +85,6 @@ void Physics::update(Game* game)
 	}
 }
 
-void Physics::rockFall(Game* game)
-{
-	list<b2Body*>::iterator it = rockSchedule.begin();
-	list<b2Body*>::iterator end = rockSchedule.end();
-
-	for (; it != end; ++it)
-	{
-		/*b2Fixture* f;
-		for (f = (*it)->GetFixtureList(); f; f = f->GetNext())
-			if (f->IsSensor()) break;*/
-
-		(*it)->SetType(b2_dynamicBody);
-		/*(*it)->DestroyFixture(f);
-		rocks.remove((*it));
-		++it;*/
-	}
-
-	rockSchedule.clear();
-}
-
-void Physics::removeScheduledForRemoval(Game* game)
-{
-	SpriteManager* spriteManager = game->getGSM()->getSpriteManager();
-	set<b2Body*>::iterator it = scheduledForRemoval.begin();
-	set<b2Body*>::iterator end = scheduledForRemoval.end();
-	for (; it != end; ++it)
-	{
-		b2Body* toRemove = *it;
-		// Remove from bodies list
-		bots.erase(toRemove);
-		// Remove sprite from render list
-		spriteManager->removeLifelessObject((LifelessObject*)toRemove->GetUserData());
-		// Destroy body
-		world->DestroyBody(toRemove);
-	}
-	// Clear list for next time
-	scheduledForRemoval.clear();
-}
-
-void Physics::BeginContact(b2Contact* contact)
-{
-	b2Fixture* fixtureA = contact->GetFixtureA();
-	b2Fixture* fixtureB = contact->GetFixtureB();
-	b2Body* bodyA = fixtureA->GetBody();
-	b2Body* bodyB = fixtureB->GetBody();
-
-	list<b2Body*>::iterator it = rocks.begin();
-	list<b2Body*>::iterator end = rocks.end();
-
-	if (bodyA == playerBody)
-	{
-		// ROCK FALLING
-		if (bodyB->GetType() == b2_kinematicBody)
-		{
-			for (; it != end; ++it)
-			{
-				if (bodyB == *it)
-				{
-					rockSchedule.push_back(bodyB);
-				}
-			}
-		}
-
-		if (bodyB->GetType() == b2_dynamicBody && bodyB->IsActive() && bodyB->IsBullet()) {
-			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_TAKINGDAMAGESOUND);
-		}
-	}
-	else if (bodyB == playerBody)
-	{
-		// ROCK FALLING
-		if (bodyA->GetType() == b2_kinematicBody)
-		{
-			for (; it != end; ++it)
-			{
-				if (bodyA == *it)
-				{
-					rockSchedule.push_back(bodyA);
-				}
-			}
-		}
-
-		if (bodyA->GetType() == b2_dynamicBody && bodyA->IsActive() && bodyA->IsBullet()) {
-			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_TAKINGDAMAGESOUND);
-		}
-			
-	}
-}
-
 void Physics::loadScene(Game* game, const char* level)
 {
 	SpriteManager *spriteManager = game->getGSM()->getSpriteManager();
@@ -183,7 +97,6 @@ void Physics::loadScene(Game* game, const char* level)
 	b2dJson json;
 	string errorMsg;
 	world = json.readFromFile(level, errorMsg);
-	world->SetGravity(settings.gravity);
 	world->SetContactListener(this);
 
 	// LOAD GROUND
@@ -196,7 +109,7 @@ void Physics::loadScene(Game* game, const char* level)
 	makePlayer(game, x, y);
 	// Set player definitions
 	playerBody->GetFixtureList()->SetFriction(0.0f);
-	playerBody->SetGravityScale(10);
+	playerBody->SetGravityScale(20);
 	playerBody->SetUserData(player);
 
 	// LOAD BOTS
@@ -229,6 +142,20 @@ void Physics::loadScene(Game* game, const char* level)
 	{
 		loadLifelessObject(game, spriteType, tempBodies[i]);
 		rocks.push_back(tempBodies[i]);
+
+		// TODO: set any body definitions here
+		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
+		tempBodies[i]->SetGravityScale(20);
+		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
+	}
+	tempBodies.clear();
+
+	json.getBodiesByName("Platform", tempBodies);
+	spriteType = spriteManager->getSpriteType(PLATFORM_SPRITE);
+	for (int i = 0; i < tempBodies.size(); i++)
+	{
+		loadLifelessObject(game, spriteType, tempBodies[i]);
+		platforms.push_back(tempBodies[i]);
 
 		// TODO: set any body definitions here
 		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
@@ -288,31 +215,29 @@ void Physics::loadScene(Game* game, const char* level)
 	tempBodies.clear();
 }
 
-void Physics::b2dToScreen(AnimatedSprite* sprite, float32 &x, float32 &y)
+void Physics::movePlayer(void)
 {
-	x = ((x - sprite->getBoundingVolume()->getWidth() / settings.ratio / 2.0f) * settings.ratio) + (settings.worldWidth / 2.0f);
-	y = ((-y - sprite->getBoundingVolume()->getHeight() / settings.ratio / 2.0f) * settings.ratio) + (settings.worldHeight / 2.0f);
-}
-
-void Physics::movePlayer(const int moveState)
-{
-	settings.moveState = moveState;
 	b2Vec2 vel = playerBody->GetLinearVelocity();
-	float32 desiredVelX = 0.0f, desiredVelY = 0.0f;
+	float desiredVel = 0;
 	switch (moveState)
 	{
-		case LEFT:  desiredVelX = -settings.playerWalkingVel; break;
-		case STOP:  desiredVelX = 0.0f; break;
-		case RIGHT: desiredVelX = settings.playerWalkingVel; break;
-		case JUMP:  desiredVelY = settings.playerJumpingVel; break;
+		case MS_LEFT:  desiredVel = b2Max(vel.x - 5.0f, -20.0f); break;
+		case MS_STOP:  desiredVel = vel.x * 0.3f; break;
+		case MS_RIGHT: desiredVel = b2Min(vel.x + 5.0f, 20.0f); break;
 	}
-	float32 velChangeX = desiredVelX - vel.x;
-	float32 velChangeY = desiredVelY - vel.y;
-	float32 impulseX = playerBody->GetMass() * velChangeX; // disregard time factor
-	float32 inpulseY = playerBody->GetMass() * velChangeY;
-	playerBody->ApplyLinearImpulse(b2Vec2(impulseX, velChangeY), playerBody->GetWorldCenter(), true);
+	float velChange = desiredVel - vel.x;
+	float force = playerBody->GetMass() * velChange / (1 / 60.0); //f = mv/t
+	playerBody->ApplyForce(b2Vec2(force, 0), playerBody->GetWorldCenter(), true);
 }
 
+void Physics::jump(void)
+{
+	// To change velocity by 35
+	float impulse = playerBody->GetMass() * 35;
+	playerBody->ApplyLinearImpulse(b2Vec2(0, impulse), playerBody->GetWorldCenter(), true);
+}
+
+// HELPER FUNCTIONS
 void Physics::makePlayer(Game* game, float initX, float initY)
 {
 	SpriteManager *spriteManager = game->getGSM()->getSpriteManager();
@@ -375,4 +300,81 @@ void Physics::loadBot(Game* game, AnimatedSpriteType* spriteType, b2Body* body)
 	// box2d to world coordinate conversion
 	b2dToScreen(sprite, x, y);
 	sprite->getPhysicalProperties()->setPosition(x, y);
+}
+
+void Physics::b2dToScreen(AnimatedSprite* sprite, float32 &x, float32 &y)
+{
+	x = ((x - sprite->getBoundingVolume()->getWidth() / settings.ratio / 2.0f) * settings.ratio) + (settings.worldWidth / 2.0f);
+	y = ((-y - sprite->getBoundingVolume()->getHeight() / settings.ratio / 2.0f) * settings.ratio) + (settings.worldHeight / 2.0f);
+}
+
+// COLLISION HANDLING FUNCTIONS
+void Physics::destroyFixtures()
+{
+	fixturesToDestroy.unique();
+	list<b2Fixture*>::iterator it = fixturesToDestroy.begin();
+	list<b2Fixture*>::iterator end = fixturesToDestroy.end();
+
+	for (; it != end; ++it)
+	{
+		(*it)->GetBody()->SetType(b2_dynamicBody);
+		(*it)->GetBody()->DestroyFixture((*it));
+	}
+
+	fixturesToDestroy.clear();
+}
+
+void Physics::removeScheduledForRemoval(Game* game)
+{
+	SpriteManager* spriteManager = game->getGSM()->getSpriteManager();
+	set<b2Body*>::iterator it = scheduledForRemoval.begin();
+	set<b2Body*>::iterator end = scheduledForRemoval.end();
+	for (; it != end; ++it)
+	{
+		b2Body* toRemove = *it;
+		// Remove from bodies list
+		bots.erase(toRemove);
+		// Remove sprite from render list
+		spriteManager->removeLifelessObject((LifelessObject*)toRemove->GetUserData());
+		// Destroy body
+		world->DestroyBody(toRemove);
+	}
+	// Clear list for next time
+	scheduledForRemoval.clear();
+}
+
+void Physics::BeginContact(b2Contact* contact)
+{
+	b2Fixture* fixtureA = contact->GetFixtureA();
+	b2Fixture* fixtureB = contact->GetFixtureB();
+	b2Body* bodyA = fixtureA->GetBody();
+	b2Body* bodyB = fixtureB->GetBody();
+	
+	// MOST CASES PLAYER WILL BE BODYB
+	if (bodyB == playerBody)
+		handleCollision(bodyA, fixtureA);
+
+	else if (bodyA == playerBody)
+		handleCollision(bodyB, fixtureB);
+}
+
+void Physics::handleCollision(b2Body* body, b2Fixture* fixture)
+{
+	// FALLING BODIES - PLAYER ENTERS IN CONTACT WITH THEM
+	list<b2Body*>::iterator it = rocks.begin();
+	list<b2Body*>::iterator end = rocks.end();
+	for (; it != end; ++it)
+	{
+		if (body == *it)
+		{
+			for (b2Fixture* f = (*it)->GetFixtureList(); f; f = f->GetNext())
+				fixturesToDestroy.push_back(fixture);
+		}
+	}
+
+	// PLAYER WAS HIT BY AN ENEMY
+	if (body->GetType() == b2_dynamicBody && body->IsBullet()) {
+		// TODO: TAKE DAMAGE
+		gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_TAKINGDAMAGESOUND);
+	}
 }

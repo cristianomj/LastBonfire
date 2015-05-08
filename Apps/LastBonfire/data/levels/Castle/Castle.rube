@@ -3318,6 +3318,219 @@
         "angle" : 0,
         "angularVelocity" : 0,
         "awake" : true,
+        "bullet" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 61,
+            "name" : "fixture12",
+            "sensor" : true,
+            "shapes" : 
+            [
+              
+              {
+                "type" : "loop"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : 
+              [
+                -0.4621353149414063,
+                0.5378646850585938,
+                0.5378646850585938,
+                -0.4621353149414063
+              ],
+              "y" : 
+              [
+                -8.181983947753906,
+                -8.181983947753906,
+                -7.181983947753906,
+                -7.181983947753906
+              ]
+            }
+          },
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 62,
+            "name" : "fixture13",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.02013778686523438 ],
+              "y" : [ -0.02013778686523438 ]
+            }
+          }
+        ],
+        "id" : 60,
+        "linearVelocity" : 0,
+        "name" : "Rock",
+        "position" : 
+        {
+          "x" : -36.79805755615234,
+          "y" : 28.52519607543945
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "bullet" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 63,
+            "name" : "fixture12",
+            "sensor" : true,
+            "shapes" : 
+            [
+              
+              {
+                "type" : "loop"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : 
+              [
+                -0.4621353149414063,
+                0.5378646850585938,
+                0.5378646850585938,
+                -0.4621353149414063
+              ],
+              "y" : 
+              [
+                -8.181983947753906,
+                -8.181983947753906,
+                -7.181983947753906,
+                -7.181983947753906
+              ]
+            }
+          },
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 64,
+            "name" : "fixture13",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.02013778686523438 ],
+              "y" : [ -0.02013778686523438 ]
+            }
+          }
+        ],
+        "id" : 61,
+        "linearVelocity" : 0,
+        "name" : "Rock",
+        "position" : 
+        {
+          "x" : -34.63345718383789,
+          "y" : 28.52519607543945
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "bullet" : true,
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 65,
+            "name" : "fixture12",
+            "sensor" : true,
+            "shapes" : 
+            [
+              
+              {
+                "type" : "loop"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : 
+              [
+                -0.4621353149414063,
+                0.5378646850585938,
+                0.5378646850585938,
+                -0.4621353149414063
+              ],
+              "y" : 
+              [
+                -8.181983947753906,
+                -8.181983947753906,
+                -7.181983947753906,
+                -7.181983947753906
+              ]
+            }
+          },
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 66,
+            "name" : "fixture13",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.02013778686523438 ],
+              "y" : [ -0.02013778686523438 ]
+            }
+          }
+        ],
+        "id" : 62,
+        "linearVelocity" : 0,
+        "name" : "Rock",
+        "position" : 
+        {
+          "x" : -32.43793106079102,
+          "y" : 28.52519607543945
+        },
+        "type" : "kinematic"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
         "fixture" : 
         [
           

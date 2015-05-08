@@ -197,6 +197,7 @@ void LastBonfireDataLoader::loadWorld(Game *game, wstring levelInitFile)
 
 	// LOAD LEVEL SOUND
 	game->getAudio()->playBackgroundSound(LEVEL_SOUND);
+	game->getAudio()->playSoundFX(XACT_WAVEBANK_SOUNDS_FINDTHEEMBER);
 }
 
 /*
@@ -357,7 +358,7 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 		false,
 		W_EXIT_COMMAND);
 	// AND NOW LOAD IT INTO A ScreenGUI
-	//mainMenuGUI->addButton(buttonToAdd);
+	mainMenuGUI->addButton(buttonToAdd);
 
 	// AND LET'S ADD A START BUTTON
 	buttonToAdd = new Button();

@@ -1,5 +1,8 @@
-
 #pragma once
+/*
+	Author: Cristiano Miranda
+*/
+
 #include "sssf_VS\stdafx.h"
 #include "sssf\game\Game.h"
 #include "sssf\gsm\sprite\AnimatedSprite.h"
@@ -22,9 +25,12 @@ static const int		BAT_SPRITE = 5;
 static const int		BONE_SPRITE = 6;
 static const int		SKULLPOLE_SPRITE = 7;
 static const int		ROCK_SPRITE = 8;
-static const wstring	ATTACKING_RIGHT(L"ATTACKING_RIGHT");
-static const wstring	ATTACKING_LEFT(L"ATTACKING_LEFT");
+static const int		PLATFORM_SPRITE = 9;
 static const wstring	IDLE(L"IDLE");
+static const wstring	MOVE_RIGHT(L"MOVE_RIGHT");
+static const wstring	MOVE_LEFT(L"MOVE_LEFT");
+static const wstring	JUMP_RIGHT(L"JUMP_RIGHT");
+static const wstring	JUMP_LEFT(L"JUMP_RIGHT");
 
 struct Settings
 {
@@ -34,29 +40,23 @@ struct Settings
 		ratio = 64.0f;
 		velocityIterations = 8;
 		positionIterations = 3;
-		gravity.Set(0.0f, -10.0f);
-		playerWalkingVel = 10.0f;
-		playerJumpingVel = 400.0f;
-		moveState = STOP;
 	}
 
 	float32 hz;
 	float32 ratio;
 	int32 velocityIterations;
 	int32 positionIterations;
-	b2Vec2 gravity;
-
-	// PLAYER SETTINGS
-	float32 playerWalkingVel;
-	float32 playerJumpingVel;
-	int moveState;
 	
 	// WORLD SETTINGS
 	float32 worldWidth;
 	float32 worldHeight;
+};
 
-	int boxes;
-	int wheels;
+enum MoveState {
+	MS_STOP,
+	MS_LEFT,
+	MS_RIGHT,
+	MS_JUMP
 };
 
 class AnimatedSprite;
@@ -64,33 +64,10 @@ class AnimatedSprite;
 class Physics : public b2ContactListener
 {
 public:
-	// BOX2D STUFF
-	b2World* world;
-	b2Body* ground;
-
-	// PLAYER DATA
-	b2Body* playerBody;
-	AnimatedSprite* player;
-
-	// USED TO REMOVE BODIES
-	set<b2Body*> scheduledForRemoval;
-
-	// USED TO TEMPORARILY STORE BODIES
-	vector<b2Body*> tempBodies;
-
-	// ROCKS
-	list<b2Body*> rocks;
-	list<b2Body*> rockSchedule;
-
-	// BOTS
-	set<b2Body*> bots;
-	// LIFELESS OBJECTS
-	set<b2Body*> lifelessObjects;
 
 	// PHYSICS SETTINGS
 	Settings settings;
-
-	GameAudio* gameAudio;
+	MoveState moveState;
 
 	// CONSTRUCTOR/DESTRUCTOR
 	Physics();
@@ -101,14 +78,42 @@ public:
 	virtual void BeginContact(b2Contact* contact);
 	void createPlayer(AnimatedSprite* initPlayer);
 	void loadScene(Game* game, const char* level);
-	void movePlayer(const int);
+	void movePlayer(void);
+	void jump(void);
+
+private:
+	// BOX2D STUFF
+	b2World* world;
+	b2Body* ground;
+
+	// PLAYER DATA
+	b2Body* playerBody;
+	AnimatedSprite* player;
+
+	// USED TO TEMPORARILY STORE BODIES
+	vector<b2Body*> tempBodies;
+
+	// BOTS
+	set<b2Body*> bots;
+	// LIFELESS OBJECTS
+	set<b2Body*> lifelessObjects;
+
+	GameAudio* gameAudio;
+
+	// USED TO REMOVE BODIES
+	set<b2Body*> scheduledForRemoval;
+	// ROCKS
+	list<b2Body*> rocks;
+	list<b2Fixture*> fixturesToDestroy;
+	// FALLING PLATFORMS
+	list<b2Body*> platforms;
 
 	// HELPER METHODS DEFINED INSIDE Physics.cpp
-private:
 	void b2dToScreen(AnimatedSprite* sprite, float32 &x, float32 &y);
 	void makePlayer(Game* game, float initX, float initY);
 	void removeScheduledForRemoval(Game* game);
 	void loadLifelessObject(Game* game, AnimatedSpriteType* spriteType, b2Body* body);
 	void loadBot(Game* game, AnimatedSpriteType* spriteType, b2Body* body);
-	void rockFall(Game* game);
+	void destroyFixtures();
+	void handleCollision(b2Body* body, b2Fixture* fixture);
 };
