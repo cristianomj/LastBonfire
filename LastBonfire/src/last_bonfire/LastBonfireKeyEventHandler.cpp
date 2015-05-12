@@ -30,7 +30,7 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 
 	// LET'S GET THE PLAYER'S PHYSICAL PROPERTIES, IN CASE WE WANT TO CHANGE THEM
 	GameStateManager *gsm = game->getGSM();
-	AnimatedSprite *player = gsm->getSpriteManager()->getPlayer();
+	Player *player = gsm->getSpriteManager()->getPlayer();
 	PhysicalProperties *pp = player->getPhysicalProperties();
 	Viewport *viewport = game->getGUI()->getViewport();
 	Physics* physics = game->getGSM()->getPhysics();
@@ -52,15 +52,17 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 		// MOVE LEFT
 		if (input->isKeyDown(A_KEY))
 		{
-			vX = -PLAYER_SPEED;
-			player->setCurrentState(MOVE_LEFT);	// Animation State
+ 			vX = -PLAYER_SPEED;
+			if (player->isJumping) player->setCurrentState(JUMP_LEFT);
+			else player->setCurrentState(MOVE_LEFT);	// Animation State
 			physics->moveState = MS_LEFT;		// Move State
 		}
 		// MOVE RIGHT
 		else if (input->isKeyDown(D_KEY))
 		{
 			vX = PLAYER_SPEED;
-			player->setCurrentState(MOVE_RIGHT);	// Animation State
+			if (player->isJumping) player->setCurrentState(JUMP_RIGHT);
+			else player->setCurrentState(MOVE_RIGHT);	// Animation State
 			physics->moveState = MS_RIGHT;			// Move State
 		}
 		else if (input->isKeyDownForFirstTime(G_KEY))
@@ -77,15 +79,20 @@ void LastBonfireKeyEventHandler::handleKeyEvents(Game *game)
 		// JUMP
 		if (input->isKeyDownForFirstTime(SPACE_KEY))
 		{
-			vY = JUMP;
+			if (player->numFootContacts > 0)
+			{
+				// JUMP
+				vY = JUMP_SPEED;
+				player->isJumping = true;
 
-			physics->moveState = MS_JUMP;
-			physics->jump();
+				physics->moveState = MS_JUMP;
+				physics->jump();
 
-			if (vX > 0.0f) player->setCurrentState(JUMP_RIGHT);
-			else if (vX < 0.0f) player->setCurrentState(JUMP_LEFT);
+				if (vX > 0.0f) player->setCurrentState(JUMP_RIGHT);
+				else if (vX < 0.0f) player->setCurrentState(JUMP_LEFT);
 
-			gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_JUMPSOUND);
+				gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_JUMPSOUND);
+			}
 		}
 
 		// NOW SET THE ACTUAL PLAYER VELOCITY

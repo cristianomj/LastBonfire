@@ -74,6 +74,9 @@
     <Filter Include="src\sssf\audio">
       <UniqueIdentifier>{f1ad2884-8861-4de7-94e3-224c16f0435c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\sssf\gsm\player">
+      <UniqueIdentifier>{9b944854-1a99-4c08-9773-e66ad7191f49}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="src\sssf_VS\ReadMe.txt">
@@ -370,6 +373,9 @@
     </ClInclude>
     <ClInclude Include="src\sssf\gsm\ai\bots\Bat.h">
       <Filter>src\sssf\gsm\ai\bots</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sssf\gsm\player\Player.h">
+      <Filter>src\sssf\gsm\player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

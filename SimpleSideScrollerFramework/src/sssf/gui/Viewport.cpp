@@ -10,6 +10,7 @@
 
 #include "sssf_VS\stdafx.h"
 #include "sssf\gui\Viewport.h"
+#include "sssf\gsm\player\Player.h"
 
 /*
 	Viewport - This default constructor simply sets all integer

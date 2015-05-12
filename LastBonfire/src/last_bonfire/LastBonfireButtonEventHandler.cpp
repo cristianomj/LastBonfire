@@ -33,8 +33,8 @@ void LastBonfireButtonEventHandler::handleButtonEvents(Game *game,
 		int level = (*it)->x;
 
 		if (level == 0) game->setCurrentLevelFileName(W_LEVEL_1_NAME);
-		else if (level == -1024) game->setCurrentLevelFileName(W_LEVEL_2_NAME);
-		else if (level == -2048) game->setCurrentLevelFileName(W_LEVEL_3_NAME);
+		else if (level == -1680) game->setCurrentLevelFileName(W_LEVEL_2_NAME);
+		else if (level == -3360) game->setCurrentLevelFileName(W_LEVEL_3_NAME);
 		game->startGame();
 	}
 	// THE USER PRESSED THE Quit BUTTON ON THE IN-GAME MENU,
@@ -42,7 +42,7 @@ void LastBonfireButtonEventHandler::handleButtonEvents(Game *game,
 	else if (command.compare(W_QUIT_COMMAND) == 0)
 	{
 		game->quitGame();
-		//game->getGSM()->unloadCurrentLevel();
+		game->getGSM()->unloadCurrentLevel();
 		gameAudio->initAudio();
 		gameAudio->playBackgroundSound(XACT_WAVEBANK_SOUNDS_BACKGROUND);
 	}

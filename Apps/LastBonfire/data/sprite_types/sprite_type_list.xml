@@ -10,4 +10,5 @@
   <sprite_type>skullPole</sprite_type>
   <sprite_type>rock</sprite_type>
   <sprite_type>platform</sprite_type>
+  <sprite_type>cube</sprite_type>
 </sprite_type_list>

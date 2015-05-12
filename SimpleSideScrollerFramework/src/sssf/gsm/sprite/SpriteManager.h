@@ -15,6 +15,7 @@
 #include "sssf\gsm\ai\LifelessObject.h"
 #include "sssf\gsm\ai\Bot.h"
 #include "sssf\gsm\ai\BotRecycler.h"
+#include "sssf\gsm\player\Player.h"
 #include "sssf\gsm\sprite\AnimatedSprite.h"
 #include "sssf\gsm\sprite\AnimatedSpriteType.h"
 
@@ -31,7 +32,7 @@ private:
 	list<LifelessObject*> objects;
 
 	// AND THIS IS THE PLAYER. AS-IS, WE ONLY ALLOW FOR ONE PLAYER AT A TIME
-	AnimatedSprite player;
+	Player player;
 
 	// THE BotRecycler MAKES SURE WE DON'T HAVE TO CONSTRUCT BOTS WHENEVER
 	// WE NEED TO SPAWN THEM, INSTEAD IT WILL RECYCLE THEM FOR US
@@ -44,7 +45,7 @@ public:
 
 	// INLINED ACCESSOR METHODS
 	int						getNumberOfSprites()				{ return objects.size();		}
-	AnimatedSprite*			getPlayer()							{ return &player;				}
+	Player*					getPlayer()							{ return &player; }
 	list<LifelessObject*>::iterator	getObjectsIterator()		{ return objects.begin();		}
 	list<LifelessObject*>::iterator	getEndOfObjectsIterator()	{ return objects.end();			}
 
@@ -62,5 +63,6 @@ public:
 	void				removeBot(Bot* botToRemove);
 	
 	void				unloadSprites();
+	void				updateViewport(Game* game);
 	void				update(Game *game);
 };

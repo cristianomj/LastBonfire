@@ -111,6 +111,8 @@ void Physics::loadScene(Game* game, const char* level)
 	playerBody->GetFixtureList()->SetFriction(0.0f);
 	playerBody->SetGravityScale(20);
 	playerBody->SetUserData(player);
+	for (b2Fixture* f = playerBody->GetFixtureList(); f; f = f->GetNext())
+		if (f->IsSensor()) f->SetUserData((void*)PLAYER_SENSOR);
 
 	// LOAD BOTS
 	json.getBodiesByName("Bat", tempBodies);
@@ -132,21 +134,19 @@ void Physics::loadScene(Game* game, const char* level)
 
 		// TODO: set any body definitions here
 		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
-		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
 	}
 	tempBodies.clear();
 
 	json.getBodiesByName("Rock", tempBodies);
-	spriteType = spriteManager->getSpriteType(ROCK_SPRITE);
+	spriteType = spriteManager->getSpriteType(CUBE_SPRITE);
 	for (int i = 0; i < tempBodies.size(); i++)
 	{
 		loadLifelessObject(game, spriteType, tempBodies[i]);
 		rocks.push_back(tempBodies[i]);
 
 		// TODO: set any body definitions here
-		tempBodies[i]->GetFixtureList()->SetFriction(0.4f);
-		tempBodies[i]->SetGravityScale(20);
-		//b2Objects[i]->GetFixtureList()->SetRestitution(0.6f);
+		for (b2Fixture* f = tempBodies[i]->GetFixtureList(); f; f = f->GetNext())
+			f->SetUserData((void*)ROCK_SENSOR);
 	}
 	tempBodies.clear();
 
@@ -221,9 +221,9 @@ void Physics::movePlayer(void)
 	float desiredVel = 0;
 	switch (moveState)
 	{
-		case MS_LEFT:  desiredVel = b2Max(vel.x - 5.0f, -20.0f); break;
+		case MS_LEFT:  desiredVel = b2Max(vel.x - 5.0f, -MOVE_FORCE); break;
 		case MS_STOP:  desiredVel = vel.x * 0.3f; break;
-		case MS_RIGHT: desiredVel = b2Min(vel.x + 5.0f, 20.0f); break;
+		case MS_RIGHT: desiredVel = b2Min(vel.x + 5.0f, MOVE_FORCE); break;
 	}
 	float velChange = desiredVel - vel.x;
 	float force = playerBody->GetMass() * velChange / (1 / 60.0); //f = mv/t
@@ -233,7 +233,7 @@ void Physics::movePlayer(void)
 void Physics::jump(void)
 {
 	// To change velocity by 35
-	float impulse = playerBody->GetMass() * 35;
+	float impulse = playerBody->GetMass() * JUMP_FORCE;
 	playerBody->ApplyLinearImpulse(b2Vec2(0, impulse), playerBody->GetWorldCenter(), true);
 }
 
@@ -241,8 +241,10 @@ void Physics::jump(void)
 void Physics::makePlayer(Game* game, float initX, float initY)
 {
 	SpriteManager *spriteManager = game->getGSM()->getSpriteManager();
-	AnimatedSprite *playerSprite = spriteManager->getPlayer();
+	Player *playerSprite = spriteManager->getPlayer();
 	this->player = playerSprite;
+	player->numFootContacts = 0;
+	player->isJumping = false;
 
 	AnimatedSpriteType *playerSpriteType = spriteManager->getSpriteType(PLAYER_SPRITE);
 	playerSprite->setSpriteType(playerSpriteType);
@@ -350,6 +352,13 @@ void Physics::BeginContact(b2Contact* contact)
 	b2Body* bodyA = fixtureA->GetBody();
 	b2Body* bodyB = fixtureB->GetBody();
 	
+	// Is player on the ground?
+	if ((int)fixtureA->GetUserData() == PLAYER_SENSOR
+		|| (int)fixtureB->GetUserData() == PLAYER_SENSOR)
+		player->numFootContacts++;
+
+	if (player->numFootContacts >= 0) player->isJumping = false;
+
 	// MOST CASES PLAYER WILL BE BODYB
 	if (bodyB == playerBody)
 		handleCollision(bodyA, fixtureA);
@@ -358,23 +367,33 @@ void Physics::BeginContact(b2Contact* contact)
 		handleCollision(bodyB, fixtureB);
 }
 
+void Physics::EndContact(b2Contact* contact)
+{
+	b2Fixture* fixtureA = contact->GetFixtureA();
+	b2Fixture* fixtureB = contact->GetFixtureB();
+	b2Body* bodyA = fixtureA->GetBody();
+	b2Body* bodyB = fixtureB->GetBody();
+
+	if ((int)fixtureA->GetUserData() == PLAYER_SENSOR
+		|| (int)fixtureB->GetUserData() == PLAYER_SENSOR)
+		player->numFootContacts--;
+}
+
 void Physics::handleCollision(b2Body* body, b2Fixture* fixture)
 {
 	// FALLING BODIES - PLAYER ENTERS IN CONTACT WITH THEM
-	list<b2Body*>::iterator it = rocks.begin();
-	list<b2Body*>::iterator end = rocks.end();
-	for (; it != end; ++it)
+	if ((int)fixture->GetUserData() == ROCK_SENSOR)
 	{
-		if (body == *it)
-		{
-			for (b2Fixture* f = (*it)->GetFixtureList(); f; f = f->GetNext())
-				fixturesToDestroy.push_back(fixture);
-		}
+		for (b2Fixture* f = body->GetFixtureList(); f; f = f->GetNext())
+			fixturesToDestroy.push_back(fixture);
 	}
 
 	// PLAYER WAS HIT BY AN ENEMY
 	if (body->GetType() == b2_dynamicBody && body->IsBullet()) {
 		// TODO: TAKE DAMAGE
+		int health = player->getHealth();
+		player->takeDamage(DAMAGE);
+		health = player->getHealth();
 		gameAudio->playSoundFX(XACT_WAVEBANK_SOUNDS_TAKINGDAMAGESOUND);
 	}
 }

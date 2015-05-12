@@ -18,6 +18,9 @@
 */
 #pragma once
 #include "sssf_VS\stdafx.h"
+#include "sssf\game\Game.h"
+
+class Game;
 
 class Viewport
 {
@@ -44,6 +47,8 @@ public:
 	int getViewportHeight()		{ return viewportHeight;		}
 	int getViewportOffsetX()	{ return viewportOffsetX;		}
 	int getViewportOffsetY()	{ return viewportOffsetY;		}
+	int getViewportCenterX()	{ return viewportX + (viewportWidth / 2); }
+	int getViewportCenterY()	{ return viewportY + (viewportHeight / 2); }
 
 	// INLINED MUTATOR METHODS
 	void setScrollSpeedX(int initScrollSpeedX)

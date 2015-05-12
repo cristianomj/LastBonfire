@@ -924,6 +924,7 @@
    <tile gid="78"/>
    <tile gid="78"/>
    <tile gid="78"/>
+   <tile gid="71"/>
    <tile gid="78"/>
    <tile gid="78"/>
    <tile gid="78"/>
@@ -945,9 +946,8 @@
    <tile gid="78"/>
    <tile gid="78"/>
    <tile gid="78"/>
-   <tile gid="75"/>
-   <tile gid="75"/>
-   <tile gid="75"/>
+   <tile gid="78"/>
+   <tile gid="78"/>
    <tile gid="71"/>
    <tile gid="71"/>
    <tile gid="71"/>

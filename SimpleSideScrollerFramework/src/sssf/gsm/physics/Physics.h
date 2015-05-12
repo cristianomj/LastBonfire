@@ -6,16 +6,20 @@
 #include "sssf_VS\stdafx.h"
 #include "sssf\game\Game.h"
 #include "sssf\gsm\sprite\AnimatedSprite.h"
+#include "sssf\gsm\player\Player.h"
 #include "sssf\gsm\ai\LifelessObject.h"
 #include "sssf\gsm\ai\Bot.h"
 #include "sssf\gsm\ai\bots\Bat.h"
 #include "sssf\audio\GameAudio.h"
 #include <Box2D\Box2D.h>
 
-static const int		STOP = 0;
-static const int		RIGHT = 1;
-static const int		LEFT = 2;
-static const int		JUMP = 3;
+// PLAYER STUFF
+static const float		MOVE_FORCE = 15.0f;
+static const float		JUMP_FORCE = 40.0f;
+static const int		PLAYER_SENSOR = 1;
+static const int		ROCK_SENSOR = 2;
+static const int		DAMAGE = -1;
+// SPRITE TYPES
 static const int		PLAYER_SPRITE = 0;
 static const int		BOX_SPRITE = 1;
 static const int		BALL_SPRITE = 2;
@@ -26,11 +30,14 @@ static const int		BONE_SPRITE = 6;
 static const int		SKULLPOLE_SPRITE = 7;
 static const int		ROCK_SPRITE = 8;
 static const int		PLATFORM_SPRITE = 9;
+static const int		CUBE_SPRITE = 10;
+// ANIMATIONS STATES
 static const wstring	IDLE(L"IDLE");
+static const wstring	DEATH(L"DEATH");
 static const wstring	MOVE_RIGHT(L"MOVE_RIGHT");
 static const wstring	MOVE_LEFT(L"MOVE_LEFT");
 static const wstring	JUMP_RIGHT(L"JUMP_RIGHT");
-static const wstring	JUMP_LEFT(L"JUMP_RIGHT");
+static const wstring	JUMP_LEFT(L"JUMP_LEFT");
 
 struct Settings
 {
@@ -51,7 +58,6 @@ struct Settings
 	float32 worldWidth;
 	float32 worldHeight;
 };
-
 enum MoveState {
 	MS_STOP,
 	MS_LEFT,
@@ -76,6 +82,7 @@ public:
 	// PUBLIC METHODS DEFINED INSIDE Physics.cpp
 	void update(Game* game);
 	virtual void BeginContact(b2Contact* contact);
+	virtual void EndContact(b2Contact* contact);
 	void createPlayer(AnimatedSprite* initPlayer);
 	void loadScene(Game* game, const char* level);
 	void movePlayer(void);
@@ -88,7 +95,7 @@ private:
 
 	// PLAYER DATA
 	b2Body* playerBody;
-	AnimatedSprite* player;
+	Player* player;
 
 	// USED TO TEMPORARILY STORE BODIES
 	vector<b2Body*> tempBodies;
