@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sprite_type>
+    <image_config>SEPARATED</image_config>
+    <width>96</width>
+    <height>96</height>
+    <images_list>
+        <image_file id="1" file_name="flap1.png"/>
+        <image_file id="2" file_name="flap2.png"/>
+		<image_file id="3" file_name="flap3.png"/>
+		<image_file id="4" file_name="flap4.png"/>	
+		<image_file id="5" file_name="swoop1.png"/>
+		<image_file id="6" file_name="swoop2.png"/>
+		<image_file id="7" file_name="swoop3.png"/>
+		<image_file id="8" file_name="swoop4.png"/>
+    </images_list>
+    <animations_list>
+        <animation_state>
+            <state>IDLE</state>
+            <animation_sequence>
+                <pose image_id="1" duration="12"/>
+				<pose image_id="2" duration="10"/>
+                <pose image_id="3" duration="7"/>
+				<pose image_id="4" duration="9"/>
+                <pose image_id="2" duration="10"/>
+            </animation_sequence>
+        </animation_state>
+       <animation_state>
+            <state>ATTACK</state>
+            <animation_sequence>
+				<pose image_id="5" duration="10"/>
+				<pose image_id="6" duration="9"/>
+                <pose image_id="7" duration="22"/>
+				<pose image_id="8" duration="50"/>
+            </animation_sequence>
+        </animation_state>
+    </animations_list>  
+</sprite_type>

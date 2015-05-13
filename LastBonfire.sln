@@ -38,6 +38,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DirectXTK_Desktop_2013", "D
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DirectXTKAudio_Desktop_2013_DXSDK", "DirectXTK\Audio\DirectXTKAudio_Desktop_2013_DXSDK.vcxproj", "{4F150A30-CECB-49D1-8283-6A3F57438CF5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LuaPlusFramework", "LuaPlusFramework\LuaPlusFramework.vcxproj", "{AFCBE206-93CD-4F56-9579-C2ED194064F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -118,6 +120,12 @@ Global
 		{4F150A30-CECB-49D1-8283-6A3F57438CF5}.Release|Win32.Build.0 = Release|Win32
 		{4F150A30-CECB-49D1-8283-6A3F57438CF5}.Release|x64.ActiveCfg = Release|x64
 		{4F150A30-CECB-49D1-8283-6A3F57438CF5}.Release|x64.Build.0 = Release|x64
+		{AFCBE206-93CD-4F56-9579-C2ED194064F7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AFCBE206-93CD-4F56-9579-C2ED194064F7}.Debug|Win32.Build.0 = Debug|Win32
+		{AFCBE206-93CD-4F56-9579-C2ED194064F7}.Debug|x64.ActiveCfg = Debug|Win32
+		{AFCBE206-93CD-4F56-9579-C2ED194064F7}.Release|Win32.ActiveCfg = Release|Win32
+		{AFCBE206-93CD-4F56-9579-C2ED194064F7}.Release|Win32.Build.0 = Release|Win32
+		{AFCBE206-93CD-4F56-9579-C2ED194064F7}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

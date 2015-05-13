@@ -5,6 +5,13 @@ using namespace DirectX::SimpleMath;
 
 using Microsoft::WRL::ComPtr;
 
+GameAudio::GameAudio()
+{
+	m_musicEnabled = true;
+	m_soundEffectEnabled = true;
+	m_volume = 1.0f;
+	m_retryAudio = false;
+}
 GameAudio::~GameAudio()
 {
 	if (m_audioEngine)
@@ -13,6 +20,7 @@ GameAudio::~GameAudio()
 	}
 }
 
+// CALLED TO INITIALIZE AUDIO ENGINE
 void GameAudio::initAudio()
 {
 	CoInitializeEx(nullptr, COINIT_MULTITHREADED);
@@ -23,14 +31,13 @@ void GameAudio::initAudio()
 #endif
 	m_audioEngine.reset(new AudioEngine(eflags));
 
-	m_retryAudio = false;
-	m_volume = 1.0f;
-
 	m_sounds.reset(new WaveBank(m_audioEngine.get(), L"data/audio/sounds.xwb"));
 
 	playBackgroundSound(XACT_WAVEBANK_SOUNDS_BACKGROUND);
 }
 
+// CALLED EACH FRAME TO UPDATE AUDIO ENGINE
+// IF AUDIO DEVICE IS LOST, LOOK FOR NEW ONE
 void GameAudio::update()
 {
 	if (m_retryAudio)
@@ -54,30 +61,19 @@ void GameAudio::update()
 	}
 }
 
-void GameAudio::suspend()
-{
-	m_audioEngine->Suspend();
-}
-
-void GameAudio::resume()
-{
-	m_audioEngine->Resume();
-}
-
+// PLAYS A ONE TIME SOUND EFFECT
 void GameAudio::playSoundFX(const int sfx)
 {
-	m_sounds->Play(sfx);
+	if (m_soundEffectEnabled) {
+		m_sounds->Play(sfx);
+	}	
 }
 
+// PLAYS A LOOPING SOUND - USE FOR BACKGROUND MUSIC
 void GameAudio::playBackgroundSound(const int sfx)
 {
-	m_background_music = m_sounds->CreateInstance(sfx);
-	m_background_music->SetVolume(m_volume);
-	m_background_music->Play(true);
+	if (m_musicEnabled) {
+		m_background_music = m_sounds->CreateInstance(sfx);
+		m_background_music->Play(true);
+	}
 }
-
-void GameAudio::setVolume(float volume)
-{
-	m_background_music->SetVolume(volume);
-}
-

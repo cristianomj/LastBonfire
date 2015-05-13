@@ -19,7 +19,6 @@
 AnimatedSprite::AnimatedSprite()  
 {
 	alpha = 255;
-	currentState = L"IDLE";
 	spriteType = 0;
 	frameIndex = 0;
 	animationCounter = 0;

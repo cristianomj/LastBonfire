@@ -9,10 +9,10 @@
 */
 
 // HERE IS THE BugginOut GAME SETUP/INIT FILE. EVERYTHING WOULD START FROM HERE
-static const wstring	W_LEVEL_1_DIR			= L"data/levels/CaveLevel2/";
-static const wstring	W_LEVEL_1_NAME			= L"caveLevelErica.tmx";
+static const wstring	W_LEVEL_1_DIR			= L"data/levels/CaveLevel/";
+static const wstring	W_LEVEL_1_NAME			= L"CaveLevel.tmx";
 static const wstring	W_LEVEL_1_PATH			= W_LEVEL_1_DIR + W_LEVEL_1_NAME;
-static const char *		RUBE_LEVEL_1			= "data/levels/CaveLevel2/TheCave.json";
+static const char *		RUBE_LEVEL_1			= "data/levels/CaveLevel/CaveLevel.json";
 
 static const wstring	W_LEVEL_2_DIR			= L"data/levels/SnowLevel/";
 static const wstring	W_LEVEL_2_NAME			= L"SnowLevel.tmx";
@@ -70,14 +70,14 @@ static const wstring	W_BONFIRE_LEFT_PATH		= L"data/gui/buttons/left_arrow.png";
 static const wstring	W_BONFIRE_LEFT_MO_PATH	= L"data/gui/buttons/left_arrow_mo.png";
 static const wstring	W_BONFIRE_RIGHT_PATH	= L"data/gui/buttons/right_arrow.png";
 static const wstring	W_BONFIRE_RIGHT_MO_PATH = L"data/gui/buttons/right_arrow_mo.png";
-static const wstring	W_BONFIRE_LEVEL_1_PATH	= L"data/gui/overlays/last_bonfire_level_one1.png";
-static const wstring	W_BONFIRE_LEVEL_2_PATH	= L"data/gui/overlays/last_bonfire_level_two1.png";
-static const wstring	W_BONFIRE_LEVEL_3_PATH	= L"data/gui/overlays/last_bonfire_level_three1.png";
+static const wstring	W_BONFIRE_LEVEL_1_PATH	= L"data/gui/overlays/last_bonfire_level_one.png";
+static const wstring	W_BONFIRE_LEVEL_2_PATH	= L"data/gui/overlays/last_bonfire_level_two.png";
+static const wstring	W_BONFIRE_LEVEL_3_PATH	= L"data/gui/overlays/last_bonfire_level_three.png";
+static const wstring	W_BONFIRE_SELECT_LEVEL	= L"data/gui/overlays/select_level_text";
 
 // FOR OUR SPRITE
 static const wstring	SPRITE_TYPES_DIR = L"data/sprite_types/";
 static const wstring	SPRITE_TYPES_LIST = SPRITE_TYPES_DIR + L"sprite_type_list.xml";
-static const wstring	JUMPING = L"JUMPING";
 
 // FOR THE GAME WORLD
 static const float		MAX_VIEWPORT_AXIS_VELOCITY = 20.0f;
@@ -106,6 +106,10 @@ const unsigned int DOWN_KEY = VK_DOWN;
 const unsigned int LEFT_KEY = VK_LEFT;
 const unsigned int RIGHT_KEY = VK_RIGHT;
 const unsigned int SPACE_KEY = VK_SPACE;
+const unsigned int CONTROL_KEY = VK_CONTROL;
+const unsigned int ONE_KEY = (unsigned int)'1';
+const unsigned int TWO_KEY = (unsigned int)'2';
+const unsigned int THREE_KEY = (unsigned int)'3';
 
 // THIS IS JUST FOR SHOWING HOW THE CURSOR CAN BE CHANGED
 const unsigned int C_KEY = (unsigned int)'C';

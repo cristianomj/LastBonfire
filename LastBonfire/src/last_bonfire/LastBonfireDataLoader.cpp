@@ -197,6 +197,7 @@ void LastBonfireDataLoader::loadWorld(Game *game, wstring levelInitFile)
 
 	// LOAD LEVEL SOUND
 	game->getAudio()->playBackgroundSound(LEVEL_SOUND);
+	game->getAudio()->playSoundFX(XACT_WAVEBANK_SOUNDS_FINDTHEEMBER);
 }
 
 /*
@@ -261,19 +262,8 @@ void LastBonfireDataLoader::initSplashScreen(Game *game, GameGUI *gui, DirectXTe
 	imageToAdd->y = 0;
 	imageToAdd->z = 0;
 	imageToAdd->alpha = 255;
-	imageToAdd->width = 1024;
-	imageToAdd->height = 768;
-	imageToAdd->imageID = imageID;
-	splashScreenGUI->addOverlayImage(imageToAdd);
-
-	imageID = guiTextureManager->loadTexture(W_MAIN_MENU_PATH);
-	imageToAdd = new OverlayImage();
-	imageToAdd->x = 1024;
-	imageToAdd->y = 0;
-	imageToAdd->z = 0;
-	imageToAdd->alpha = 255;
-	imageToAdd->width = 1024;
-	imageToAdd->height = 768;
+	imageToAdd->width = 1680;
+	imageToAdd->height = 1050;
 	imageToAdd->imageID = imageID;
 	splashScreenGUI->addOverlayImage(imageToAdd);
 
@@ -285,12 +275,12 @@ void LastBonfireDataLoader::initSplashScreen(Game *game, GameGUI *gui, DirectXTe
 	Button *buttonToAdd = new Button();
 	buttonToAdd->initButton(normalTextureID,
 		mouseOverTextureID,
-		507,
-		506,
+		830,
+		681,
 		0,
 		255,
-		101,
-		170,
+		169,
+		142,
 		false,
 		W_GO_TO_MM_COMMAND);
 	splashScreenGUI->addButton(buttonToAdd);
@@ -312,30 +302,30 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 	imageToAdd->y = 0;
 	imageToAdd->z = 0;
 	imageToAdd->alpha = 200;
-	imageToAdd->width = 1024;
-	imageToAdd->height = 768;
+	imageToAdd->width = 1680;
+	imageToAdd->height = 1050;
 	imageToAdd->imageID = imageID;
 	mainMenuGUI->addOverlayImage(imageToAdd);
 	
 	imageID = guiTextureManager->loadTexture(W_BONFIRE_LEVEL_2_PATH);
 	imageToAdd = new OverlayImage();
-	imageToAdd->x = 1024;
+	imageToAdd->x = 1680;
 	imageToAdd->y = 0;
 	imageToAdd->z = 0;
 	imageToAdd->alpha = 200;
-	imageToAdd->width = 1024;
-	imageToAdd->height = 768;
+	imageToAdd->width = 1680;
+	imageToAdd->height = 1050;
 	imageToAdd->imageID = imageID;
 	mainMenuGUI->addOverlayImage(imageToAdd);
 	
 	imageID = guiTextureManager->loadTexture(W_BONFIRE_LEVEL_3_PATH);
 	imageToAdd = new OverlayImage();
-	imageToAdd->x = 2048;
+	imageToAdd->x = 3360;
 	imageToAdd->y = 0;
 	imageToAdd->z = 0;
 	imageToAdd->alpha = 200;
-	imageToAdd->width = 1024;
-	imageToAdd->height = 768;
+	imageToAdd->width = 1680;
+	imageToAdd->height = 1050;
 	imageToAdd->imageID = imageID;
 	mainMenuGUI->addOverlayImage(imageToAdd);
 
@@ -348,12 +338,12 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 	// - INIT THE EXIT BUTTON
 	buttonToAdd->initButton(normalTextureID,
 		mouseOverTextureID,
-		400,
-		700,
+		865,
+		850,
 		0,
 		255,
-		200,
-		50,
+		400,
+		100,
 		false,
 		W_EXIT_COMMAND);
 	// AND NOW LOAD IT INTO A ScreenGUI
@@ -368,12 +358,12 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 	// - INIT THE START BUTTON
 	buttonToAdd->initButton(normalTextureID,
 		mouseOverTextureID,
-		100,
-		700,
+		415,
+		850,
 		0,
 		255,
-		200,
-		50,
+		400,
+		100,
 		false,
 		W_START_COMMAND);
 	// AND NOW LOAD IT INTO A ScreenGUI
@@ -386,7 +376,7 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 	buttonToAdd->initButton(normalTextureID,
 		mouseOverTextureID,
 		0,
-		350,
+		461,
 		0,
 		255,
 		128,
@@ -401,8 +391,8 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 	buttonToAdd = new Button();
 	buttonToAdd->initButton(normalTextureID,
 		mouseOverTextureID,
-		1024 - 128,
-		350,
+		1680 - 128,
+		461,
 		0,
 		255,
 		128,

@@ -13,6 +13,2312 @@
 			[
 				
 				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -30.76919364929199,
+				"y" : 18.47112464904785
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -32.33985900878906,
+				"y" : 20.21733283996582
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -24.19088554382324,
+				"y" : 16.74339485168457
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -26.82406425476074,
+				"y" : 20.26352882385254
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -26.77786064147949,
+				"y" : 17.06676673889160
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -40.36832427978516,
+				"y" : 13.92479896545410
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -29.70669364929199,
+				"y" : 16.69719886779785
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -28.13603019714356,
+				"y" : 14.95099067687988
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -41.19061279296875,
+				"y" : 16.15144538879395
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -36.29039001464844,
+				"y" : 17.93840980529785
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -38.60363769531250,
+				"y" : 15.82807350158691
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -38.47084045410156,
+				"y" : 18.04928016662598
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -37.11267852783203,
+				"y" : 20.16505622863770
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -34.52570343017578,
+				"y" : 19.84168434143066
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -40.041503906250,
+				"y" : 19.79548835754395
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -44.11943817138672,
+				"y" : 15.78187751770020
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -25.95557975769043,
+				"y" : 14.84012222290039
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -28.58874320983887,
+				"y" : 18.36025428771973
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -29.41103935241699,
+				"y" : 20.58689689636231
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -51.65860748291016,
+				"y" : -11.73803329467773
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -57.17440795898438,
+				"y" : -11.78422927856445
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -53.42329406738281,
+				"y" : -13.64130783081055
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -55.73654174804688,
+				"y" : -15.75164413452148
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -54.24558258056641,
+				"y" : -11.41466140747070
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -55.60374450683594,
+				"y" : -13.53043746948242
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -61.25234222412109,
+				"y" : -15.79784011840820
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -43.08848571777344,
+				"y" : -16.73959541320801
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -45.72164916992188,
+				"y" : -13.21946334838867
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -46.54394531250,
+				"y" : -10.99282073974609
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -43.95697021484375,
+				"y" : -11.31618881225586
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -45.26893615722656,
+				"y" : -16.62872695922852
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -43.91076660156250,
+				"y" : -14.51295089721680
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -49.47276306152344,
+				"y" : -11.36238479614258
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -58.32351684570313,
+				"y" : -15.42827224731445
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -57.50122833251953,
+				"y" : -17.65491867065430
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -46.8395996093750,
+				"y" : -14.88251876831055
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -41.32379150390625,
+				"y" : -14.83632278442383
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -47.9020996093750,
+				"y" : -13.10859298706055
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -70.46011352539063,
+				"y" : 17.41929244995117
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -69.10194396972656,
+				"y" : 19.53506851196289
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -66.51496887207031,
+				"y" : 19.21169662475586
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -68.27966308593750,
+				"y" : 17.30842399597168
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -73.09327697753906,
+				"y" : 20.93942642211914
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -74.66394042968750,
+				"y" : 22.68563461303711
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -71.73512268066406,
+				"y" : 23.05519866943359
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -72.03077697753906,
+				"y" : 19.16550064086914
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -70.91282653808594,
+				"y" : 20.82855606079102
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -69.14814758300781,
+				"y" : 22.73183059692383
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -83.51469421386719,
+				"y" : 18.61974716186523
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -82.69240570068359,
+				"y" : 16.39310073852539
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -84.87285614013672,
+				"y" : 16.50397109985352
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -86.44351959228516,
+				"y" : 18.25017929077148
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -80.92771911621094,
+				"y" : 18.29637527465820
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -80.7949218750,
+				"y" : 20.51758193969727
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -76.84978485107422,
+				"y" : 22.30998611450195
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -79.43675994873047,
+				"y" : 22.63335800170898
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -82.36558532714844,
+				"y" : 22.26379013061523
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.0005187988281250,
+							"y" : 0.0009899139404296875
+						},
+						"radius" : 0.5985538363456726
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture6",
+					"sensor" : true
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Bat",
+			"position" : 
+			{
+				"x" : -78.61447143554688,
+				"y" : 20.40671157836914
+			},
+			"type" : 1
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								37.00058364868164,
+								36.94886016845703,
+								-14.27837753295898,
+								-14.26859664916992,
+								-12.25095748901367
+							],
+							"y" : 
+							[
+								-4.861306190490723,
+								2.047593116760254,
+								2.072457313537598,
+								-4.957558631896973,
+								-4.953845500946045
+							]
+						}
+					}
+				},
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								-12.25095748901367,
+								-14.26859664916992,
+								-13.30248260498047,
+								-13.01208496093750,
+								-12.68123626708984
+							],
+							"y" : 
+							[
+								-4.953845500946045,
+								-4.957558631896973,
+								-5.806373596191406,
+								-5.806373596191406,
+								-5.739232063293457
+							]
+						}
+					}
+				},
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : [ -13.30248260498047, -14.26859664916992, -14.26770782470703 ],
+							"y" : [ -5.806373596191406, -4.957558631896973, -5.724828720092773 ]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Ground",
+			"position" : 
+			{
+				"x" : -85.76460266113281,
+				"y" : 6.909480094909668
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"bullet" : true,
+			"fixedRotation" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1.249986886978149,
+					"friction" : 0.2,
+					"name" : "fixture1",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								0.5546531677246094,
+								0.5545200109481812,
+								-0.8522300124168396,
+								-0.8522850275039673,
+								-0.1256140321493149
+							],
+							"y" : 
+							[
+								-1.221547365188599,
+								1.770219445228577,
+								1.772409439086914,
+								-1.221489787101746,
+								-1.925105571746826
+							]
+						}
+					}
+				},
+				
+				{
+					"circle" : 
+					{
+						"center" : 
+						{
+							"x" : -0.1532039642333984,
+							"y" : -1.222102880477905
+						},
+						"radius" : 0.7003064751625061
+					},
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture3"
+				}
+			],
+			"linearVelocity" : 0,
+			"massData-I" : 0.4060147106647492,
+			"massData-center" : 
+			{
+				"x" : -0.1491552144289017,
+				"y" : -0.1801495552062988
+			},
+			"massData-mass" : 7.422417640686035,
+			"name" : "Player",
+			"position" : 
+			{
+				"x" : -90.96323394775391,
+				"y" : 17.62716484069824
+			},
+			"type" : 2
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								185.7043151855469,
+								184.6694946289063,
+								184.6483459472656,
+								185.6794433593750
+							],
+							"y" : 
+							[
+								18.04318046569824,
+								17.15569686889648,
+								-30.98616218566895,
+								-31.96838760375977
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Ground",
+			"position" : 
+			{
+				"x" : -85.67951965332031,
+				"y" : 6.973023414611816
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								-12.29390716552734,
+								-12.30367279052734,
+								-14.24324035644531,
+								-14.24324035644531,
+								-13.27080535888672,
+								-12.88619232177734,
+								-12.43405151367188
+							],
+							"y" : 
+							[
+								17.17777061462402,
+								17.98866271972656,
+								17.98030662536621,
+								16.18484497070313,
+								16.16202354431152,
+								16.19021034240723,
+								16.48190879821777
+							]
+						}
+					}
+				},
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								-13.27080535888672,
+								-14.24324035644531,
+								-14.27467346191406,
+								-13.29215240478516
+							],
+							"y" : 
+							[
+								16.16202354431152,
+								16.18484497070313,
+								1.996385574340820,
+								2.001238822937012
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Ground",
+			"position" : 
+			{
+				"x" : -85.74340057373047,
+				"y" : 7.021265029907227
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								185.7043151855469,
+								-12.30367279052734,
+								-12.29390716552734,
+								184.7384948730469
+							],
+							"y" : 
+							[
+								17.99717521667481,
+								17.98866271972656,
+								17.17777061462402,
+								17.15569686889648
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Ground",
+			"position" : 
+			{
+				"x" : -85.70320129394531,
+				"y" : 7.026130199432373
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								-12.38642883300781,
+								-12.40277862548828,
+								-12.58259582519531,
+								-12.90953826904297,
+								-13.28970432281494,
+								-14.24010467529297,
+								-12.39807128906250
+							],
+							"y" : 
+							[
+								-31.00834465026856,
+								-30.53427886962891,
+								-30.19099044799805,
+								-30.04386520385742,
+								-30.01115608215332,
+								-31.97898864746094,
+								-31.97898292541504
+							]
+						}
+					}
+				},
+				
+				{
+					"density" : 1,
+					"friction" : 0.2,
+					"name" : "fixture0",
+					"polygon" : 
+					{
+						"vertices" : 
+						{
+							"x" : 
+							[
+								-13.26348876953125,
+								-14.25766754150391,
+								-14.24010467529297,
+								-13.28970432281494
+							],
+							"y" : 
+							[
+								-5.953852176666260,
+								-5.855374336242676,
+								-31.97898864746094,
+								-30.01115608215332
+							]
+						}
+					}
+				}
+			],
+			"linearVelocity" : 0,
+			"name" : "Ground",
+			"position" : 
+			{
+				"x" : -85.74050140380859,
+				"y" : 6.994949817657471
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"fixture" : 
+			[
+				
+				{
 					"density" : 1,
 					"friction" : 0.2,
 					"name" : "fixture4",
@@ -2644,412 +4950,6 @@
 			"angle" : 0,
 			"angularVelocity" : 0,
 			"awake" : true,
-			"linearVelocity" : 0,
-			"name" : "Ground",
-			"position" : 
-			{
-				"x" : -45.72880172729492,
-				"y" : 72.55300140380859
-			},
-			"type" : 0
-		},
-		
-		{
-			"angle" : 0,
-			"angularVelocity" : 0,
-			"awake" : true,
-			"fixture" : 
-			[
-				
-				{
-					"density" : 1,
-					"friction" : 0.2,
-					"name" : "fixture0",
-					"polygon" : 
-					{
-						"vertices" : 
-						{
-							"x" : 
-							[
-								37.00058364868164,
-								36.94886016845703,
-								-14.27837753295898,
-								-14.26859664916992,
-								-12.25095748901367
-							],
-							"y" : 
-							[
-								-4.861306190490723,
-								2.047593116760254,
-								2.072457313537598,
-								-4.957558631896973,
-								-4.953845500946045
-							]
-						}
-					}
-				},
-				
-				{
-					"density" : 1,
-					"friction" : 0.2,
-					"name" : "fixture0",
-					"polygon" : 
-					{
-						"vertices" : 
-						{
-							"x" : 
-							[
-								-12.25095748901367,
-								-14.26859664916992,
-								-13.30248260498047,
-								-13.01208496093750,
-								-12.68123626708984
-							],
-							"y" : 
-							[
-								-4.953845500946045,
-								-4.957558631896973,
-								-5.806373596191406,
-								-5.806373596191406,
-								-5.739232063293457
-							]
-						}
-					}
-				},
-				
-				{
-					"density" : 1,
-					"friction" : 0.2,
-					"name" : "fixture0",
-					"polygon" : 
-					{
-						"vertices" : 
-						{
-							"x" : [ -13.30248260498047, -14.26859664916992, -14.26770782470703 ],
-							"y" : [ -5.806373596191406, -4.957558631896973, -5.724828720092773 ]
-						}
-					}
-				}
-			],
-			"linearVelocity" : 0,
-			"name" : "Ground",
-			"position" : 
-			{
-				"x" : -85.76460266113281,
-				"y" : 6.909480094909668
-			},
-			"type" : 0
-		},
-		
-		{
-			"angle" : 0,
-			"angularVelocity" : 0,
-			"awake" : true,
-			"bullet" : true,
-			"fixedRotation" : true,
-			"fixture" : 
-			[
-				
-				{
-					"circle" : 
-					{
-						"center" : 
-						{
-							"x" : -0.1532039642333984,
-							"y" : -1.222102880477905
-						},
-						"radius" : 0.7003064751625061
-					},
-					"density" : 1,
-					"friction" : 0.2,
-					"name" : "fixture3"
-				},
-				
-				{
-					"density" : 1.249986886978149,
-					"friction" : 0.2,
-					"name" : "fixture1",
-					"polygon" : 
-					{
-						"vertices" : 
-						{
-							"x" : 
-							[
-								0.5546531677246094,
-								0.5545200109481812,
-								-0.8522300124168396,
-								-0.8522850275039673,
-								-0.1256140321493149
-							],
-							"y" : 
-							[
-								-1.221547365188599,
-								1.770219445228577,
-								1.772409439086914,
-								-1.221489787101746,
-								-1.925105571746826
-							]
-						}
-					}
-				}
-			],
-			"linearVelocity" : 0,
-			"massData-I" : 0.4060147404670715,
-			"massData-center" : 
-			{
-				"x" : -0.1491552293300629,
-				"y" : -0.1801495552062988
-			},
-			"massData-mass" : 7.422417640686035,
-			"name" : "Player",
-			"position" : 
-			{
-				"x" : -90.96323394775391,
-				"y" : 17.62716484069824
-			},
-			"type" : 2
-		},
-		
-		{
-			"angle" : 0,
-			"angularVelocity" : 0,
-			"awake" : true,
-			"fixture" : 
-			[
-				
-				{
-					"density" : 1,
-					"friction" : 0.2,
-					"name" : "fixture0",
-					"polygon" : 
-					{
-						"vertices" : 
-						{
-							"x" : 
-							[
-								185.7043151855469,
-								184.6694946289063,
-								184.6483459472656,
-								185.6794433593750
-							],
-							"y" : 
-							[
-								18.04318046569824,
-								17.15569686889648,
-								-30.98616218566895,
-								-31.96838760375977
-							]
-						}
-					}
-				}
-			],
-			"linearVelocity" : 0,
-			"name" : "Ground",
-			"position" : 
-			{
-				"x" : -85.67951965332031,
-				"y" : 6.973023414611816
-			},
-			"type" : 0
-		},
-		
-		{
-			"angle" : 0,
-			"angularVelocity" : 0,
-			"awake" : true,
-			"fixture" : 
-			[
-				
-				{
-					"density" : 1,
-					"friction" : 0.2,
-					"name" : "fixture0",
-					"polygon" : 
-					{
-						"vertices" : 
-						{
-							"x" : 
-							[
-								-12.29390716552734,
-								-12.30367279052734,
-								-14.24324035644531,
-								-14.24324035644531,
-								-13.27080535888672,
-								-12.88619232177734,
-								-12.43405151367188
-							],
-							"y" : 
-							[
-								17.17777061462402,
-								17.98866271972656,
-								17.98030662536621,
-								16.18484497070313,
-								16.16202354431152,
-								16.19021034240723,
-								16.48190879821777
-							]
-						}
-					}
-				},
-				
-				{
-					"density" : 1,
-					"friction" : 0.2,
-					"name" : "fixture0",
-					"polygon" : 
-					{
-						"vertices" : 
-						{
-							"x" : 
-							[
-								-13.27080535888672,
-								-14.24324035644531,
-								-14.27467346191406,
-								-13.29215240478516
-							],
-							"y" : 
-							[
-								16.16202354431152,
-								16.18484497070313,
-								1.996385574340820,
-								2.001238822937012
-							]
-						}
-					}
-				}
-			],
-			"linearVelocity" : 0,
-			"name" : "Ground",
-			"position" : 
-			{
-				"x" : -85.74340057373047,
-				"y" : 7.021265029907227
-			},
-			"type" : 0
-		},
-		
-		{
-			"angle" : 0,
-			"angularVelocity" : 0,
-			"awake" : true,
-			"fixture" : 
-			[
-				
-				{
-					"density" : 1,
-					"friction" : 0.2,
-					"name" : "fixture0",
-					"polygon" : 
-					{
-						"vertices" : 
-						{
-							"x" : 
-							[
-								185.7043151855469,
-								-12.30367279052734,
-								-12.29390716552734,
-								184.7384948730469
-							],
-							"y" : 
-							[
-								17.99717521667481,
-								17.98866271972656,
-								17.17777061462402,
-								17.15569686889648
-							]
-						}
-					}
-				}
-			],
-			"linearVelocity" : 0,
-			"name" : "Ground",
-			"position" : 
-			{
-				"x" : -85.70320129394531,
-				"y" : 7.026130199432373
-			},
-			"type" : 0
-		},
-		
-		{
-			"angle" : 0,
-			"angularVelocity" : 0,
-			"awake" : true,
-			"fixture" : 
-			[
-				
-				{
-					"density" : 1,
-					"friction" : 0.2,
-					"name" : "fixture0",
-					"polygon" : 
-					{
-						"vertices" : 
-						{
-							"x" : 
-							[
-								-12.38642883300781,
-								-12.40277862548828,
-								-12.58259582519531,
-								-12.90953826904297,
-								-13.28970432281494,
-								-14.24010467529297,
-								-12.39807128906250
-							],
-							"y" : 
-							[
-								-31.00834465026856,
-								-30.53427886962891,
-								-30.19099044799805,
-								-30.04386520385742,
-								-30.01115608215332,
-								-31.97898864746094,
-								-31.97898292541504
-							]
-						}
-					}
-				},
-				
-				{
-					"density" : 1,
-					"friction" : 0.2,
-					"name" : "fixture0",
-					"polygon" : 
-					{
-						"vertices" : 
-						{
-							"x" : 
-							[
-								-13.26348876953125,
-								-14.25766754150391,
-								-14.24010467529297,
-								-13.28970432281494
-							],
-							"y" : 
-							[
-								-5.953852176666260,
-								-5.855374336242676,
-								-31.97898864746094,
-								-30.01115608215332
-							]
-						}
-					}
-				}
-			],
-			"linearVelocity" : 0,
-			"name" : "Ground",
-			"position" : 
-			{
-				"x" : -85.74050140380859,
-				"y" : 6.994949817657471
-			},
-			"type" : 0
-		},
-		
-		{
-			"angle" : 0,
-			"angularVelocity" : 0,
-			"awake" : true,
 			"fixture" : 
 			[
 				
@@ -3085,6 +4985,20 @@
 			{
 				"x" : -85.70158386230469,
 				"y" : 6.994146347045898
+			},
+			"type" : 0
+		},
+		
+		{
+			"angle" : 0,
+			"angularVelocity" : 0,
+			"awake" : true,
+			"linearVelocity" : 0,
+			"name" : "Ground",
+			"position" : 
+			{
+				"x" : -45.72880172729492,
+				"y" : 72.55300140380859
 			},
 			"type" : 0
 		},
@@ -8579,26 +10493,2212 @@
 		
 		{
 			"aspectScale" : 1,
-			"body" : -1,
-			"center" : 0,
+			"body" : 2,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
 			"corners" : 
 			{
-				"x" : [ -100.0, 100.0, 100.0, -100.0 ],
-				"y" : [ -25.0, -25.0, 25.0, 25.0 ]
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
 			},
-			"file" : "SnowLevel.png",
+			"file" : "../../sprite_types/bat/swoop4.png",
 			"filter" : 1,
 			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
 			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
-			"glVertexPointer" : [ -100.0, -25.0, 100.0, -25.0, 100.0, 25.0, -100.0, 25.0 ],
-			"name" : "image0",
-			"opacity" : 0.5,
-			"scale" : 50.0
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 28,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 53,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 34,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 22,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 26,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 31,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 25,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 32,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 44,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 36,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 43,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 14,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 17,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 6,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 39,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 18,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 4,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 10,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 1,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 16,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 11,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 13,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 5,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 7,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 15,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 8,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 9,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 0,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 12,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 48,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 30,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 42,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 49,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 46,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 21,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 52,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 47,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 38,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 45,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 55,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 40,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 57,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 41,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 56,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 50,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 29,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 35,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
 		},
 		
 		{
 			"aspectScale" : 1,
 			"body" : 3,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 59,
 			"center" : 
 			{
 				"x" : -0.1384487152099609,
@@ -8639,6 +12739,430 @@
 			"name" : "image1",
 			"opacity" : 0.5,
 			"scale" : 4
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 23,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 37,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 54,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 27,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : -1,
+			"center" : 0,
+			"corners" : 
+			{
+				"x" : [ -100.0, 100.0, 100.0, -100.0 ],
+				"y" : [ -25.0, -25.0, 25.0, 25.0 ]
+			},
+			"file" : "SnowLevel.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : [ -100.0, -25.0, 100.0, -25.0, 100.0, 25.0, -100.0, 25.0 ],
+			"name" : "image0",
+			"opacity" : 0.5,
+			"scale" : 50.0
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 19,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 24,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 20,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 51,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
+		},
+		
+		{
+			"aspectScale" : 1,
+			"body" : 33,
+			"center" : 
+			{
+				"x" : 0.006483078002929688,
+				"y" : -0.004055023193359375
+			},
+			"corners" : 
+			{
+				"x" : 
+				[
+					-0.7435169219970703,
+					0.7564830780029297,
+					0.7564830780029297,
+					-0.7435169219970703
+				],
+				"y" : 
+				[
+					-0.7540550231933594,
+					-0.7540550231933594,
+					0.7459449768066406,
+					0.7459449768066406
+				]
+			},
+			"file" : "../../sprite_types/bat/swoop4.png",
+			"filter" : 1,
+			"glDrawElements" : [ 0, 1, 2, 2, 3, 0 ],
+			"glTexCoordPointer" : [ 0.0, 0.0, 1, 0.0, 1, 1, 0.0, 1 ],
+			"glVertexPointer" : 
+			[
+				-0.7435169219970703,
+				-0.7540550231933594,
+				0.7564830780029297,
+				-0.7540550231933594,
+				0.7564830780029297,
+				0.7459449768066406,
+				-0.7435169219970703,
+				0.7459449768066406
+			],
+			"name" : "image2",
+			"opacity" : 1,
+			"scale" : 1.5
 		}
 	],
 	"positionIterations" : 3,

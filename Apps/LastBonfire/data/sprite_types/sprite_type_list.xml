@@ -5,4 +5,11 @@
   <sprite_type>ball</sprite_type>
   <sprite_type>scooter_wheel</sprite_type>
   <sprite_type>scooter</sprite_type>
+  <sprite_type>cube</sprite_type>
+  <sprite_type>bone</sprite_type>
+  <sprite_type>skullPole</sprite_type>
+  <sprite_type>rock</sprite_type>
+  <sprite_type>platform</sprite_type>
+  <sprite_type>bat</sprite_type>
+  <sprite_type>batR</sprite_type>
 </sprite_type_list>

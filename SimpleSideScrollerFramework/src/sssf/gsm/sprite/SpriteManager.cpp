@@ -151,6 +151,8 @@ AnimatedSpriteType* SpriteManager::getSpriteType(unsigned int typeIndex)
 void SpriteManager::unloadSprites()
 {
 	// @TODO - WE'LL DO THIS LATER WHEN WE LEARN MORE ABOUT MEMORY MANAGEMENT
+	bots.clear();
+	objects.clear();
 }
 
 void SpriteManager::removeLifelessObject(LifelessObject *objectToRemove)
@@ -173,12 +175,8 @@ void SpriteManager::update(Game *game)
 	// UPDATE THE PLAYER SPRITE
 	player.updateSprite();
 
-	Viewport *viewport = game->getGUI()->getViewport();
-
-	viewport->moveViewport(player.getPhysicalProperties()->getX(),
-		player.getPhysicalProperties()->getY(),
-		game->getGSM()->getWorld()->getWorldWidth(),
-		game->getGSM()->getWorld()->getWorldHeight());
+	// UPDATE VIEWPORT
+	updateViewport(game);
 
 	// UPDATE BOTS
 	list<Bot*>::iterator botsIterator;
@@ -186,6 +184,7 @@ void SpriteManager::update(Game *game)
 	while (botsIterator != bots.end())
 	{
 		Bot *bot = *botsIterator;
+		//bot->think(game);
 		bot->updateSprite();
 		botsIterator++;
 	}
@@ -199,4 +198,30 @@ void SpriteManager::update(Game *game)
 		object->updateSprite();
 		objectIterator++;
 	}
+}
+
+void SpriteManager::updateViewport(Game* game)
+{
+	Viewport* viewport = game->getGUI()->getViewport();
+
+	PhysicalProperties* pp = player.getPhysicalProperties();
+
+	float playerCenterX = pp->getX() + 64;
+	float playerCenterY = pp->getY() + 128;
+	float viewportCenterX = viewport->getViewportCenterX();
+	float viewportCenterY = viewport->getViewportCenterY();
+	float viewportX = viewport->getViewportX();
+	float viewportY = viewport->getViewportY();
+
+	float velX = 0.0f;
+	float velY = 0.0f;
+
+	if (playerCenterX < viewportCenterX - 192) velX = -15.0f;
+	else if (playerCenterX > viewportCenterX + 192) velX = 15.0f;
+	if (playerCenterY < viewportCenterY - 192) velY = -15.0f;
+	else if (playerCenterY > viewportCenterY + 192) velY = 15.0f;
+
+	viewport->moveViewport(velX, velY,
+		game->getGSM()->getWorld()->getWorldWidth(),
+		game->getGSM()->getWorld()->getWorldHeight());
 }
