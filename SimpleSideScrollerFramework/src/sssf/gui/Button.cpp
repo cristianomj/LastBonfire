@@ -69,7 +69,9 @@ void Button::initButton(int initNormalTextureID,
 				int initWidth,
 				int initHeight,
 				bool initMouseOver,
-				wstring initCommand)
+				wstring initCommand,
+				string initName)
+				//erica added for top bar
 {
 	normalTextureID = initNormalTextureID;
 	mouseOverTextureID = initMouseOverTextureID;
@@ -81,6 +83,7 @@ void Button::initButton(int initNormalTextureID,
 	height = initHeight;
 	mouseOver = initMouseOver;
 	command = initCommand;
+	name = initName;
 }
 
 /*

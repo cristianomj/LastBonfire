@@ -17,6 +17,8 @@
 #include "sssf\gsm\sprite\AnimatedSpriteType.h"
 #include "sssf\gsm\sprite\SpriteManager.h"
 #include "sssf\gsm\state\GameStateManager.h"
+//erica added for top bar
+#include "sssf\gui\ScreenGUI.h"
 
 /*
 	addSpriteToRenderList - This method checks to see if the sprite
@@ -173,6 +175,12 @@ void SpriteManager::removeBot(Bot* botToRemove)
 */
 void SpriteManager::update(Game *game)
 {
+	//erica added for top bar
+	//to change the life lanterns use cmd:
+	//game->getGUI()->getScreen(game->getGSM()->getCurrentGameState())->healthButton(#); where int is 0-6
+	//6 full health, 3 half, 0 dead
+
+
 	// UPDATE THE PLAYER SPRITE
 	player.updateSprite();
 

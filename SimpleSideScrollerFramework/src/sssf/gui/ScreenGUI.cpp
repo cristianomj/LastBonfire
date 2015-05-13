@@ -47,6 +47,107 @@ void ScreenGUI::addButton(Button *buttonToAdd)
 	buttons->push_back(buttonToAdd);
 }
 
+//erica added for top bar
+void ScreenGUI::healthButton(int healthNum)
+{
+	//6 hits == death, 6 is full health, 3 is half health, 0 is death
+	//only 3 buttons at the end of the buttons list, change their images
+	Button *button1;
+	Button *button2;
+	Button *button3;
+	Button *button4;
+	Button *button5;
+	Button *button6;
+
+	list<Button*>::iterator buttonIterator;
+	buttonIterator = buttons->begin();
+	while (buttonIterator != buttons->end())
+	{
+		Button *button = (*buttonIterator);
+
+		if (button->getName() == "lantern1"){
+			button1 = button;
+		}
+		if (button->getName() == "lantern2"){
+			button2 = button;
+		}
+		if (button->getName() == "lantern3"){
+			button3 = button;
+		}
+		if (button->getName() == "lantern4"){
+			button4 = button;
+		}
+		if (button->getName() == "lantern5"){
+			button5 = button;
+		}
+		if (button->getName() == "lantern6"){
+			button6 = button;
+		}
+
+		buttonIterator++;
+	}
+
+
+	switch (healthNum){
+	case 0:  //death
+		button1->setAlpha(0);
+		button2->setAlpha(0);
+		button3->setAlpha(0);
+		button4->setAlpha(0);
+		button5->setAlpha(0);
+		button6->setAlpha(0);
+		break;
+	case 1:
+		button1->setAlpha(0);
+		button2->setAlpha(0);
+		button3->setAlpha(0);
+		button4->setAlpha(255);
+		button5->setAlpha(0);
+		button6->setAlpha(0);
+		break;
+	case 2:
+		button1->setAlpha(0);
+		button2->setAlpha(0);
+		button3->setAlpha(0);
+		button4->setAlpha(255);
+		button5->setAlpha(255);
+		button6->setAlpha(0);
+		break;
+	case 3:  //half life
+		button1->setAlpha(0);
+		button2->setAlpha(0);
+		button3->setAlpha(0);
+		button4->setAlpha(255);
+		button5->setAlpha(255);
+		button6->setAlpha(255);
+		break;
+	case 4:
+		button1->setAlpha(255);
+		button2->setAlpha(0);
+		button3->setAlpha(0);
+		button4->setAlpha(0);
+		button5->setAlpha(255);
+		button6->setAlpha(255);
+		break;
+	case 5:
+		button1->setAlpha(255);
+		button2->setAlpha(255);
+		button3->setAlpha(0);
+		button4->setAlpha(0);
+		button5->setAlpha(0);
+		button6->setAlpha(255);
+		break;
+	case 6:  //full life
+		button1->setAlpha(255);
+		button2->setAlpha(255);
+		button3->setAlpha(255);
+		button4->setAlpha(0);
+		button5->setAlpha(0);
+		button6->setAlpha(0);
+		break;
+	}
+}
+
 /*
 	addOverlayImage - This method adds a constructured OverlayImage
 	to this GUI screen.

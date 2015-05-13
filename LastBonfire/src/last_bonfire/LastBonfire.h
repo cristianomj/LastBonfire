@@ -52,6 +52,12 @@ static const wstring	W_START_COMMAND			= L"Start";
 static const wstring	W_LOAD_COMMAND			= L"Load";
 static const wstring	W_EXIT_COMMAND			= L"Exit";
 static const wstring	W_QUIT_COMMAND			= L"Quit";
+
+//erica added for top bar
+static const wstring	W_HELP_COMMAND = L"Help";
+static const wstring	W_BULLSHIT_COMMAND = L"Bullshit Bullshit Bullshit";
+//end erica added for top bar
+
 static const wstring	W_GREEN_CURSOR_PATH		= L"data/gui/cursor/flame_cursor.png";
 static const wstring	W_RED_CURSOR_PATH		= L"data/gui/cursor/red_cursor.png";
 static const wstring	W_SPLASH_SCREEN_PATH	= L"data/gui/overlays/last_bonfire_splash_screen_overlay.png";
@@ -62,7 +68,16 @@ static const wstring	W_LOAD_IMAGE_PATH		= L"data/gui/buttons/load_game.png";
 static const wstring	W_LOAD_IMAGE_MO_PATH	= L"data/gui/buttons/load_game_mo.png";
 static const wstring	W_EXIT_IMAGE_PATH		= L"data/gui/buttons/exit_game.png";
 static const wstring	W_EXIT_IMAGE_MO_PATH	= L"data/gui/buttons/exit_game_mo.png";
-static const wstring	W_QUIT_IMAGE_PATH		= L"data/gui/buttons/quit.png";
+
+//erica added for top bar
+static const wstring	W_QUIT_IMAGE_PATH = L"data/gui/buttons/quit.png";
+static const wstring	W_HELP_IMAGE_PATH = L"data/gui/buttons/help.png";
+static const wstring	W_LIFE_IMAGE_PATH = L"data/gui/buttons/life.png";
+static const wstring	W_LIFE_LANTERN1_IMAGE_PATH = L"data/gui/buttons/lifeLantern1.png";
+static const wstring	W_LIFE_LANTERN2_IMAGE_PATH = L"data/gui/buttons/lifeLantern2.png";
+//end erica added
+
+
 static const wstring	W_QUIT_IMAGE_MO_PATH	= L"data/gui/buttons/quit_mo.png";
 static const wstring	W_LANTERN_OFF_PATH		= L"data/gui/buttons/lantern_off.png";
 static const wstring	W_LANTERN_ON_PATH		= L"data/gui/buttons/lantern_on.png";

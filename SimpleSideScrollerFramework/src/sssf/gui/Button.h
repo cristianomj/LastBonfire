@@ -50,6 +50,9 @@ private:
 	wstring command;
 	ButtonEventHandler *eventHandler;
 
+	//erica added for top bar
+	string name = "noname";
+
 	// IS OVER BUTTON
 	bool lanternOff = true;
 
@@ -65,6 +68,7 @@ public:
 	int		getWidth()				{ return width;					}
 	bool	isMouseOver()			{ return mouseOver;				}
 	wstring	getCommand()			{ return command;				}
+	string	getName()				{ return name;					}
 
 	// INLINED MUTATOR METHODS
 	void setNormalTextureID(int initNormalTextureID)
@@ -93,6 +97,6 @@ public:
 	Button::Button();
 	Button::~Button();
 	void fireEvent(Game *game);
-	void initButton(int initNormalTextureID, int initMouseOverTextureID, int initX, int initY, int initZ, int initAlpha, int initWidth, int initHeight, bool initMouseOver, wstring initCommand);
+	void initButton(int initNormalTextureID, int initMouseOverTextureID, int initX, int initY, int initZ, int initAlpha, int initWidth, int initHeight, bool initMouseOver, wstring initCommand, string name);
 	void updateMouseOver(Game* game, long mouseX, long mouseY);
 };

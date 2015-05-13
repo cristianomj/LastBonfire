@@ -51,6 +51,9 @@ public:
 	// METHODS DEFINED IN ScreenGUI.cpp
 	ScreenGUI();
 	~ScreenGUI();
+	//erica added for top bar
+	void ScreenGUI::healthButton(int healthNum);
+
 	void addButton(Button *buttonToAdd);
 	void addOverlayImage(OverlayImage *imageToAdd);
 	void addRenderItemsToRenderList(RenderList *renderList);

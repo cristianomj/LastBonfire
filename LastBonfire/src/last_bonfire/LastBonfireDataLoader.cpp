@@ -282,7 +282,8 @@ void LastBonfireDataLoader::initSplashScreen(Game *game, GameGUI *gui, DirectXTe
 		169,
 		142,
 		false,
-		W_GO_TO_MM_COMMAND);
+		W_GO_TO_MM_COMMAND,
+		"noname");
 	splashScreenGUI->addButton(buttonToAdd);
 
 	// AND REGISTER IT WITH THE GUI
@@ -345,7 +346,8 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 		400,
 		100,
 		false,
-		W_EXIT_COMMAND);
+		W_EXIT_COMMAND,
+		"noname");
 	// AND NOW LOAD IT INTO A ScreenGUI
 	mainMenuGUI->addButton(buttonToAdd);
 
@@ -365,7 +367,8 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 		400,
 		100,
 		false,
-		W_START_COMMAND);
+		W_START_COMMAND,
+		"noname");
 	// AND NOW LOAD IT INTO A ScreenGUI
 	mainMenuGUI->addButton(buttonToAdd);
 
@@ -382,7 +385,8 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 		128,
 		128,
 		false,
-		W_SPIN_LEFT_COMMAND);
+		W_SPIN_LEFT_COMMAND,
+		"noname");
 	mainMenuGUI->addButton(buttonToAdd);
 
 	// SPIN RIGHT BUTTON
@@ -398,7 +402,8 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 		128,
 		128,
 		false,
-		W_SPIN_RIGHT_COMMAND);
+		W_SPIN_RIGHT_COMMAND,
+		"noname");
 	mainMenuGUI->addButton(buttonToAdd);
 
 	// AND LET'S ADD OUR SCREENS
@@ -416,19 +421,141 @@ void LastBonfireDataLoader::initInGameGUI(GameGUI *gui, DirectXTextureManager *g
 	unsigned int normalTextureID = guiTextureManager->loadTexture(W_QUIT_IMAGE_PATH);
 	unsigned int mouseOverTextureID = guiTextureManager->loadTexture(W_QUIT_IMAGE_MO_PATH);
 
+	//erica added for top bar
+	unsigned int lantern1TextureID = guiTextureManager->loadTexture(W_LIFE_LANTERN1_IMAGE_PATH);
+	unsigned int lantern2TextureID = guiTextureManager->loadTexture(W_LIFE_LANTERN2_IMAGE_PATH);
+	unsigned int helpTextureID = guiTextureManager->loadTexture(W_HELP_IMAGE_PATH);
+	unsigned int lifeTextureID = guiTextureManager->loadTexture(W_LIFE_IMAGE_PATH);
+
 	// INIT THE QUIT BUTTON
 	Button *buttonToAdd = new Button();
 	buttonToAdd->initButton(normalTextureID,
-		mouseOverTextureID,
+		normalTextureID,
 		0,
 		0,
 		0,
 		255,
-		200,
+		100,
 		100,
 		false,
-		W_QUIT_COMMAND);
+		W_QUIT_COMMAND,
+		"noname");
 	inGameGUI->addButton(buttonToAdd);
+
+	Button *helpImg = new Button();
+	helpImg->initButton(helpTextureID,
+		helpTextureID,
+		130,
+		0,
+		0,
+		255,
+		100,
+		100,
+		false,
+		W_HELP_COMMAND,
+		"noname");
+	inGameGUI->addButton(helpImg);
+
+	Button *lifeImg = new Button();
+	lifeImg->initButton(lifeTextureID,
+		lifeTextureID,
+		260,
+		0,
+		0,
+		255,
+		100,
+		100,
+		false,
+		W_BULLSHIT_COMMAND,
+		"noname");
+	inGameGUI->addButton(lifeImg);
+
+	Button *lantern11Img = new Button();
+	lantern11Img->initButton(lantern1TextureID,
+		lantern1TextureID,
+		389,
+		0,
+		0,
+		255,
+		100,
+		100,
+		false,
+		W_BULLSHIT_COMMAND,
+		"lantern1");
+	inGameGUI->addButton(lantern11Img);
+
+	Button *lantern21Img = new Button();
+	lantern21Img->initButton(lantern2TextureID,
+		lantern2TextureID,
+		389,
+		0,
+		0,
+		0,
+		100,
+		100,
+		false,
+		W_BULLSHIT_COMMAND,
+		"lantern4");
+	inGameGUI->addButton(lantern21Img);
+
+	Button *lantern12Img = new Button();
+	lantern12Img->initButton(lantern1TextureID,
+		lantern1TextureID,
+		454,
+		0,
+		0,
+		255,
+		100,
+		100,
+		false,
+		W_BULLSHIT_COMMAND,
+		"lantern2");
+	inGameGUI->addButton(lantern12Img);
+
+	Button *lantern22Img = new Button();
+	lantern22Img->initButton(lantern2TextureID,
+		lantern2TextureID,
+		454,
+		0,
+		0,
+		0,
+		100,
+		100,
+		false,
+		W_BULLSHIT_COMMAND,
+		"lantern5");
+	inGameGUI->addButton(lantern22Img);
+
+	Button *lantern13Img = new Button();
+	lantern13Img->initButton(lantern1TextureID,
+		lantern1TextureID,
+		519,
+		0,
+		0,
+		255,
+		100,
+		100,
+		false,
+		W_BULLSHIT_COMMAND,
+		"lantern3");
+	inGameGUI->addButton(lantern13Img);
+
+	Button *lantern23Img = new Button();
+	lantern23Img->initButton(lantern2TextureID,
+		lantern2TextureID,
+		519,
+		0,
+		0,
+		0,
+		100,
+		100,
+		false,
+		W_BULLSHIT_COMMAND,
+		"lantern6");
+	inGameGUI->addButton(lantern23Img);
+
+
+	//end erica added for top bar
 
 	// AND LET'S ADD OUR SCREENS
 	gui->addScreenGUI(GS_GAME_IN_PROGRESS, inGameGUI);

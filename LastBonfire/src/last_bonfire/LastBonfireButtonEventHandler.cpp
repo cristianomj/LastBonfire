@@ -7,6 +7,11 @@
 #include "sssf\audio\GameAudio.h"
 #include "sssf\audio\sounds.h"
 
+//erica added for pop up box
+#include <Windows.h>
+#include <string.h>
+#include <iostream>
+
 void LastBonfireButtonEventHandler::handleButtonEvents(Game *game, wstring command)
 {
 	GameAudio* gameAudio = game->getAudio();
@@ -45,6 +50,15 @@ void LastBonfireButtonEventHandler::handleButtonEvents(Game *game, wstring comma
 		gameAudio->initAudio();
 		gameAudio->playBackgroundSound(XACT_WAVEBANK_SOUNDS_BACKGROUND);
 	}
+
+	//erica added for top bar
+	else if (command.compare(W_HELP_COMMAND) == 0){
+		HWND wHandle = GetForegroundWindow();
+		MessageBox(wHandle, L"A KEY:\t\tMove Left\nD KEY:\t\tMove Right\nJ KEY:\t\tAttack with Fireball\nLEFT-ARROW:\tMove Viewport Left\nRIGHT-ARROW:\tMove Viewport Right\nSPACE BAR:\tJump\n\nMission: To find the ember! Can't you hear the ominious voice wants it?"
+			, L"***HELP MENU***", MB_OK | MB_ICONINFORMATION | MB_SETFOREGROUND);
+
+	}
+	//end erica added for top bar
 
 	else if (command.compare(W_SPIN_RIGHT_COMMAND) == 0)
 	{
