@@ -73,6 +73,7 @@ static const wstring	W_BONFIRE_RIGHT_MO_PATH = L"data/gui/buttons/right_arrow_mo
 static const wstring	W_BONFIRE_LEVEL_1_PATH	= L"data/gui/overlays/last_bonfire_level_one.png";
 static const wstring	W_BONFIRE_LEVEL_2_PATH	= L"data/gui/overlays/last_bonfire_level_two.png";
 static const wstring	W_BONFIRE_LEVEL_3_PATH	= L"data/gui/overlays/last_bonfire_level_three.png";
+static const wstring	W_BONFIRE_SELECT_LEVEL	= L"data/gui/overlays/select_level_text";
 
 // FOR OUR SPRITE
 static const wstring	SPRITE_TYPES_DIR = L"data/sprite_types/";

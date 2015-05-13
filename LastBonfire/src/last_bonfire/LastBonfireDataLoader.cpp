@@ -338,12 +338,12 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 	// - INIT THE EXIT BUTTON
 	buttonToAdd->initButton(normalTextureID,
 		mouseOverTextureID,
-		400,
-		700,
+		865,
+		850,
 		0,
 		255,
-		200,
-		50,
+		400,
+		100,
 		false,
 		W_EXIT_COMMAND);
 	// AND NOW LOAD IT INTO A ScreenGUI
@@ -358,12 +358,12 @@ void LastBonfireDataLoader::initMainMenu(GameGUI *gui, DirectXTextureManager *gu
 	// - INIT THE START BUTTON
 	buttonToAdd->initButton(normalTextureID,
 		mouseOverTextureID,
-		144,
-		25,
+		415,
+		850,
 		0,
 		255,
-		736,
-		717,
+		400,
+		100,
 		false,
 		W_START_COMMAND);
 	// AND NOW LOAD IT INTO A ScreenGUI

@@ -1,3 +1,0 @@
-
-graphicsDevice->Reset: FAILED - Reloading GPU imagesSUCCEEDED
-D3DXCreateSprite(): SUCCEEDED

@@ -38,6 +38,37 @@
       "bitplane32"
     ]
   },
+  "customPropertyDefs" : 
+  [
+    
+    {
+      "class" : "body",
+      "displayName" : "Vertical Range",
+      "name" : "verRange",
+      "type" : "float"
+    },
+    
+    {
+      "class" : "body",
+      "displayName" : "Horizontal Range",
+      "name" : "horRange",
+      "type" : "float"
+    },
+    
+    {
+      "class" : "body",
+      "displayName" : "Speed",
+      "name" : "speed",
+      "type" : "float"
+    },
+    
+    {
+      "class" : "body",
+      "displayName" : "Sprite Type",
+      "name" : "spriteType",
+      "type" : "int"
+    }
+  ],
   "metaworld" : 
   {
     "allowSleep" : true,
@@ -135,6 +166,67 @@
           "y" : -11.94629383087158
         },
         "type" : "static"
+      },
+      
+      {
+        "angle" : 0,
+        "angularVelocity" : 0,
+        "awake" : true,
+        "customProperties" : 
+        [
+          
+          {
+            "int" : 11,
+            "name" : "spriteType"
+          },
+          
+          {
+            "float" : 1,
+            "name" : "horRange"
+          },
+          
+          {
+            "float" : 2,
+            "name" : "speed"
+          },
+          
+          {
+            "float" : 5,
+            "name" : "verRange"
+          }
+        ],
+        "fixture" : 
+        [
+          
+          {
+            "density" : 1,
+            "friction" : 0.2,
+            "id" : 3,
+            "name" : "fixture6",
+            "shapes" : 
+            [
+              
+              {
+                "radius" : 0.5985538363456726,
+                "type" : "circle"
+              }
+            ],
+            "vertices" : 
+            {
+              "x" : [ -0.0005187988281250 ],
+              "y" : [ 0.0009899139404296875 ]
+            }
+          }
+        ],
+        "id" : 3,
+        "linearVelocity" : 0,
+        "name" : "Bat",
+        "position" : 
+        {
+          "x" : 4.620509147644043,
+          "y" : 6.433314800262451
+        },
+        "type" : "kinematic"
       },
       
       {
@@ -376,6 +468,29 @@
         "angle" : 0,
         "angularVelocity" : 0,
         "awake" : true,
+        "customProperties" : 
+        [
+          
+          {
+            "int" : 10,
+            "name" : "spriteType"
+          },
+          
+          {
+            "float" : 5,
+            "name" : "horRange"
+          },
+          
+          {
+            "float" : 5,
+            "name" : "speed"
+          },
+          
+          {
+            "float" : 1,
+            "name" : "verRange"
+          }
+        ],
         "fixture" : 
         [
           
@@ -384,7 +499,6 @@
             "friction" : 0.2,
             "id" : 11,
             "name" : "fixture6",
-            "sensor" : true,
             "shapes" : 
             [
               
@@ -405,8 +519,8 @@
         "name" : "Bat",
         "position" : 
         {
-          "x" : -10.23183631896973,
-          "y" : 3.873332023620606
+          "x" : -10.10507488250732,
+          "y" : 4.887126922607422
         },
         "type" : "kinematic"
       },
@@ -727,18 +841,18 @@
         ],
         "id" : 18,
         "linearVelocity" : 0,
-        "massData-I" : 0.9036466479301453,
+        "massData-I" : 0.9036467671394348,
         "massData-center" : 
         {
           "x" : 7.902857032604516e-005,
-          "y" : -0.4296213388442993
+          "y" : -0.4296213686466217
         },
         "massData-mass" : 4.895836830139160,
         "name" : "Player",
         "position" : 
         {
-          "x" : -28.84212875366211,
-          "y" : 3.665176391601563
+          "x" : -29.06087303161621,
+          "y" : -11.26905822753906
         },
         "type" : "dynamic"
       },
@@ -907,6 +1021,23 @@
       
       {
         "aspectScale" : 1,
+        "body" : 3,
+        "center" : 
+        {
+          "x" : 0.0005197525024414063,
+          "y" : 0.003737688064575195
+        },
+        "file" : "../../sprite_types/batR/swoop4R.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 1,
+        "name" : "image3",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
         "body" : 11,
         "center" : 
         {
@@ -917,6 +1048,23 @@
         "filter" : 1,
         "flip" : false,
         "id" : 2,
+        "name" : "image2",
+        "opacity" : 1,
+        "scale" : 1.5
+      },
+      
+      {
+        "aspectScale" : 1,
+        "body" : 11,
+        "center" : 
+        {
+          "x" : 0.006483078002929688,
+          "y" : -0.004055023193359375
+        },
+        "file" : "../../sprite_types/bat/swoop4.png",
+        "filter" : 1,
+        "flip" : false,
+        "id" : 3,
         "name" : "image2",
         "opacity" : 1,
         "scale" : 1.5

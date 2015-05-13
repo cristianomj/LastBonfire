@@ -7,8 +7,7 @@
 #include "sssf\audio\GameAudio.h"
 #include "sssf\audio\sounds.h"
 
-void LastBonfireButtonEventHandler::handleButtonEvents(Game *game,
-	wstring command)
+void LastBonfireButtonEventHandler::handleButtonEvents(Game *game, wstring command)
 {
 	GameAudio* gameAudio = game->getAudio();
 

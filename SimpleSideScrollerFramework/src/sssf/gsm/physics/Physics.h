@@ -15,7 +15,7 @@
 
 // PLAYER STUFF
 static const float		MOVE_FORCE = 15.0f;
-static const float		JUMP_FORCE = 40.0f;
+static const float		JUMP_FORCE = 42.0f;
 static const int		PLAYER_SENSOR = 1;
 static const int		ROCK_SENSOR = 2;
 static const int		DAMAGE = -1;
@@ -25,12 +25,13 @@ static const int		BOX_SPRITE = 1;
 static const int		BALL_SPRITE = 2;
 static const int		WHEEL_SPRITE = 3;
 static const int		SCOOTER_SPRITE = 4;
-static const int		BAT_SPRITE = 5;
+static const int		CUBE_SPRITE = 5;
 static const int		BONE_SPRITE = 6;
 static const int		SKULLPOLE_SPRITE = 7;
 static const int		ROCK_SPRITE = 8;
 static const int		PLATFORM_SPRITE = 9;
-static const int		CUBE_SPRITE = 10;
+static const int		BAT_SPRITE = 10;
+static const int		BATR_SPRITE = 11;
 // ANIMATIONS STATES
 static const wstring	IDLE(L"IDLE");
 static const wstring	DEATH(L"DEATH");
@@ -38,6 +39,7 @@ static const wstring	MOVE_RIGHT(L"MOVE_RIGHT");
 static const wstring	MOVE_LEFT(L"MOVE_LEFT");
 static const wstring	JUMP_RIGHT(L"JUMP_RIGHT");
 static const wstring	JUMP_LEFT(L"JUMP_LEFT");
+static const wstring	ATTACK(L"ATTACK");
 
 struct Settings
 {
@@ -93,6 +95,8 @@ private:
 	b2World* world;
 	b2Body* ground;
 
+	float32 m_timePassed;
+
 	// PLAYER DATA
 	b2Body* playerBody;
 	Player* player;
@@ -123,4 +127,7 @@ private:
 	void loadBot(Game* game, AnimatedSpriteType* spriteType, b2Body* body);
 	void destroyFixtures();
 	void handleCollision(b2Body* body, b2Fixture* fixture);
+
+	void updateLifelessObjects(void);
+	void updateBats(void);
 };

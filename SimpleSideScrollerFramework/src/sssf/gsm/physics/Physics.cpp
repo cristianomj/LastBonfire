@@ -35,6 +35,7 @@ Physics::Physics()
 	playerBody = NULL;
 	gameAudio = NULL;
 	moveState = MS_STOP;
+	m_timePassed = 0;
 }
 
 Physics::~Physics()
@@ -48,6 +49,7 @@ Physics::~Physics()
 void Physics::update(Game* game)
 {	
 	float32 timeStep = 1.0f / settings.hz;
+	m_timePassed += 1.0f / settings.hz;
 	world->Step(timeStep, settings.velocityIterations, settings.positionIterations);
 
 	// REMOVE BODIES THAT WERE SCHEDULED TO BE REMOVED
@@ -67,7 +69,16 @@ void Physics::update(Game* game)
 	// Change sprite position
 	player->getPhysicalProperties()->setPosition(x, y);
 
-	// UPDATE BOTS POSITIONS
+	// UPDATE LIFELESS OBJECTS
+	updateLifelessObjects();
+
+	// UPDATE BAT POSITIONS
+	updateBats();
+}
+
+void Physics::updateLifelessObjects(void)
+{
+	// UPDATE LIFELESS OBJECT POSITIONS
 	set<b2Body*>::iterator it = lifelessObjects.begin();
 	set<b2Body*>::iterator end = lifelessObjects.end();
 	for (; it != end; ++it)
@@ -75,13 +86,37 @@ void Physics::update(Game* game)
 		b2Body* body = *it;
 		LifelessObject* sprite = (LifelessObject*)body->GetUserData();
 		// Get body's position
-		x = body->GetPosition().x;
-		y = body->GetPosition().y;
+		float32 x = body->GetPosition().x;
+		float32 y = body->GetPosition().y;
 		// box2 to screen conversion
 		b2dToScreen(sprite, x, y);
 		// Update sprite position and rotation
 		sprite->getPhysicalProperties()->setPosition(x, y);
 		sprite->setRotationInRadians(body->GetAngle());
+	}
+}
+void Physics::updateBats(void)
+{
+	set<b2Body*>::iterator it = bots.begin();
+	set<b2Body*>::iterator end = bots.end();
+	for (; it != end; ++it)
+	{
+		b2Body* body = *it;
+		Bat* bat = (Bat*)body->GetUserData();
+
+		// SET TRANSFORM
+		b2Vec2 pos = bat->basePosition +
+			b2Vec2(sin(m_timePassed * bat->speed) * bat->horizontalRange, cos(m_timePassed * bat->speed) * bat->verticalRange);
+		body->SetTransform(pos, 0);
+
+		// Get body's position
+		float32 x = body->GetPosition().x;
+		float32 y = body->GetPosition().y;
+		// box2 to screen conversion
+		b2dToScreen(bat, x, y);
+		// Update sprite position and rotation
+		bat->getPhysicalProperties()->setPosition(x, y);
+		bat->setRotationInRadians(body->GetAngle());
 	}
 }
 
@@ -116,10 +151,18 @@ void Physics::loadScene(Game* game, const char* level)
 
 	// LOAD BOTS
 	json.getBodiesByName("Bat", tempBodies);
-	AnimatedSpriteType* spriteType = spriteManager->getSpriteType(BAT_SPRITE);
+	AnimatedSpriteType* spriteType;// = spriteManager->getSpriteType(BAT_SPRITE);
 	for (int i = 0; i < tempBodies.size(); i++)
 	{
+		int type = json.getCustomInt(tempBodies[i], "spriteType", 10);
+		spriteType = spriteManager->getSpriteType(type);
 		loadBot(game, spriteType, tempBodies[i]);
+
+		// Set range and speed
+		Bat* sprite = (Bat*)tempBodies[i]->GetUserData();
+		sprite->speed = json.getCustomFloat(tempBodies[i], "speed", 0);
+		sprite->horizontalRange = json.getCustomFloat(tempBodies[i], "horRange", 0);
+		sprite->verticalRange = json.getCustomFloat(tempBodies[i], "verRange", 0);
 
 		// TODO: set any body definitions here
 	}
@@ -249,6 +292,7 @@ void Physics::makePlayer(Game* game, float initX, float initY)
 	AnimatedSpriteType *playerSpriteType = spriteManager->getSpriteType(PLAYER_SPRITE);
 	playerSprite->setSpriteType(playerSpriteType);
 
+	playerSprite->setCurrentState(IDLE);
 	playerSprite->affixTightAABBBoundingVolume();
 	b2dToScreen(player, initX, initY);
 	playerSprite->getPhysicalProperties()->setPosition(initX, initY);
@@ -262,6 +306,7 @@ void Physics::loadLifelessObject(Game* game, AnimatedSpriteType* spriteType, b2B
 	Physics *physics = game->getGSM()->getPhysics();
 
 	sprite->setSpriteType(spriteType);
+	sprite->setCurrentState(IDLE);
 	spriteManager->addLifelessObject(sprite);
 	sprite->affixTightAABBBoundingVolume();
 
@@ -286,6 +331,7 @@ void Physics::loadBot(Game* game, AnimatedSpriteType* spriteType, b2Body* body)
 	Bat* sprite = new Bat();
 	Physics *physics = game->getGSM()->getPhysics();
 
+	sprite->setCurrentState(IDLE);
 	sprite->setSpriteType(spriteType);
 	spriteManager->addBot(sprite);
 	sprite->affixTightAABBBoundingVolume();
@@ -302,6 +348,7 @@ void Physics::loadBot(Game* game, AnimatedSpriteType* spriteType, b2Body* body)
 	// box2d to world coordinate conversion
 	b2dToScreen(sprite, x, y);
 	sprite->getPhysicalProperties()->setPosition(x, y);
+	sprite->basePosition = body->GetPosition();
 }
 
 void Physics::b2dToScreen(AnimatedSprite* sprite, float32 &x, float32 &y)

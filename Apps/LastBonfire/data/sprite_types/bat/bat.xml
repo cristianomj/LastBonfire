@@ -25,7 +25,7 @@
             </animation_sequence>
         </animation_state>
        <animation_state>
-            <state>ATTACKING</state>
+            <state>ATTACK</state>
             <animation_sequence>
 				<pose image_id="5" duration="10"/>
 				<pose image_id="6" duration="9"/>

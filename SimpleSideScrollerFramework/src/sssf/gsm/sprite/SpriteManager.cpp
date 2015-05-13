@@ -184,6 +184,7 @@ void SpriteManager::update(Game *game)
 	while (botsIterator != bots.end())
 	{
 		Bot *bot = *botsIterator;
+		//bot->think(game);
 		bot->updateSprite();
 		botsIterator++;
 	}
