@@ -9,10 +9,10 @@
 */
 
 // HERE IS THE BugginOut GAME SETUP/INIT FILE. EVERYTHING WOULD START FROM HERE
-static const wstring	W_LEVEL_1_DIR			= L"data/levels/CaveLevel/";
-static const wstring	W_LEVEL_1_NAME			= L"CaveLevel.tmx";
+static const wstring	W_LEVEL_1_DIR			= L"data/levels/CaveLevel2/";
+static const wstring	W_LEVEL_1_NAME			= L"caveLevelErica.tmx";
 static const wstring	W_LEVEL_1_PATH			= W_LEVEL_1_DIR + W_LEVEL_1_NAME;
-static const char *		RUBE_LEVEL_1			= "data/levels/CaveLevel/CaveLevel.json";
+static const char *		RUBE_LEVEL_1			= "data/levels/CaveLevel2/TheCave.json";
 
 static const wstring	W_LEVEL_2_DIR			= L"data/levels/SnowLevel/";
 static const wstring	W_LEVEL_2_NAME			= L"SnowLevel.tmx";
@@ -93,6 +93,8 @@ static const wstring	W_BONFIRE_SELECT_LEVEL	= L"data/gui/overlays/select_level_t
 // FOR OUR SPRITE
 static const wstring	SPRITE_TYPES_DIR = L"data/sprite_types/";
 static const wstring	SPRITE_TYPES_LIST = SPRITE_TYPES_DIR + L"sprite_type_list.xml";
+static const wstring	JUMP_LEFT = L"JUMP_LEFT";
+static const wstring	JUMP_RIGHT = L"JUMP_RIGHT";
 
 // FOR THE GAME WORLD
 static const float		MAX_VIEWPORT_AXIS_VELOCITY = 20.0f;
@@ -121,10 +123,6 @@ const unsigned int DOWN_KEY = VK_DOWN;
 const unsigned int LEFT_KEY = VK_LEFT;
 const unsigned int RIGHT_KEY = VK_RIGHT;
 const unsigned int SPACE_KEY = VK_SPACE;
-const unsigned int CONTROL_KEY = VK_CONTROL;
-const unsigned int ONE_KEY = (unsigned int)'1';
-const unsigned int TWO_KEY = (unsigned int)'2';
-const unsigned int THREE_KEY = (unsigned int)'3';
 
 // THIS IS JUST FOR SHOWING HOW THE CURSOR CAN BE CHANGED
 const unsigned int C_KEY = (unsigned int)'C';

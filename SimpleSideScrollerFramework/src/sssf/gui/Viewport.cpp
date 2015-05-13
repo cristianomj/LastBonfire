@@ -128,8 +128,8 @@ void Viewport::moveViewport(int incX,
 {
 	// MOVE THE VIEWPORT IN X AXIS ACCORDING
 	// TO PROVIDED INCREMENT.
-	viewportX += incX;
-	//viewportX = incX - (.3 * viewportWidth);
+	//viewportX += incX;
+	viewportX = incX - (.3 * viewportWidth);
 
 	// DON'T LET IT GO OFF THE LEFT-MOST EDGE
 	// OF THE GAME WORLD. CLAMP INSTEAD.
@@ -143,8 +143,8 @@ void Viewport::moveViewport(int incX,
 	
 	// MOVE THE VIEWPORT IN Y AXIS ACCORDING
 	// TO PROVIDED INCREMENT.
-	viewportY += incY;
-	//viewportY = incY - (.7 * viewportHeight);
+	//viewportY += incY;
+	viewportY = incY - (.5 * viewportHeight);
 
 	// DON'T LET IT GO OFF THE TOP-MOST EDGE
 	// OF THE GAME WORLD. CLAMP INSTEAD.
