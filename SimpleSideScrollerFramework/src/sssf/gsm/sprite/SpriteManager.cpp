@@ -92,6 +92,7 @@ void SpriteManager::addSpriteItemsToRenderList(	Game *game)
 		}
 	}
 }
+//erica test
 
 /*
 	addSprite - This method is for adding a new sprite to 
